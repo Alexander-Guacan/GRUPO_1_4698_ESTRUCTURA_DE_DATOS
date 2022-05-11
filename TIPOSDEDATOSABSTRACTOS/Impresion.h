@@ -7,4 +7,5 @@ class Impresion {
     public:
         void mostrarEnConsola(CProceso);
 };
+
 #endif

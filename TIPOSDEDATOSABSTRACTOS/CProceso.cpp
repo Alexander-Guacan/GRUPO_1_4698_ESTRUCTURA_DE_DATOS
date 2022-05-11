@@ -32,6 +32,3 @@ CProceso CProceso::racional(CProceso obj1, CProceso obj2) {
     return *this;
 }
 
-void CProceso::imprimir(CProceso obj) {
-    std::cout << obj.getNumerador() << "/" << obj.getNumerador() << std::endl;
-}

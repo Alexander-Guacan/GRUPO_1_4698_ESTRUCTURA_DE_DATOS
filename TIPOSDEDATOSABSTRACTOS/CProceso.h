@@ -11,8 +11,6 @@ class CProceso {
         void setDenominador(int denominador);
         int getNumerador();
         int getDenominador();
-        CProceso racional(CProceso, CProceso);
-        void imprimir(CProceso);
 };
 
 #endif

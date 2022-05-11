@@ -1,0 +1,120 @@
+/*
+ * UNIVERSIDAD DE LAS FUERZAS ARMADAS - ESPE
+ * Resolver el siguiente problema usando metodos racionales a/b + c/d = ((a*d) + (c*b)) / b*d
+ * Autores: Alexander David Guacán Rivera y Alison Paola Moncayo Achilchisa
+ * Fecha de creacion: 11/05/2022
+ * Fecha de ultima modificación: 11/05/2022
+ * Grupo: 10
+ * Github: https://github.com/Alexander-Guacan/GRUPO_10_4698_ESTRUCTURA_DE_DATOS.git
+ */
+
+#include "CProceso.h"
+#include "Impresion.h"
+#include "Operacion.h"
+
+int main() {
+    Impresion impresionDeFracciones = Impresion();
+    Operacion operadorDeFracciones = Operacion();
+    
+    CProceso *obj1 = new CProceso(10, 3);
+    CProceso *obj2 = new CProceso(7, 8);
+    CProceso obj3 = CProceso(0, 0);
+
+    obj3 = operadorDeFracciones.suma(*obj1, *obj2);
+
+    impresionDeFracciones.mostrarEnConsola(*obj1);
+    impresionDeFracciones.mostrarEnConsola(*obj2);
+    impresionDeFracciones.mostrarEnConsola(obj3);
+
+    return 0;
+}
+
+#ifndef CPROCESO_H
+#define CPROCESO_H
+
+class CProceso {
+    int numerador;
+    int denominador;
+
+    public:
+        CProceso(int numerador, int denominador);
+        void setNumerador(int numerador);
+        void setDenominador(int denominador);
+        int getNumerador();
+        int getDenominador();
+};
+
+#endif
+
+#include "CProceso.h"
+#include <iostream>
+
+CProceso::CProceso(int numerador, int denominador) {
+    this->numerador = numerador;
+    this->denominador = denominador;
+}
+
+void CProceso::setNumerador(int numerador) {
+    this->numerador = numerador;
+}
+
+void CProceso::setDenominador(int denominador) {
+    this->denominador = denominador;
+}
+
+int CProceso::getNumerador() {
+    return numerador;
+}
+
+int CProceso::getDenominador() {
+    return denominador;
+}
+
+#ifndef IMPRESION_H
+#define IMPRESION_H
+#include "CProceso.h"
+
+class Impresion {
+
+    public:
+        void mostrarEnConsola(CProceso);
+};
+
+#endif
+
+#include "CProceso.h"
+#include "Impresion.h"
+#include <iostream>
+
+void Impresion::mostrarEnConsola(CProceso obj) {
+    std::cout << obj.getNumerador() << "/" << obj.getNumerador() << std::endl;
+}
+
+
+#ifndef OPERACION_H
+#define OPERACION_H
+
+#include "CProceso.h"
+
+class Operacion{
+    
+    public:
+        CProceso suma(CProceso,CProceso);
+};
+
+#endif
+
+#include "Operacion.h"
+
+CProceso Operacion::suma(CProceso obj1, CProceso obj2) {
+    int a = obj1.getNumerador();
+    int b = obj1.getDenominador();
+    int c = obj2.getNumerador();
+    int d = obj2.getDenominador();
+
+    CProceso resultado = CProceso(0,0);
+    resultado.setNumerador((a*d) + (c*b));
+    resultado.setDenominador(b*d);
+    return resultado;
+}
+

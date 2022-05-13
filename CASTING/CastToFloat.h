@@ -1,10 +1,12 @@
 #ifndef CAST_TO_FLOAT_H
 #define CAST_TO_FLOAT_H
 
-class CastToFloat {
+#include "Cast.h"
+
+class CastToFloat : public Cast<float> {
     
     public:
-        float casting(char* input);
+        float transform(char* input);
     
 };
 

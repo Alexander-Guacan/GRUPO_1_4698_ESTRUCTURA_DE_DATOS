@@ -1,10 +1,12 @@
 #ifndef CAST_TO_INT_H
 #define CAST_TO_INT_H
 
-class CastToInt {
+#include "Cast.h"
+
+class CastToInt : public Cast<int> {
     
     public:
-        int casting(char* input);
+        int transform(char* input);
     
 };
 

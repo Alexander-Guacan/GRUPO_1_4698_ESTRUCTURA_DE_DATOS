@@ -1,22 +1,25 @@
+#include "Menu.h"
+#include "ValidadorAscii.h"
 #include "Input.h"
 #include "CastToInt.h"
 #include "CastToFloat.h"
-#include <cstdio>
-#include <cstring>
 #include <iostream>
+#include <cstdio>
+#include <string.h>
 
 int main() {
+    /* Input *input = new Input();
+    char* valorReal = input->ingresarDatoReal("Ingrese un numero real: ");
+    char* valorEntero = input->ingresarDatoEntero("\nIngrese un numero entero: ");
 
-    Input *input = new Input();
+    CastToInt *castToInt = new CastToInt();
+    CastToFloat *castToFloat = new CastToFloat();
 
-    char* resultado = input->ingresarDatoReal("Ingrese un dato cualquiera: ");
+    printf("\nValores transformado a entero: %d, %d", castToInt->transform(valorReal), castToInt->transform(valorEntero));
+    printf("\nValores transformado a real: %.4f, %.4f", castToFloat->transform(valorReal), castToFloat->transform(valorEntero)); */
+    Menu *menu = new Menu();
+
+    menu->printMenu();
     
-    CastToInt *casteador = new CastToInt();
-    
-    CastToFloat *casteador2 = new CastToFloat();
-
-    std::cout << "\nResultado: " << casteador->casting(resultado);
-    std::cout << "\nResultado2: " << casteador2->casting(resultado);
-
     return 0;
 }

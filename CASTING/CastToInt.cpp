@@ -1,6 +1,6 @@
 #include "CastToInt.h"
 #include <string>
 
-int CastToInt::casting(char* input) {
+int CastToInt::transform(char* input) {
     return std::atoi(input);
 }

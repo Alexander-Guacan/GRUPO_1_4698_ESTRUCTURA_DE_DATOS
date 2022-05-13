@@ -1,6 +1,6 @@
 #include "CastToFloat.h"
 #include <string>
 
-float CastToFloat::casting(char* input) {
+float CastToFloat::transform(char* input) {
     return std::atof(input);
 }

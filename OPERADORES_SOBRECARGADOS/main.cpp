@@ -5,7 +5,7 @@
  * Fecha de creacion: 17/05/2022
  * Fecha de ultima modificación: 17/05/2022
  * Grupo: 1 y 17
- * Github: https://github.com/Alexander-Guacan/GRUPO_10_4698_ESTRUCTURA_DE_DATOS.git / https://github.com/Ariel2006/G17-ESTRUCTURA-DE-DATOS
+ * Github: https://github.com/Alexander-Guacan/GRUPO_1_4698_ESTRUCTURA_DE_DATOS.git / https://github.com/Ariel2006/G17-ESTRUCTURA-DE-DATOS
  */
 
 #include "Reloj.h"

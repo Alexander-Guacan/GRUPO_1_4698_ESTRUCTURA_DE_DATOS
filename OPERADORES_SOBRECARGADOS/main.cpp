@@ -31,45 +31,45 @@ int main() {
          <<std::setw(4)<< R.Segundo() <<std:: endl;
 
     // Ejercicio 2
-    Vector V1(10,20), V2(5,5);
+    /* Vector V1(10,20), V2(5,5);
      float p;
 
      p = V1*V2;
 
-    std::cout << "P = " << p<< std::endl;
+    std::cout << "P = " << p<< std::endl; */
 
     // Ejercicio propio sobrecargando operador ->
-    Persona obj("Genesis",32);
+    /* Persona obj("Genesis",32);
 	obj.imprimirDatos();
-	obj->imprimirDatos();
+	obj->imprimirDatos(); */
 
     // Ejercicio 3
-    char mensaje1[]{"Hola "}, mensaje2[]{"Juan"};
+    /* char mensaje1[]{"Hola "}, mensaje2[]{"Juan"};
     Cadena cadena1(mensaje1), cadena2(mensaje2);
 
     cadena1 + cadena2;
 
-    std::cout << "Cadena1 + Cadena2 = " << cadena1.dameCadena();
+    std::cout << "Cadena1 + Cadena2 = " << cadena1.dameCadena(); */
 
     // Ejercicio 4
-    Complejo comp1(5, 6), comp2(3, 4), comp3(2, 1);
+    /* Complejo comp1(5, 6), comp2(3, 4), comp3(2, 1);
 
     Complejo comp4 = comp1 + comp2 - comp3;
 
     printf("\nD = (%.2f + %.2f) + (%.2f + %.2f) - (%.2f + %.2f) = %.2f + %.2f",
            comp1.getParteReal(), comp1.getParteImaginaria(), comp2.getParteReal(), comp2.getParteImaginaria(),
-           comp3.getParteReal(), comp3.getParteImaginaria(), comp4.getParteReal(), comp4.getParteImaginaria());
+           comp3.getParteReal(), comp3.getParteImaginaria(), comp4.getParteReal(), comp4.getParteImaginaria()); */
     
     // Ejercicio propio sobrecargando new
-    int cantidadDeCuadros{};
+    /* int cantidadDeCuadros{};
     std::cout << "\nCantidad de cuadros a dibujar: ";
     std::cin >> cantidadDeCuadros;
 
     Cuadro cuadro;
-    cuadro.dibujar(cantidadDeCuadros);
+    cuadro.dibujar(cantidadDeCuadros); */
 
     // Ejercicio 5
-    A A1(2), A2(3), A3(0);
+    /* A A1(2), A2(3), A3(0);
     std ::cout << "Inicialmente : " << "\n";
     std ::cout << "A1 : " << A1.DameX() << "\n";
     std ::cout << "A2 : " << A2.DameX() << "\n";
@@ -84,20 +84,20 @@ int main() {
     std ::cout << "\n";
     std::cout << "Como sufijo A3 = A2++: " << "\n";
     std ::cout << "A2 : " << A2.DameX() << "\n";
-    std ::cout << "A3 : " << A3.DameX() << "\n";
+    std ::cout << "A3 : " << A3.DameX() << "\n"; */
 
     // Ejercicio 6
-    Quebrado quebrado1(2,3), quebrado2(5,6), quebrado3(0,0);
+    /* Quebrado quebrado1(2,3), quebrado2(5,6), quebrado3(0,0);
     quebrado3 = quebrado1 + quebrado2;
-    cout << quebrado3.DameNum() << "/" << quebrado3.DameDen() << std::endl;
+    cout << quebrado3.DameNum() << "/" << quebrado3.DameDen() << std::endl; */
 
     // Ejercicio 7
-    ClaseA Objeto;
+    /* ClaseA Objeto;
     Objeto.defineA(3);
-    std::cout << P(Objeto) << std::endl;
+    std::cout << P(Objeto) << std::endl; */
 
     // Ejercicio sobrecargando operador -
-    ComplejoTemplate<int> complejoTemplateA(1,3),complejoTemplateB(2,4);
+    /* ComplejoTemplate<int> complejoTemplateA(1,3),complejoTemplateB(2,4);
 	ComplejoTemplate<int> complejoTemplateC;
 	int x,y;
 	cout <<" suma de complejos "<<endl;
@@ -109,10 +109,10 @@ int main() {
 	complejoTemplateC=complejoTemplateA-complejoTemplateB;
 	cout<<complejoTemplateC.getReal()<<"  +  "<<complejoTemplateC.getImg()<<"  i "<< endl;
 	cin.ignore();
-	system("pause");
+	system("pause"); */
 
     // Ejercicio 8
-    B objetoB;
+    /* B objetoB;
 
      std :: cout << "Ingrese datos :" << "\n";
      while (1)
@@ -123,10 +123,10 @@ int main() {
      }
      std :: cout << "Datos leidos :" << "\n";
      for (int i=0; i<objetoB.DameCant(); i++)
-     std :: cout << objetoB[i] << "\n";
+     std :: cout << objetoB[i] << "\n"; */
 
     // Ejercicio sobrecargando operador +
-    Cuadrado cuadrado1,cuadrado2,cuadrado3;
+    /* Cuadrado cuadrado1,cuadrado2,cuadrado3;
 
     cuadrado1.leer();
     cuadrado1.imprimeArea();
@@ -141,7 +141,7 @@ int main() {
     cuadrado3 = cuadrado1 + cuadrado2;
     std::cout << "\nSuma de area y perimetro:" << std::endl;
     cuadrado3.imprimeArea();
-    cuadrado3.imprimePerimetro();
+    cuadrado3.imprimePerimetro(); */
 
     return 0;
 }

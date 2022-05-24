@@ -7,15 +7,15 @@ void Cuadro::dibujar(int cantidadDeCuadros) {
     consola.ubicarCursor(1, 20);
 
     for (int i{}; i < cantidadDeCuadros; i++) {
-        int longitudMensaje = printf("Ingrese coordenada (x, y): ");
+        int longitudMensaje = printf("Ingrese coordenada con el siguiente formato x, y: ");
 
         int x{}, y{};
-        int longitudRespuesta = scanf("%d%*c%*c%d", &x, &y);
+        scanf("%d%*c%*c%d", &x, &y);
 
         Cuadro *cuadro = new (x, y) Cuadro;
 
         consola.ubicarCursor(longitudMensaje, 20);
-        for (int i{}; i < longitudMensaje; i++)
+        for (int i{}; i < 10; i++)
             printf(" ");
 
         consola.ubicarCursor(1, 20);

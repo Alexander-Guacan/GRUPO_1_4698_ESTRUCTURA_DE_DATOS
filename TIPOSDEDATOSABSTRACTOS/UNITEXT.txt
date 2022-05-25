@@ -3,11 +3,12 @@
  * Resolver el siguiente problema usando metodos racionales a/b + c/d = ((a*d) + (c*b)) / b*d
  * Autores: Alexander David Guacán Rivera y Alison Paola Moncayo Achilchisa
  * Fecha de creacion: 11/05/2022
- * Fecha de ultima modificación: 11/05/2022
- * Grupo: 10
- * Github: https://github.com/Alexander-Guacan/GRUPO_10_4698_ESTRUCTURA_DE_DATOS.git
+ * Fecha de ultima modificación: 24/05/2022
+ * Grupo: 1
+ * Github: https://github.com/Alexander-Guacan/GRUPO_1_4698_ESTRUCTURA_DE_DATOS.git
  */
 
+#include <iostream>
 #include "CProceso.h"
 #include "Impresion.h"
 #include "Operacion.h"
@@ -22,12 +23,18 @@ int main() {
 
     obj3 = operadorDeFracciones.suma(*obj1, *obj2);
 
-    impresionDeFracciones.mostrarEnConsola(*obj1);
+    std::cout << " ---------------- OPERACIONES USANDO FRACCIONES --------------" << std::endl<< std::endl;
+    std::cout << "a = 10 --- b = 3 --- c = 7 --- d = 8" << std::endl << std::endl;
+    std::cout << "FRACCION a/b: " << std::endl;
+    impresionDeFracciones.mostrarEnConsola(*obj1) ;
+    std::cout << "FRACCION c/d: " << std::endl;
     impresionDeFracciones.mostrarEnConsola(*obj2);
+    std::cout << "" << std::endl;
+    std::cout << "Operacion de racionales ((a*d) + (c*b)) / b*d : " << std::endl;
     impresionDeFracciones.mostrarEnConsola(obj3);
-
     return 0;
 }
+
 
 #ifndef CPROCESO_H
 #define CPROCESO_H
@@ -45,6 +52,8 @@ class CProceso {
 };
 
 #endif
+
+
 
 #include "CProceso.h"
 #include <iostream>
@@ -70,6 +79,7 @@ int CProceso::getDenominador() {
     return denominador;
 }
 
+
 #ifndef IMPRESION_H
 #define IMPRESION_H
 #include "CProceso.h"
@@ -82,12 +92,13 @@ class Impresion {
 
 #endif
 
+
 #include "CProceso.h"
 #include "Impresion.h"
 #include <iostream>
 
 void Impresion::mostrarEnConsola(CProceso obj) {
-    std::cout << obj.getNumerador() << "/" << obj.getNumerador() << std::endl;
+    std::cout << obj.getNumerador() << "/" << obj.getDenominador() << std::endl;
 }
 
 
@@ -104,6 +115,7 @@ class Operacion{
 
 #endif
 
+
 #include "Operacion.h"
 
 CProceso Operacion::suma(CProceso obj1, CProceso obj2) {
@@ -117,4 +129,14 @@ CProceso Operacion::suma(CProceso obj1, CProceso obj2) {
     resultado.setDenominador(b*d);
     return resultado;
 }
+
+
+
+
+
+
+
+
+
+
 

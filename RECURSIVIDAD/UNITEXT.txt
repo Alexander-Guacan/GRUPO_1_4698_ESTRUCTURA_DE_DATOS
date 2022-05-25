@@ -1,0 +1,150 @@
+/*
+ * UNIVERSIDAD DE LAS FUERZAS ARMADAS - ESPE
+ * Crear un programa que permita pasar de un numero decimal a numero binario usando punteros
+ * Crear un programa que permita calcular el minimo comun multiplo y el maximo comun divisor de 3 terminos
+ * sin crear nuevas variables dentro de las funciones
+ * Autores: Alexander David Guacán Rivera y Alison Paola Moncayo Achilchisa
+ * Fecha de creacion: 22/05/2022
+ * Fecha de ultima modificación: 24/05/2022
+ * Grupo: 10
+ * Github: https://github.com/Alexander-Guacan/GRUPO_10_4698_ESTRUCTURA_DE_DATOS.git
+ */
+
+#include <iostream>
+#include "TransformarDecimalABinario.h"
+#include "Matematica.h"
+
+int main() {
+
+    Matematica matematica;
+    TransformarDecimalABinario DecimalABinario;
+
+    std :: cout << "TRANSFORMAR DE DECIMAL A BINARIO" << std :: endl;
+    std::cout << "Ingrese un numero: " << std :: endl ;
+    int valor = 0;
+    std :: cin >> valor;
+    char * Transformacion = new char [10]{};
+    DecimalABinario.decimalABinario(Transformacion,valor);
+    std :: cout << "Resultado: " << Transformacion << std::endl  <<std :: endl;
+
+    std :: cout <<"MINIMO COMUN MULTIPLO Y MAXIMO COMUN DIVISOR" <<std :: endl;
+    int valor1, valor2, valor3;
+    std :: cout <<"Ingrese valor1 : " <<std ::endl;
+    std :: cin >> valor1;
+    std :: cout <<"Ingrese valor2 : " <<std ::endl;
+    std :: cin >> valor2;
+    std :: cout <<"Ingrese valor3 : " <<std ::endl;
+    std :: cin >> valor3;
+
+    int mcm = matematica.minimoComunMultiplo(valor1,valor2,valor3,2);
+    int mcd = matematica.maximoComunDivisor(valor1,valor2,valor3,2);
+
+    std :: cout << "Resultado Minimo Comun Multiplo: " << mcm << std :: endl << std :: endl;
+    std :: cout << "Resultado Maximo Comun Divisor: " << mcd << std :: endl << std :: endl;
+
+    return 0;
+}
+
+
+#ifndef MATEMATICA_H
+#define MATEMATICA_H
+
+class Matematica {
+    
+    public:
+        int minimoComunMultiplo(int, int, int, int);
+        int maximoComunDivisor(int, int, int, int);
+        int siguienteNumeroPrimo(int);
+};
+
+#endif
+
+
+#include "Matematica.h"
+
+int Matematica::siguienteNumeroPrimo(int numeroPrimo) {
+    bool esNumeroPrimo = false;
+    numeroPrimo++;
+
+    while (!esNumeroPrimo) {
+        int iterador{ 1 };
+        int divisores{};
+        while (divisores <= 2 && iterador <= numeroPrimo) {
+            if (numeroPrimo % iterador == 0)
+                divisores++;
+
+            iterador++;
+        }
+
+        esNumeroPrimo = divisores == 2;
+
+        if (!esNumeroPrimo)
+            numeroPrimo++;
+    }
+
+    return numeroPrimo;
+}
+
+int Matematica::minimoComunMultiplo(int valor1, int valor2, int valor3, int numeroPrimo) {
+
+    if (valor1 == 1 && valor2 == 1 && valor3 == 1) {
+        return 1;
+    }
+    else if (valor1 % numeroPrimo == 0 || valor2 % numeroPrimo == 0 || valor3 % numeroPrimo == 0) {
+        if (valor1 % numeroPrimo == 0) valor1 /= numeroPrimo;
+        if (valor2 % numeroPrimo == 0) valor2 /= numeroPrimo;
+        if (valor3 % numeroPrimo == 0) valor3 /= numeroPrimo;
+
+        return numeroPrimo * minimoComunMultiplo(valor1, valor2, valor3, numeroPrimo);
+    } else {
+        return minimoComunMultiplo(valor1, valor2, valor3, siguienteNumeroPrimo(numeroPrimo));
+    }
+}
+
+int Matematica::maximoComunDivisor(int valor1, int valor2, int valor3, int numeroPrimo) {
+    if (valor1 == 1 && valor2 == 1 && valor3 == 1) {
+        return 1;
+    } else if (valor1 % numeroPrimo == 0 && valor2 % numeroPrimo == 0 && valor3 % numeroPrimo == 0) {
+        valor1 /= numeroPrimo;
+        valor2 /= numeroPrimo;
+        valor3 /= numeroPrimo;
+
+        return numeroPrimo * maximoComunDivisor(valor1, valor2, valor3, numeroPrimo);
+    } else if (valor1 % numeroPrimo == 0 || valor2 % numeroPrimo == 0 || valor3 % numeroPrimo == 0) {
+        if (valor1 % numeroPrimo == 0) valor1 /= numeroPrimo;
+        if (valor2 % numeroPrimo == 0) valor2 /= numeroPrimo;
+        if (valor3 % numeroPrimo == 0) valor3 /= numeroPrimo;
+
+        return maximoComunDivisor(valor1, valor2, valor3, numeroPrimo);
+    } else {
+        return maximoComunDivisor(valor1, valor2, valor3, siguienteNumeroPrimo(numeroPrimo));
+    }
+}
+
+
+#ifndef DECIMALABINARIO_H
+#define DECIMALABINARIO_H
+
+class TransformarDecimalABinario {
+    
+    public:
+        char *decimalABinario(char* destino, int valor);
+};
+
+#endif 
+
+
+#include "TransformarDecimalABinario.h"
+#include <cstdio>
+#include <conio.h>
+
+char *TransformarDecimalABinario ::decimalABinario(char* destino, int valor) {
+    if (valor >= 1) {
+        destino = decimalABinario(destino, valor / 2);
+
+        *destino = (valor % 2) + '0';
+        destino++;
+    }
+
+    return destino;
+}

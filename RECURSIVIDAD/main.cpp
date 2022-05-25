@@ -5,7 +5,7 @@
  * sin crear nuevas variables dentro de las funciones
  * Autores: Alexander David Guacán Rivera y Alison Paola Moncayo Achilchisa
  * Fecha de creacion: 22/05/2022
- * Fecha de ultima modificación: 24/05/2022
+ * Fecha de ultima modificación: 25/05/2022
  * Grupo: 1
  * Github: https://github.com/Alexander-Guacan/GRUPO_1_4698_ESTRUCTURA_DE_DATOS.git
  */
@@ -36,8 +36,8 @@ int main() {
     std :: cout <<"Ingrese valor3 : " <<std ::endl;
     std :: cin >> valor3;
 
-    int mcm = matematica.minimoComunMultiplo(valor1,valor2,valor3,2);
-    int mcd = matematica.maximoComunDivisor(valor1,valor2,valor3,2);
+    int mcm = matematica.minimoComunMultiplo(valor1, valor2, valor3);
+    int mcd = matematica.maximoComunDivisor(valor1, valor2, valor3);
 
     std :: cout << "Resultado Minimo Comun Multiplo: " << mcm << std :: endl << std :: endl;
     std :: cout << "Resultado Maximo Comun Divisor: " << mcd << std :: endl << std :: endl;

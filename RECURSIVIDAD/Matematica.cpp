@@ -1,14 +1,14 @@
 #include "Matematica.h"
 
-int Matematica::siguienteNumeroPrimo(int numeroPrimo) {
+int Matematica::siguienteNumeroPrimo(int numeroPrimoActual) {
     bool esNumeroPrimo = false;
-    numeroPrimo++;
+    numeroPrimoActual++;
 
     while (!esNumeroPrimo) {
         int iterador{ 1 };
         int divisores{};
-        while (divisores <= 2 && iterador <= numeroPrimo) {
-            if (numeroPrimo % iterador == 0)
+        while (divisores <= 2 && iterador <= numeroPrimoActual) {
+            if (numeroPrimoActual % iterador == 0)
                 divisores++;
 
             iterador++;
@@ -17,44 +17,51 @@ int Matematica::siguienteNumeroPrimo(int numeroPrimo) {
         esNumeroPrimo = divisores == 2;
 
         if (!esNumeroPrimo)
-            numeroPrimo++;
+            numeroPrimoActual++;
     }
 
-    return numeroPrimo;
+    return numeroPrimoActual;
 }
 
-int Matematica::minimoComunMultiplo(int valor1, int valor2, int valor3, int numeroPrimo) {
+int Matematica::minimoComunMultiplo(int valor1, int valor2, int valor3) {
 
     if (valor1 == 1 && valor2 == 1 && valor3 == 1) {
+        this->numeroPrimo = 2;
         return 1;
     }
-    else if (valor1 % numeroPrimo == 0 || valor2 % numeroPrimo == 0 || valor3 % numeroPrimo == 0) {
-        if (valor1 % numeroPrimo == 0) valor1 /= numeroPrimo;
-        if (valor2 % numeroPrimo == 0) valor2 /= numeroPrimo;
-        if (valor3 % numeroPrimo == 0) valor3 /= numeroPrimo;
+    else if (valor1 % this->numeroPrimo == 0 || valor2 % this->numeroPrimo == 0 || valor3 % this->numeroPrimo == 0) {
+        if (valor1 % this->numeroPrimo == 0) valor1 /= this->numeroPrimo;
+        if (valor2 % this->numeroPrimo == 0) valor2 /= this->numeroPrimo;
+        if (valor3 % this->numeroPrimo == 0) valor3 /= this->numeroPrimo;
 
-        return numeroPrimo * minimoComunMultiplo(valor1, valor2, valor3, numeroPrimo);
+        return this->numeroPrimo * minimoComunMultiplo(valor1, valor2, valor3);
     } else {
-        return minimoComunMultiplo(valor1, valor2, valor3, siguienteNumeroPrimo(numeroPrimo));
+        this->numeroPrimo = siguienteNumeroPrimo(this->numeroPrimo);
+        return minimoComunMultiplo(valor1, valor2, valor3);
     }
 }
 
-int Matematica::maximoComunDivisor(int valor1, int valor2, int valor3, int numeroPrimo) {
+int Matematica::maximoComunDivisor(int valor1, int valor2, int valor3) {
     if (valor1 == 1 && valor2 == 1 && valor3 == 1) {
+        this->numeroPrimo = 2;
+
         return 1;
-    } else if (valor1 % numeroPrimo == 0 && valor2 % numeroPrimo == 0 && valor3 % numeroPrimo == 0) {
-        valor1 /= numeroPrimo;
-        valor2 /= numeroPrimo;
-        valor3 /= numeroPrimo;
+    } else if (valor1 % this->numeroPrimo == 0 && valor2 % this->numeroPrimo == 0 && valor3 % this->numeroPrimo == 0) {
+        valor1 /= this->numeroPrimo;
+        valor2 /= this->numeroPrimo;
+        valor3 /= this->numeroPrimo;
 
-        return numeroPrimo * maximoComunDivisor(valor1, valor2, valor3, numeroPrimo);
-    } else if (valor1 % numeroPrimo == 0 || valor2 % numeroPrimo == 0 || valor3 % numeroPrimo == 0) {
-        if (valor1 % numeroPrimo == 0) valor1 /= numeroPrimo;
-        if (valor2 % numeroPrimo == 0) valor2 /= numeroPrimo;
-        if (valor3 % numeroPrimo == 0) valor3 /= numeroPrimo;
+        return this->numeroPrimo * maximoComunDivisor(valor1, valor2, valor3);
+    } else if (valor1 % this->numeroPrimo == 0 || valor2 % this->numeroPrimo == 0 || valor3 % this->numeroPrimo == 0) {
+        if (valor1 % this->numeroPrimo == 0) valor1 /= this->numeroPrimo;
+        if (valor2 % this->numeroPrimo == 0) valor2 /= this->numeroPrimo;
+        if (valor3 % this->numeroPrimo == 0) valor3 /= this->numeroPrimo;
 
-        return maximoComunDivisor(valor1, valor2, valor3, numeroPrimo);
+        return maximoComunDivisor(valor1, valor2, valor3);
     } else {
-        return maximoComunDivisor(valor1, valor2, valor3, siguienteNumeroPrimo(numeroPrimo));
+
+        this->numeroPrimo = siguienteNumeroPrimo(this->numeroPrimo);
+
+        return maximoComunDivisor(valor1, valor2, valor3);
     }
 }

@@ -3,7 +3,7 @@
  * Copiar ejercicios de operadores sobrecargados y por cada integrante del grupo generar un propio operador sobrecargado
  * Autor: Alexander David Guacán Rivera, Alison Paola Moncayo Achilchisa, Génesis Isabel Calapaqui Portilla, Ariel Alexander Jara Caiza
  * Fecha de creacion: 17/05/2022
- * Fecha de ultima modificación: 17/05/2022
+ * Fecha de ultima modificación: 24/05/2022
  * Grupo: 1 y 17
  * Github: https://github.com/Alexander-Guacan/GRUPO_1_4698_ESTRUCTURA_DE_DATOS.git / https://github.com/Ariel2006/G17-ESTRUCTURA-DE-DATOS
  */
@@ -185,8 +185,8 @@ int main() {
 
     B objetoB;
 
-    std::cout << "Ingrese numeros (ingrese 0 para detener el ingreso):"
-               << "\n";
+    std::cout << "Ingrese numeros (ingrese 0 para detener el ingreso):\n";
+
     while (1)
     {
         int p;

@@ -1,0 +1,366 @@
+/*
+ * UNIVERSIDAD DE LAS FUERZAS ARMADAS - ESPE
+ * Generar clases que permitan ingresar numeros reales y enteros y que los permita transformar a entero, real o char
+ * Autor: Alexander David Guacán Rivera, Alison Paola Moncayo Achilchisa
+ * Fecha de creacion: 11/05/2022
+ * Fecha de ultima modificación: 24/05/2022
+ * Grupo: 1
+ * Github: https://github.com/Alexander-Guacan/GRUPO_1_4698_ESTRUCTURA_DE_DATOS.git
+ */
+
+#include "Menu.h"
+#include "ValidadorAscii.h"
+#include "Input.h"
+#include "CastToInt.h"
+#include "CastToFloat.h"
+#include <iostream>
+#include <cstdio>
+#include <string.h>
+
+int main() {
+    Input *input = new Input();
+    printf("\nTRANSFORMAR NUMEROS A ENTERO Y/O REAL\n");
+    char* valorReal = input->ingresarDatoReal("Ingrese un numero real: ");
+    char* valorEntero = input->ingresarDatoEntero("\nIngrese un numero entero: ");
+
+    CastToInt *castToInt = new CastToInt();
+    CastToFloat *castToFloat = new CastToFloat();
+
+    printf("\n\nValores transformados a entero: %d, %d", castToInt->transform(valorReal), castToInt->transform(valorEntero));
+    printf("\nValores transformados a real: %.4f, %.4f", castToFloat->transform(valorReal), castToFloat->transform(valorEntero));
+
+    printf("\n\nTRANSFORMAR NUMERO A ENTERO, REAL O CHAR\n");
+
+    Menu *menu = new Menu();
+
+    menu->printMenu();
+    
+    return 0;
+}
+
+#ifndef INPUT_H
+#define INPUT_H
+
+class Input {
+    
+    public:
+        char *ingresarDatoEntero(const char *mensaje);
+        char *ingresarDatoReal(const char *mensaje);
+};
+
+#endif
+
+#include "Input.h"
+#include <cstdio>
+#include <conio.h>
+
+char *Input::ingresarDatoEntero(const char* mensaje) {
+    const int ENTER_KEY = 13;
+    const int BACKSPACE_KEY = 8;
+    const int DELETE_KEY = 127;
+
+    printf("%s", mensaje);
+
+    char *dato = new char[10];
+    char caracterIngresado;
+
+    int i{};
+    while ((caracterIngresado = getch()) != ENTER_KEY) {
+        if (caracterIngresado >= '0' && caracterIngresado <= '9') {
+            printf("%c", caracterIngresado);
+            dato[i++] = caracterIngresado;
+        } else if (caracterIngresado == BACKSPACE_KEY) {
+            if (i > 0) {
+                i--;
+                printf("\b \b");
+            }
+        }
+    }
+
+    dato[i] = '\0';
+
+    return dato;
+}
+
+char *Input::ingresarDatoReal(const char *mensaje) {
+    const int ENTER_KEY = 13;
+    const int BACKSPACE_KEY = 8;
+    const int DELETE_KEY = 127;
+
+    printf("%s", mensaje);
+
+    char *dato = new char[10];
+    char caracterIngresado;
+
+    int i{};
+    bool haIngresadoPunto{false};
+    while ((caracterIngresado = getch()) != ENTER_KEY) {
+        if (caracterIngresado >= '0' && caracterIngresado <= '9') {
+            printf("%c", caracterIngresado);
+            dato[i++] = caracterIngresado;
+        } else if(caracterIngresado == '.' && !haIngresadoPunto) {
+            printf("%c", caracterIngresado);
+            dato[i++] = caracterIngresado;
+            haIngresadoPunto = true;
+        } else if (caracterIngresado == BACKSPACE_KEY) {
+            if (i > 0) {
+                i--;
+                if (dato[i] == '.') {
+                    haIngresadoPunto = false;
+                }
+                printf("\b \b");
+            }
+        }
+    }
+
+    dato[i] = '\0';
+
+    return dato;
+}
+
+#ifndef MENU_H
+#define MENU_H
+
+class Menu {
+    
+    public:
+        char* inputData();
+        void printMenu();
+};
+
+#endif
+
+#include "Menu.h"
+#include "ValidadorNumero.h"
+#include "ValidadorAscii.h"
+#include "CastToInt.h"
+#include "CastToFloat.h"
+#include "CastToChar.h"
+#include <iostream>
+#include <cstdlib>
+#include <conio.h>
+
+char* Menu::inputData() {
+    char *input = new char[10];
+    std::cout << "\nIngrese un numero: ";
+    std::cin >> input;
+
+    return input;
+}
+
+void Menu::printMenu() {
+
+    Validador *validadorNumero = new ValidadorNumero();
+    Validador *validadorAscii = new ValidadorAscii();
+    CastToInt *castToInt = new CastToInt();
+    CastToFloat *castToFloat = new CastToFloat();
+    CastToChar *castToChar = new CastToChar();
+
+    bool hasPressCorrectKey{false};
+
+    do {
+
+        char *input = inputData();
+
+        system("cls");
+
+        std::cout << "Elija el tipo de dato a convertir:" << std::endl
+                << "1) Entero" << std::endl
+                << "2) Real" << std::endl
+                << "3) Caracter" << std::endl
+                << "Presione una opcion" << std::endl;
+
+        switch(getch()) {
+            case '1':
+
+                if (validadorNumero->esValido(input)) {
+                    std::cout << "\nValor transformado a entero: " << castToInt->transform(input) << '\n';
+                    hasPressCorrectKey = true;
+                } else {
+                    std::cout << "\nNo se puede convertir a entero\n";
+                }
+
+                system("pause");
+
+                break;
+
+            case '2':
+                if (validadorNumero->esValido(input)) {
+                    printf("\nValor transformado a real: %.4f", castToFloat->transform(input)) << '\n';
+                    hasPressCorrectKey = true;
+                } else {
+                    std::cout << "\nNo se puede convertir a real\n";
+                }
+
+                system("pause");
+
+                break;
+
+            case '3':
+                if (validadorAscii->esValido(input)) {
+                    std::cout << "Caracter ascii imprimible: " << castToChar->transform(input) << '\n';
+                    hasPressCorrectKey = true;
+                } else {
+                    std::cout << "No se puede transformar a caracter ascii imprimible\n";
+                }
+
+                system("pause");
+
+                break;
+        }
+        
+    } while (!hasPressCorrectKey);
+
+    
+}
+
+#ifndef CAST_H
+#define CAST_H
+
+template <typename T> class Cast {
+    
+    public:
+        virtual T transform(char *input) = 0;
+};
+
+#endif
+
+#ifndef CAST_TO_CHAR_H
+#define CAST_TO_CHAR_H
+
+#include "Cast.h"
+
+class CastToChar : public Cast<char> {
+    
+    public:
+        char transform(char *);
+};
+
+#endif
+
+#include "CastToChar.h"
+#include <string>
+
+char CastToChar::transform(char *input) {
+    return std::atoi(input);
+}
+
+#ifndef CAST_TO_FLOAT_H
+#define CAST_TO_FLOAT_H
+
+#include "Cast.h"
+
+class CastToFloat : public Cast<float> {
+    
+    public:
+        float transform(char* input);
+    
+};
+
+#endif
+
+#include "CastToFloat.h"
+#include <string>
+
+float CastToFloat::transform(char* input) {
+    return std::atof(input);
+}
+
+#ifndef CAST_TO_INT_H
+#define CAST_TO_INT_H
+
+#include "Cast.h"
+
+class CastToInt : public Cast<int> {
+    
+    public:
+        int transform(char* input);
+    
+};
+
+#endif
+
+#include "CastToInt.h"
+#include <string>
+
+int CastToInt::transform(char* input) {
+    return std::atoi(input);
+}
+
+#ifndef VALIDATE_H
+#define VALIDATE_H
+
+#include <string>
+
+class Validador {
+    
+    public:
+        virtual bool esValido(char*) = 0;
+};
+
+#endif
+
+#ifndef VALIDADOR_ASCII_H
+#define VALIDADOR_ASCII_H
+
+#include "Validador.h"
+
+class ValidadorAscii : public Validador {
+    
+    public:
+        bool esValido(char *);
+};
+
+#endif
+
+#include "ValidadorAscii.h"
+#include <cstring>
+
+bool ValidadorAscii::esValido(char *input) {
+    int i{};
+    bool esNumero{true};
+
+    while (i < std::strlen(input) && esNumero) {
+        esNumero = input[i] >= '0' && input[i] <= '9';
+        i++;
+    }
+
+    bool esCaracterImprimible{false};
+    if (esNumero) esCaracterImprimible = std::atoi(input) >= 33 && std::atoi(input) <= 254 && std::atoi(input) != 127;
+
+    return esNumero && esCaracterImprimible;
+}
+
+#ifndef VALIDADOR_NUMERO_H
+#define VALIDADOR_NUMERO_H
+
+#include "Validador.h"
+
+class ValidadorNumero : public Validador {
+
+    public:
+        bool esValido(char*);
+};
+
+#endif
+
+#include "ValidadorNumero.h"
+#include <cstring>
+#include <iostream>
+
+bool ValidadorNumero::esValido(char *input) {
+    int i{};
+    bool esNumero{true};
+    int cantidadDePuntos{};
+    while (i < std::strlen(input) && esNumero && cantidadDePuntos <= 1) {
+        esNumero = input[i] >= '0' && input[i] <= '9' || input[i] == '.';
+        
+        if (input[i] == '.') {
+            cantidadDePuntos++;
+        }
+        
+        i++;
+    }
+
+    return esNumero && cantidadDePuntos <= 1;
+}

@@ -25,123 +25,208 @@
 
 int main() {
     // Ejercicio 1
-    Reloj R(10,59,56);
-    for (int i=0; i<10; i++, ++R)
-    std::cout <<std::setw(4)<< R.Hora() <<std::setw(4)<< R.Minuto() 
-         <<std::setw(4)<< R.Segundo() <<std:: endl;
+    system("cls");
+    std::cout << "\n EJERCICIO 1: RELOJ\n";
+
+    Reloj R(10, 59, 56);
+
+    for (int i = 0; i < 10; i++, ++R)
+        std::cout << std::setw(4) << R.Hora() << std::setw(4) << R.Minuto()
+                  << std::setw(4) << R.Segundo() << std::endl;
+
+    system("pause");
 
     // Ejercicio 2
-    /* Vector V1(10,20), V2(5,5);
-     float p;
+    system("cls");
+    std::cout << "\n EJERCICIO 2: PRODUCTO PUNTO DE VECTORES\n";
 
-     p = V1*V2;
+    Vector V1(10, 20), V2(5, 5);
+    float p = V1 * V2;
 
-    std::cout << "P = " << p<< std::endl; */
+    std::cout << "(" << V1.DameX() << ", " << V1.DameY() << ") * "
+              << "(" << V2.DameX() << ", " << V2.DameY() << ")"
+              << " = " << p << std::endl;
+
+    system("pause");
 
     // Ejercicio propio sobrecargando operador ->
-    /* Persona obj("Genesis",32);
-	obj.imprimirDatos();
-	obj->imprimirDatos(); */
+    system("cls");
+    std::cout << "\n EJERCICIO DEL GRUPO SOBRECARGANDO OPERADOR ->\n";
+    std::cout << "\nInstancia de objeto: Persona obj('Genesis', 32)\n";
+
+    Persona obj("Genesis", 32);
+
+    std::cout << "\nAccediendo a metodo: obj.imprimirDatos()\n";
+
+    obj.imprimirDatos();
+
+    std::cout << "\nAccediendo a metodo: obj->imprimirDatos()\n";
+
+    obj->imprimirDatos();
+
+    std::cout << '\n';
+    system("pause");
 
     // Ejercicio 3
-    /* char mensaje1[]{"Hola "}, mensaje2[]{"Juan"};
+    system("cls");
+    std::cout << "\n EJERCICIO 3: Concatenacion de cadenas\n";
+
+    char mensaje1[]{"Hola "}, mensaje2[]{"Juan"};
     Cadena cadena1(mensaje1), cadena2(mensaje2);
 
     cadena1 + cadena2;
 
-    std::cout << "Cadena1 + Cadena2 = " << cadena1.dameCadena(); */
+    std::cout << "\nCadena1{'Hola '} + Cadena2{'Juan'} = " << cadena1.dameCadena() << '\n';
+
+    system("pause");
 
     // Ejercicio 4
-    /* Complejo comp1(5, 6), comp2(3, 4), comp3(2, 1);
+    system("cls");
+    std::cout << "\n EJERCICIO 4: Sumatoria de numeros complejos\n";
+
+    Complejo comp1(5, 6), comp2(3, 4), comp3(2, 1);
 
     Complejo comp4 = comp1 + comp2 - comp3;
 
-    printf("\nD = (%.2f + %.2f) + (%.2f + %.2f) - (%.2f + %.2f) = %.2f + %.2f",
+    printf("\n(%.2f + %.2fi) + (%.2f + %.2fi) - (%.2f + %.2fi) = %.2f + %.2fi\n",
            comp1.getParteReal(), comp1.getParteImaginaria(), comp2.getParteReal(), comp2.getParteImaginaria(),
-           comp3.getParteReal(), comp3.getParteImaginaria(), comp4.getParteReal(), comp4.getParteImaginaria()); */
-    
+           comp3.getParteReal(), comp3.getParteImaginaria(), comp4.getParteReal(), comp4.getParteImaginaria());
+
+    system("pause");
+
     // Ejercicio propio sobrecargando new
-    /* int cantidadDeCuadros{};
-    std::cout << "\nCantidad de cuadros a dibujar: ";
+    system("cls");
+    std::cout << "\n EJERCICIO DEL GRUPO SOBRECARGANDO OPERADOR new\n";
+
+    std::cout << "\nIngrese cantidad de cuadros a dibujar: ";
+
+    int cantidadDeCuadros{};
     std::cin >> cantidadDeCuadros;
 
     Cuadro cuadro;
-    cuadro.dibujar(cantidadDeCuadros); */
+    cuadro.dibujar(cantidadDeCuadros);
+
+    std::cout << '\n';
+    system("pause");
 
     // Ejercicio 5
-    /* A A1(2), A2(3), A3(0);
-    std ::cout << "Inicialmente : " << "\n";
-    std ::cout << "A1 : " << A1.DameX() << "\n";
-    std ::cout << "A2 : " << A2.DameX() << "\n";
-    std ::cout << "\n";
+    system("cls");
+    std::cout << "\n EJERCICIO 5: sobrecarga de operador ++ como prefijo y sufijo\n";
+
+    A A1(2), A2(3), A3(0);
+
+    std::cout << "Inicialmente :\n"
+              << "A1 : " << A1.DameX() << "\n"
+              << "A2 : " << A2.DameX() << "\n\n";
 
     A3 = ++A1;
-    std ::cout << "Como prefijo A3 = ++A1 : " << "\n";
-    std ::cout << "A1 : " << A1.DameX() << "\n";
-    std ::cout << "A3 : " << A3.DameX() << "\n";
+    std::cout << "Como prefijo A3 = ++A1 :\n"
+              << "A1 : " << A1.DameX() << "\n"
+              << "A3 : " << A3.DameX() << "\n\n";
 
     A3 = A2++;
-    std ::cout << "\n";
-    std::cout << "Como sufijo A3 = A2++: " << "\n";
-    std ::cout << "A2 : " << A2.DameX() << "\n";
-    std ::cout << "A3 : " << A3.DameX() << "\n"; */
+    std::cout << "Como sufijo A3 = A2++:\n"
+              << "A2 : " << A2.DameX() << "\n"
+              << "A3 : " << A3.DameX() << "\n\n";
+    system("pause");
 
     // Ejercicio 6
-    /* Quebrado quebrado1(2,3), quebrado2(5,6), quebrado3(0,0);
+    system("cls");
+    std::cout << "\n EJERCICIO 6: sumatoria de fracciones\n";
+    Quebrado quebrado1(2, 3), quebrado2(5, 6), quebrado3(0, 0);
     quebrado3 = quebrado1 + quebrado2;
-    cout << quebrado3.DameNum() << "/" << quebrado3.DameDen() << std::endl; */
+    std::cout << quebrado1.DameNum() << "/" << quebrado1.DameDen() << " + "
+              << quebrado2.DameNum() << "/" << quebrado2.DameDen() << " = "
+              << quebrado3.DameNum() << "/" << quebrado3.DameDen() << std::endl;
+    system("pause");
 
     // Ejercicio 7
-    /* ClaseA Objeto;
+    system("cls");
+    std::cout << "\n EJERCICIO 7: uso de funcion friend\n";
+
+    ClaseA Objeto;
     Objeto.defineA(3);
-    std::cout << P(Objeto) << std::endl; */
+
+    std::cout << P(Objeto) << std::endl;
+
+    system("pause");
 
     // Ejercicio sobrecargando operador -
-    /* ComplejoTemplate<int> complejoTemplateA(1,3),complejoTemplateB(2,4);
-	ComplejoTemplate<int> complejoTemplateC;
-	int x,y;
-	cout <<" suma de complejos "<<endl;
-	complejoTemplateC=complejoTemplateA+complejoTemplateB;
-	cout<<complejoTemplateC.getReal()<<"  +  "<<complejoTemplateC.getImg()<<"  i "<< endl;
-	complejoTemplateC.setImg(0);
-	complejoTemplateC.setReal(0);
-	cout <<" resta de complejos "<<endl;
-	complejoTemplateC=complejoTemplateA-complejoTemplateB;
-	cout<<complejoTemplateC.getReal()<<"  +  "<<complejoTemplateC.getImg()<<"  i "<< endl;
-	cin.ignore();
-	system("pause"); */
+    system("cls");
+    std::cout << "\n EJERCICIO DEL GRUPO SOBRECARGANDO OPERADOR - y +\n";
+
+    ComplejoTemplate<int> complejoTemplateA(1, 3), complejoTemplateB(2, 4);
+    ComplejoTemplate<int> complejoTemplateC;
+
+    std::cout << "Suma de complejos " << std::endl;
+
+    complejoTemplateC = complejoTemplateA + complejoTemplateB;
+
+    std::cout << "(" << complejoTemplateA.getReal() << " + " << complejoTemplateA.getImg() << "i)"
+              << " + (" << complejoTemplateB.getReal() << " + " << complejoTemplateB.getImg() << "i) = "
+              << "(" << complejoTemplateC.getReal() << " + " << complejoTemplateC.getImg() << " i)" << std::endl;
+
+    complejoTemplateC.setImg(0);
+    complejoTemplateC.setReal(0);
+
+    std::cout << "Resta de complejos " << std::endl;
+
+    complejoTemplateC = complejoTemplateA - complejoTemplateB;
+
+    std::cout << "(" << complejoTemplateA.getReal() << " + " << complejoTemplateA.getImg() << "i)"
+              << " - (" << complejoTemplateB.getReal() << " + " << complejoTemplateB.getImg() << "i) = "
+              << "(" << complejoTemplateC.getReal() << " + " << complejoTemplateC.getImg() << " i)" << "\n\n";
+
+    system("pause");
 
     // Ejercicio 8
-    /* B objetoB;
+    system("cls");
+    std::cout << "\n EJERCICIO 8\n";
 
-     std :: cout << "Ingrese datos :" << "\n";
-     while (1)
-     {    int p;
-          std :: cin >> p;
-          if (p<=0) break;
-          objetoB.Ingresa(p);
-     }
-     std :: cout << "Datos leidos :" << "\n";
-     for (int i=0; i<objetoB.DameCant(); i++)
-     std :: cout << objetoB[i] << "\n"; */
+    B objetoB;
+
+    std::cout << "Ingrese numeros (ingrese 0 para detener el ingreso):"
+               << "\n";
+    while (1)
+    {
+        int p;
+        std ::cin >> p;
+        if (p <= 0)
+            break;
+        objetoB.Ingresa(p);
+    }
+
+    std ::cout << "Datos leidos :\n";
+
+    for (int i = 0; i < objetoB.DameCant(); i++)
+        std::cout << objetoB[i] << "\n";
+
+    system("pause");
 
     // Ejercicio sobrecargando operador +
-    /* Cuadrado cuadrado1,cuadrado2,cuadrado3;
+    system("cls");
+    std::cout << "\n EJERCICIO DEL GRUPO SOBRECARGANDO OPERADOR +\n";
+    Cuadrado cuadrado1, cuadrado2, cuadrado3;
 
     cuadrado1.leer();
     cuadrado1.imprimeArea();
     cuadrado1.imprimePerimetro();
 
-    std::cout << std::endl << std::endl;
+    std::cout << "\n";
 
     cuadrado2.leer();
     cuadrado2.imprimeArea();
     cuadrado2.imprimePerimetro();
 
     cuadrado3 = cuadrado1 + cuadrado2;
-    std::cout << "\nSuma de area y perimetro:" << std::endl;
+
+    std::cout << "\nSuma de area y perimetro:\n\n";
     cuadrado3.imprimeArea();
-    cuadrado3.imprimePerimetro(); */
+    cuadrado3.imprimePerimetro();
+
+    std::cout << '\n';
+
+    system("pause");
 
     return 0;
 }

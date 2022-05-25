@@ -1,3 +1,13 @@
+/*
+ * UNIVERSIDAD DE LAS FUERZAS ARMADAS - ESPE
+ * Generar clases que permitan ingresar numeros reales y enteros y que los permita transformar a entero, real o char
+ * Autor: Alexander David Guacán Rivera, Alison Paola Moncayo Achilchisa
+ * Fecha de creacion: 11/05/2022
+ * Fecha de ultima modificación: 24/05/2022
+ * Grupo: 1
+ * Github: https://github.com/Alexander-Guacan/GRUPO_1_4698_ESTRUCTURA_DE_DATOS.git
+ */
+
 #include "Menu.h"
 #include "ValidadorAscii.h"
 #include "Input.h"

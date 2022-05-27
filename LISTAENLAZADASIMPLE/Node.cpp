@@ -1,5 +1,9 @@
 #include "Node.h"
 
+Node::Node(int initialValue) {
+    this->value = initialValue;
+}
+
 void Node::setValue(int newValue) {
     this->value = newValue;
 }

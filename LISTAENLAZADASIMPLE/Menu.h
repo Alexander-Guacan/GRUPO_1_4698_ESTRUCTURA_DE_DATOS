@@ -3,8 +3,7 @@
 
 class Menu {
     public:
-    void start();
-
+        void start();
 };
 
 #endif

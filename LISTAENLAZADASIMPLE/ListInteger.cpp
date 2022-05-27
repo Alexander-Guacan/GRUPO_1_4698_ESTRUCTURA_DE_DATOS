@@ -109,11 +109,11 @@ void ListInteger::search(int value) {
 
     if (!hasFoundValue){
 
-        printf("\nNo se encontro el valor \n");
+        printf("\nNo se encontro el valor\n");
 
     } else {
 
-        printf("\nEl valor se encuentra en la posicion: %d \n" , position);
+        printf("\nEl valor se encuentra en la posicion: %d\n" , position);
     }
 }
 
@@ -131,10 +131,7 @@ bool ListInteger::deleteFromHead(int value) {
         }
     }
     
-    if (isEmpty() || !hasFoundValue) {
-        printf("\nEl valor [%d] no se encuentra en la lista \n", value);
-
-    } else if (iterator == firstNode && hasFoundValue) {
+    if (iterator == firstNode && hasFoundValue) {
 
         auxiliar = iterator;
         iterator = iterator->getNextNode();
@@ -183,10 +180,6 @@ bool ListInteger::deleteFromTail(int value) {
         }
 
         i++;
-    }
-
-    if (!hasFoundValue) {
-        printf("\nEl valor [%d] no se encuentra en la lista \n", value);
     }
 
     return hasFoundValue;

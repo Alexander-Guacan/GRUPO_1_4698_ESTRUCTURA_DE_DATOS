@@ -4,66 +4,78 @@
 #include "Input.h"
 #include "ListInteger.h"
 
-void Menu::start(){
+void Menu::start() {
 
     bool exit{false};
+    bool hasFoundValue{false};
     Input *input = new Input();
-    ListInteger *listaEnteros = new ListInteger();
+    List *integerNumbers = new ListInteger();
 
-    do{
-        system ("cls");
-        printf("1. Ingresar elementos por Cabeza \n"  
-               "2. Ingresar elementos por Cola \n"
-               "3. Imprimir elementos desde el inicio \n"
-               "4. Imprimir elementos desde el final \n"
-               "5. Buscar elemento de la lista \n"
-               "6. Eliminar 1era ocurrencia por Cabeza \n"
-               "7. Eliminar 1era ocurrencia por Cola \n"
-               "8. SALIR \n\n"
+    do {
+        system("cls");
 
-               "Presione una opcion:  ");
+        printf("1. Insertar numero al inicio de la lista\n"
+               "2. Insertar numero al final de la lista\n"
+               "3. Imprimir numeros desde el inicio hasta el final\n"
+               "4. Imprimir numeros desde el final hasta el inicio\n"
+               "5. Buscar numero en la lista\n"
+               "6. Eliminar primera ocurrencia desde el principio\n"
+               "7. Eliminar primera ocurrencia desde el final\n"
+               "8. Salir\n\n"
+               "Presione una opcion [ ]\b\b");
 
-        switch (getch())
-        {
-        case '1':
-            listaEnteros->insertTop(input->integerNumber("Ingrese un numero ENTERO al principio de la lista: "));
-            break;
-        
-        case '2':
-            listaEnteros->insertBack(input->integerNumber("Ingrese un numero ENTERO el final de la lista: "));
-            break;
-        
-        case '3':
-            listaEnteros->printFromStart();
-            system ("pause");
-            break;
-        
-        case '4':
-            listaEnteros->printFromEnd();
-            system ("pause");
-            break;
-        
-        case '5':
-            listaEnteros->search(input->integerNumber("Ingrese numero a buscar:  "));
-            system ("pause");
-            break;
-        
-        case '6':
-            listaEnteros->deleteFromHead(input->integerNumber("Ingrese numero a eliminar del inicio de la lista: "));
-            break;
-        
-        case '7':
-            listaEnteros->deleteFromTail(input->integerNumber("Ingrese numero a elimnar del final de la lista:  "));
-            break;
+        switch (getch()) {
 
-        case '8':
-            exit = true;
-            break;
-        
-        default:
-            break;
+            case '1':
+                integerNumbers->insertTop(input->integerNumber("Ingrese un numero entero que ira al principio de la lista: "));
+                break;
+
+            case '2':
+                integerNumbers->insertBack(input->integerNumber("Ingrese un numero entero que ira al final de la lista: "));
+                break;
+
+            case '3':
+                integerNumbers->printFromStart();
+                system("pause");
+                break;
+
+            case '4':
+                integerNumbers->printFromEnd();
+                system("pause");
+                break;
+
+            case '5':
+                integerNumbers->search(input->integerNumber("Ingrese numero a buscar: "));
+                system("pause");
+                break;
+
+            case '6':
+                hasFoundValue = integerNumbers->deleteFromHead(input->integerNumber("Ingrese numero a eliminar desde el inicio de la lista: "));
+
+                if (!hasFoundValue) {
+                    printf("\nEl valor no se encuentra en la lista\n");
+                    system("pause");
+                }
+
+                break;
+
+            case '7':
+                hasFoundValue = integerNumbers->deleteFromTail(input->integerNumber("Ingrese numero a eliminar desde el final de la lista: "));
+
+                if (!hasFoundValue) {
+                    printf("\nEl valor no se encuentra en la lista\n");
+                    system("pause");
+                }
+
+                break;
+
+            case '8':
+                exit = true;
+                break;
+
+            default:
+                break;
         }
-        
-    }while (!exit);
 
+    } while (!exit);
 }

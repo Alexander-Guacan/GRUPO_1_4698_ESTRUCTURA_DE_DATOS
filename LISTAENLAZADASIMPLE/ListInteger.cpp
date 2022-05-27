@@ -17,29 +17,19 @@ bool ListInteger::isEmpty() { //funcion verifica si la lista esta vacia
 }
 
 void ListInteger::insertBack(int value) {
-    Node *newNode = new Node();
-    newNode->setValue(value);
+    Node *newNode = new Node(value);
     
     if (isEmpty()) {
-
         firstNode = newNode;
-
     } else {
-        Node *iterator{firstNode};
-        Node *auxiliar{nullptr};
-
-        while (iterator != nullptr) {
-            auxiliar = iterator;
-            iterator = iterator->getNextNode();
-        }
-
-        auxiliar->setNextNode(newNode);
+        lastNode->setNextNode(newNode);
     }
+
+    lastNode = newNode;
 }
 
 void ListInteger::insertTop(int value) {
-    Node *newNode = new Node();
-    newNode->setValue(value);
+    Node *newNode = new Node(value);
 
     if (isEmpty()) {
         firstNode = newNode;

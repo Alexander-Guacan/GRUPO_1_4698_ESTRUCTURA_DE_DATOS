@@ -6,6 +6,7 @@
 
 class ListInteger : public List {
     Node *firstNode{nullptr};
+    Node *lastNode{firstNode};
 
     public:
         int size();

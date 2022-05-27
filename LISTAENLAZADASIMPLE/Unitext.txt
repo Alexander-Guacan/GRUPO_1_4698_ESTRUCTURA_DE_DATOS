@@ -1,0 +1,418 @@
+/*
+ * UNIVERSIDAD DE LAS FUERZAS ARMADAS - ESPE
+ * Crear un programa que permita hacer operaciones basicas con listas enlazadas simples (insertar, buscar, eliminar, imprimir)
+ * Autor: Alexander David Guacán Rivera y Alison Paola Moncayo Achilchisa
+ * Fecha de creacion: 26/05/2022
+ * Fecha de ultima modificación: 26/05/2022
+ * Grupo: 1
+ * Github: https://github.com/Alexander-Guacan/GRUPO_1_4698_ESTRUCTURA_DE_DATOS.git
+ */
+
+#include "Menu.h"
+
+int main() {
+    Menu *menu = new Menu();
+    menu->start();
+
+    return 0;
+}
+
+#ifndef MENU_H
+#define MENU_H
+
+class Menu {
+    public:
+        void start();
+};
+
+#endif
+
+#include <iostream>
+#include <conio.h>
+#include "Menu.h"
+#include "Input.h"
+#include "ListInteger.h"
+
+void Menu::start() {
+
+    bool exit{false};
+    bool hasFoundValue{false};
+    Input *input = new Input();
+    List *integerNumbers = new ListInteger();
+
+    do {
+        system("cls");
+
+        printf("1. Insertar numero al inicio de la lista\n"
+               "2. Insertar numero al final de la lista\n"
+               "3. Imprimir numeros desde el inicio hasta el final\n"
+               "4. Imprimir numeros desde el final hasta el inicio\n"
+               "5. Buscar numero en la lista\n"
+               "6. Eliminar primera ocurrencia desde el principio\n"
+               "7. Eliminar primera ocurrencia desde el final\n"
+               "8. Salir\n\n"
+               "Presione una opcion [ ]\b\b");
+
+        switch (getch()) {
+
+            case '1':
+                integerNumbers->insertTop(input->integerNumber("Ingrese un numero entero que ira al principio de la lista: "));
+                break;
+
+            case '2':
+                integerNumbers->insertBack(input->integerNumber("Ingrese un numero entero que ira al final de la lista: "));
+                break;
+
+            case '3':
+                integerNumbers->printFromStart();
+                system("pause");
+                break;
+
+            case '4':
+                integerNumbers->printFromEnd();
+                system("pause");
+                break;
+
+            case '5':
+                integerNumbers->search(input->integerNumber("Ingrese numero a buscar: "));
+                system("pause");
+                break;
+
+            case '6':
+                hasFoundValue = integerNumbers->deleteFromHead(input->integerNumber("Ingrese numero a eliminar desde el inicio de la lista: "));
+
+                if (!hasFoundValue) {
+                    printf("\nEl valor no se encuentra en la lista\n");
+                    system("pause");
+                }
+
+                break;
+
+            case '7':
+                hasFoundValue = integerNumbers->deleteFromTail(input->integerNumber("Ingrese numero a eliminar desde el final de la lista: "));
+
+                if (!hasFoundValue) {
+                    printf("\nEl valor no se encuentra en la lista\n");
+                    system("pause");
+                }
+
+                break;
+
+            case '8':
+                exit = true;
+                break;
+
+            default:
+                break;
+        }
+
+    } while (!exit);
+}
+
+#ifndef NODE_H
+#define NODE_H
+
+class Node {
+    int value;
+    Node *nextNode{nullptr};
+
+    public:
+        void setValue(int newValue);
+        void setNextNode(Node *newNextNode);
+        int getValue();
+        Node *getNextNode();
+};
+
+#endif
+
+#include "Node.h"
+
+void Node::setValue(int newValue) {
+    this->value = newValue;
+}
+
+void Node::setNextNode(Node *newNextNode) {
+    this->nextNode = newNextNode;
+}
+
+int Node::getValue() {
+    return this->value;
+}
+
+Node *Node::getNextNode() {
+    return this->nextNode;
+}
+
+#ifndef LIST_H
+#define LIST_H
+
+class List {
+    
+    public:
+        virtual void insertBack(int value) = 0;
+        virtual void insertTop(int value) = 0;
+        virtual void printFromEnd() = 0;
+        virtual void printFromStart() = 0;
+        virtual void search(int value) = 0;
+        virtual bool deleteFromHead(int value) = 0;
+        virtual bool deleteFromTail(int value) = 0;
+};
+
+#endif
+
+#ifndef LIST_INTEGER_H
+#define LIST_INTEGER_H
+
+#include "List.h"
+#include "Node.h"
+
+class ListInteger : public List {
+    Node *firstNode{nullptr};
+
+    public:
+        int size();
+        bool isEmpty();
+        void insertBack(int value);
+        void insertTop(int value);
+        void printFromStart();
+        void printFromEnd();
+        void search(int value);
+        bool deleteFromHead(int value);
+        bool deleteFromTail(int value);
+    
+};
+
+#endif
+
+#include "ListInteger.h"
+#include <iostream>
+
+int ListInteger::size() { //funcion retorna el tamaño de la lista
+    int size{};
+    Node *iterator{firstNode}; 
+    while (iterator != nullptr) {
+        size++;
+        iterator = iterator->getNextNode();
+    }
+
+    return size;
+}
+
+bool ListInteger::isEmpty() { //funcion verifica si la lista esta vacia
+    return firstNode == nullptr;
+}
+
+void ListInteger::insertBack(int value) {
+    Node *newNode = new Node();
+    newNode->setValue(value);
+    
+    if (isEmpty()) {
+
+        firstNode = newNode;
+
+    } else {
+        Node *iterator{firstNode};
+        Node *auxiliar{nullptr};
+
+        while (iterator != nullptr) {
+            auxiliar = iterator;
+            iterator = iterator->getNextNode();
+        }
+
+        auxiliar->setNextNode(newNode);
+    }
+}
+
+void ListInteger::insertTop(int value) {
+    Node *newNode = new Node();
+    newNode->setValue(value);
+
+    if (isEmpty()) {
+        firstNode = newNode;
+    } else {
+        newNode->setNextNode(firstNode);
+        firstNode = newNode;
+    }
+}
+
+void ListInteger::printFromStart() {
+    Node *iterator = firstNode;
+    
+    if (!isEmpty()) {
+
+        printf("\n");
+
+        while (iterator != nullptr) {
+            printf("[%d] ", iterator->getValue());
+            iterator = iterator->getNextNode();
+        }
+
+        printf("\n");
+
+    } else {
+
+        printf("\nLista vacia\n");
+    }
+}
+
+void ListInteger::printFromEnd() {
+    Node *iterator = firstNode;
+
+    if (!isEmpty()) {
+
+        int *inverseList = new int[size()];
+
+        for (int i{size() - 1}; i >= 0; i--) {
+            *(inverseList + i) = iterator->getValue();
+            iterator = iterator->getNextNode();
+        }
+
+        printf("\n");
+
+        for (int i{}; i < size(); i++) {
+            printf("[%d] ", *(inverseList + i));
+        }
+
+        printf("\n");
+
+        delete[] inverseList;
+    } else {
+
+        printf("\nLista vacia\n");
+    }
+}
+
+void ListInteger::search(int value) {
+    int position{};
+    bool hasFoundValue{false};
+    Node *iterator{firstNode};
+    
+    while (iterator != nullptr && !hasFoundValue) {
+        position++;
+        hasFoundValue = iterator->getValue() == value;
+        iterator = iterator->getNextNode();
+    }
+
+    if (!hasFoundValue){
+
+        printf("\nNo se encontro el valor\n");
+
+    } else {
+
+        printf("\nEl valor se encuentra en la posicion: %d\n" , position);
+    }
+}
+
+bool ListInteger::deleteFromHead(int value) {
+    Node *iterator{firstNode};
+    Node *auxiliar{nullptr};
+    bool hasFoundValue{false};
+    
+    while (iterator != nullptr && !hasFoundValue) {
+        hasFoundValue = iterator->getValue() == value;
+
+        if (!hasFoundValue) {
+            auxiliar = iterator;
+            iterator = iterator->getNextNode();
+        }
+    }
+    
+    if (iterator == firstNode && hasFoundValue) {
+
+        auxiliar = iterator;
+        iterator = iterator->getNextNode();
+        firstNode = iterator;
+
+        if (auxiliar != nullptr) {
+            delete auxiliar;
+        }
+                        
+    } else if (hasFoundValue && firstNode != iterator) {
+        auxiliar->setNextNode(iterator->getNextNode());
+
+        if (iterator != nullptr) {
+            delete iterator;
+        }
+    }
+
+    return hasFoundValue;
+}
+
+bool ListInteger::deleteFromTail(int value) {
+    Node **iterator = new Node *[size()];
+    Node *auxiliar{firstNode};
+
+    for (int i{size() - 1}; i >= 0; i--) {
+        *(iterator + i) = auxiliar;
+        auxiliar = auxiliar->getNextNode();
+    }
+
+    bool hasFoundValue{false};
+    int i{};
+
+    while (i < size() && !hasFoundValue) {
+        hasFoundValue = (*(*(iterator + i))).getValue() == value;
+
+        if (*(iterator + i) != firstNode && hasFoundValue) {
+
+            (*(*(iterator + i + 1))).setNextNode((*(*(iterator + i))).getNextNode());
+
+            delete *(iterator + i);
+
+        } else if (*(iterator + i) == firstNode && hasFoundValue) {
+            firstNode = *(iterator + i - 1);
+
+            delete *(iterator + i);
+        }
+
+        i++;
+    }
+
+    return hasFoundValue;
+}
+
+#ifndef INPUT_H
+#define INPUT_H
+
+class Input {
+    
+    public:
+        int integerNumber(const char *instructionMessage);
+};
+
+#endif
+
+#include "Input.h"
+#include <iostream>
+#include <conio.h>
+
+int Input::integerNumber(const char *instructionMessage) {
+    printf("\n%s", instructionMessage);
+
+    const char ENTER_KEY{13};
+    const char BACKSPACE_KEY{8};
+
+    char *numbers = new char[11]{};
+    char *iterator{numbers};
+    char keyPressed{};
+
+    while ((keyPressed = getch()) != ENTER_KEY || *numbers == '\0') {
+
+        if (keyPressed >= '0' && keyPressed <= '9') {
+            printf("%c", keyPressed);
+
+            *iterator = keyPressed;
+            iterator++;
+
+        } else if (keyPressed == BACKSPACE_KEY && iterator != numbers) {
+            printf("\b \b");
+
+            iterator--;
+            *iterator = '\0';
+        }
+    }
+
+    printf("\n");
+
+    return std::atoi(numbers);
+}

@@ -6,6 +6,7 @@ class Node {
     Node *nextNode{nullptr};
 
     public:
+        Node(int initialValue);
         void setValue(int newValue);
         void setNextNode(Node *newNextNode);
         int getValue();

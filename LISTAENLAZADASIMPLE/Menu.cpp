@@ -27,11 +27,11 @@ void Menu::start() {
         switch (getch()) {
 
             case '1':
-                integerNumbers->insertTop(input->integerNumber("Ingrese un numero entero que ira al principio de la lista: "));
+                integerNumbers->insertTop(input->integerNumber("Ingrese un numero entero que ira al principio de la lista: ", 5));
                 break;
 
             case '2':
-                integerNumbers->insertBack(input->integerNumber("Ingrese un numero entero que ira al final de la lista: "));
+                integerNumbers->insertBack(input->integerNumber("Ingrese un numero entero que ira al final de la lista: ", 5));
                 break;
 
             case '3':
@@ -45,12 +45,12 @@ void Menu::start() {
                 break;
 
             case '5':
-                integerNumbers->search(input->integerNumber("Ingrese numero a buscar: "));
+                integerNumbers->search(input->integerNumber("Ingrese numero a buscar: ", 5));
                 system("pause");
                 break;
 
             case '6':
-                hasFoundValue = integerNumbers->deleteFromHead(input->integerNumber("Ingrese numero a eliminar desde el inicio de la lista: "));
+                hasFoundValue = integerNumbers->deleteFromHead(input->integerNumber("Ingrese numero a eliminar desde el inicio de la lista: ", 5));
 
                 if (!hasFoundValue) {
                     printf("\nEl valor no se encuentra en la lista\n");
@@ -60,7 +60,7 @@ void Menu::start() {
                 break;
 
             case '7':
-                hasFoundValue = integerNumbers->deleteFromTail(input->integerNumber("Ingrese numero a eliminar desde el final de la lista: "));
+                hasFoundValue = integerNumbers->deleteFromTail(input->integerNumber("Ingrese numero a eliminar desde el final de la lista: ", 5));
 
                 if (!hasFoundValue) {
                     printf("\nEl valor no se encuentra en la lista\n");

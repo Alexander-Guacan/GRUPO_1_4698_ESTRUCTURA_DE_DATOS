@@ -1,32 +1,59 @@
-/***********************************************************************
- * Module:  Node.h
- * Author:  Alexander
- * Modified: jueves, 2 de junio de 2022 2:50:51
- * Purpose: Declaration of the class Node
- ***********************************************************************/
+#ifndef NODE_H
+#define NODE_H
 
-#if !defined(__Listas_Doblemente_Enlazadas_Node_h)
-#define __Listas_Doblemente_Enlazadas_Node_h
+template <typename T>
+class Node {
+    T data;
+    Node<T> *nextNode{nullptr};
+    Node<T> *previousNode{nullptr};
 
-class Node
-{
-public:
-   T getData(void);
-   void setData(T newData);
-   Node* getNextNode(void);
-   void setNextNode(Node* newNextNode);
-   Node* getPreviousNode(void);
-   void setPreviousNode(Node* newPreviousNode);
-   Node(T initialData);
-   ~Node();
-
-protected:
-private:
-   T data;
-   Node* nextNode;
-   Node* previousNode;
-
-
+    public:
+        T getData();
+        void setData(T newData);
+        Node<T> *getNextNode();
+        void setNextNode(Node<T> *newNextNode);
+        Node<T> *getPreviousNode();
+        void setPreviousNode(Node<T> *newPreviousNode);
+        Node(T initialData);
+        ~Node();
 };
+
+template <typename T>
+T Node<T>::getData() {
+    return data;
+}
+
+template <typename T>
+void Node<T>::setData(T newData) {
+    data = newData;
+}
+
+template <typename T>
+Node<T> *Node<T>::getNextNode() {
+    return nextNode;
+}
+
+template <typename T>
+void Node<T>::setNextNode(Node<T> *newNextNode) {
+    nextNode = newNextNode;
+}
+
+template <typename T>
+Node<T> *Node<T>::getPreviousNode() {
+    return previousNode;
+}
+
+template <typename T>
+void Node<T>::setPreviousNode(Node<T> *newPreviousNode) {
+    previousNode = newPreviousNode;
+}
+
+template <typename T>
+Node<T>::Node(T initialData) : data(initialData) {}
+
+template <typename T>
+Node<T>::~Node() {
+    // TODO : implement
+}
 
 #endif

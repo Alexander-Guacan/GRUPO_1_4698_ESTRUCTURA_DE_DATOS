@@ -1,0 +1,104 @@
+/***********************************************************************
+ * Module:  Node.cpp
+ * Author:  Alexander
+ * Modified: jueves, 2 de junio de 2022 2:50:51
+ * Purpose: Implementation of the class Node
+ ***********************************************************************/
+
+#include "Node.h"
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Node::getData()
+// Purpose:    Implementation of Node::getData()
+// Return:     T
+////////////////////////////////////////////////////////////////////////
+
+T Node::getData(void)
+{
+   return data;
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Node::setData(T newData)
+// Purpose:    Implementation of Node::setData()
+// Parameters:
+// - newData
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void Node::setData(T newData)
+{
+   data = newData;
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Node::getNextNode()
+// Purpose:    Implementation of Node::getNextNode()
+// Return:     Node*
+////////////////////////////////////////////////////////////////////////
+
+Node* Node::getNextNode(void)
+{
+   return nextNode;
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Node::setNextNode(Node* newNextNode)
+// Purpose:    Implementation of Node::setNextNode()
+// Parameters:
+// - newNextNode
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void Node::setNextNode(Node* newNextNode)
+{
+   nextNode = newNextNode;
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Node::getPreviousNode()
+// Purpose:    Implementation of Node::getPreviousNode()
+// Return:     Node*
+////////////////////////////////////////////////////////////////////////
+
+Node* Node::getPreviousNode(void)
+{
+   return previousNode;
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Node::setPreviousNode(Node* newPreviousNode)
+// Purpose:    Implementation of Node::setPreviousNode()
+// Parameters:
+// - newPreviousNode
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void Node::setPreviousNode(Node* newPreviousNode)
+{
+   previousNode = newPreviousNode;
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Node::Node(T initialData)
+// Purpose:    Implementation of Node::Node()
+// Parameters:
+// - initialData
+// Return:     
+////////////////////////////////////////////////////////////////////////
+
+Node::Node(T initialData)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Node::~Node()
+// Purpose:    Implementation of Node::~Node()
+// Return:     
+////////////////////////////////////////////////////////////////////////
+
+Node::~Node()
+{
+   // TODO : implement
+}

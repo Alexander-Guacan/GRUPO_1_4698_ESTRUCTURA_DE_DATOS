@@ -1,0 +1,134 @@
+/***********************************************************************
+ * Module:  Menu.cpp
+ * Author:  Alexander
+ * Modified: jueves, 2 de junio de 2022 19:22:04
+ * Purpose: Implementation of the class Menu
+ ***********************************************************************/
+
+#include "Menu.h"
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Menu::start()
+// Purpose:    Implementation of Menu::start()
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void Menu::start(void)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Menu::printOptions()
+// Purpose:    Implementation of Menu::printOptions()
+// Return:     char
+////////////////////////////////////////////////////////////////////////
+
+char Menu::printOptions(void)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Menu::insertAtBegin(List<T>* list)
+// Purpose:    Implementation of Menu::insertAtBegin()
+// Parameters:
+// - list
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void Menu::insertAtBegin(List<T>* list)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Menu::insertAtEnd(List<T>* list)
+// Purpose:    Implementation of Menu::insertAtEnd()
+// Parameters:
+// - list
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void Menu::insertAtEnd(List<T>* list)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Menu::insertAt(List<T>* list)
+// Purpose:    Implementation of Menu::insertAt()
+// Parameters:
+// - list
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void Menu::insertAt(List<T>* list)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Menu::searchFromBegin(List<T>* list)
+// Purpose:    Implementation of Menu::searchFromBegin()
+// Parameters:
+// - list
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void Menu::searchFromBegin(List<T>* list)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Menu::searchFromEnd(List<T>* list)
+// Purpose:    Implementation of Menu::searchFromEnd()
+// Parameters:
+// - list
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void Menu::searchFromEnd(List<T>* list)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Menu::deleteFirst(List<T>* list)
+// Purpose:    Implementation of Menu::deleteFirst()
+// Parameters:
+// - list
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void Menu::deleteFirst(List<T>* list)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Menu::deleteLast(List<T>* list)
+// Purpose:    Implementation of Menu::deleteLast()
+// Parameters:
+// - list
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void Menu::deleteLast(List<T>* list)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Menu::deleteAt(List<T>* list)
+// Purpose:    Implementation of Menu::deleteAt()
+// Parameters:
+// - list
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void Menu::deleteAt(List<T>* list)
+{
+   // TODO : implement
+}

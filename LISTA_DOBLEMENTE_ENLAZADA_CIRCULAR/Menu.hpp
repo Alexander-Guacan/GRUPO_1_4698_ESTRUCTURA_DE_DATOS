@@ -25,7 +25,7 @@ class Menu {
 void Menu::start() {
     typedef int T;
 
-    CircularDoublyLinkedList<int> *list = new CircularDoublyLinkedList<int>();
+    CircularDoublyLinkedList<T> *list = new CircularDoublyLinkedList<T>();
 
     bool exit{false};
 

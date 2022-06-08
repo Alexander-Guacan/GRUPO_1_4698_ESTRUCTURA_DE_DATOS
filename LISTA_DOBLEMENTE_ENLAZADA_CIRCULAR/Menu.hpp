@@ -150,6 +150,8 @@ void Menu::deleteAt(List<T> *list) {
 
     if (list->deleteAt(input.unsignedIntegerNumber("\nIngresa posicion a eliminar: ", 3)) != nullptr) {
         std::cout << "\nElemento eliminado exitosamente\n";
+    } else {
+        std::cout << "\nElemento no pudo ser eliminado\n";
     }
 
     system("pause");

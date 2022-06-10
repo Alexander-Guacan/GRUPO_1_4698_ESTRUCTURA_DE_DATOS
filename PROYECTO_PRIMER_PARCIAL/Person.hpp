@@ -9,13 +9,14 @@ class Person {
     char *idCard{};
     char *firstName{};
     char *lastName{};
-    char email[40]{"No definido"};
+    char *email{};
     char *password{};
 
     private:
 
     public:
         Person();
+        Person(char *initialIdCard);
         const char *getFirstName();
         const char *getLastName();
         const char *getPassword();

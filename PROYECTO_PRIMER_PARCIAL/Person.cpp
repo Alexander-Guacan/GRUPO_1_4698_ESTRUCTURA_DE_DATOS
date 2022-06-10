@@ -4,6 +4,10 @@ Person::Person() {
     setData();
 }
 
+Person::Person(char *initialIdCard) {
+    this->idCard = initialIdCard;
+}
+
 const char *Person::getFirstName() {
     return this->firstName;
 }

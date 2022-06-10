@@ -1,4 +1,5 @@
 #include "Person.hpp"
+#include "HandleConsole.hpp"
 
 Person::Person() {
     setData();
@@ -30,10 +31,18 @@ void Person::setPassword(char *newPassword) {
 
 void Person::setData() {
     system("cls");
+    const short LEFT_SPACING = 40;
+    const short UP_SPACING = 5;
 
+    HandleConsole console;
     Input input;
-    this->idCard = input.identificationCard("\nIngresa tu cedula: ");
+
+    console.setConsoleCursorPosition({LEFT_SPACING, UP_SPACING});
+    this->idCard = input.identificationCard("Ingresa tu cedula: ");
+    console.setConsoleCursorPosition({LEFT_SPACING, (UP_SPACING + 1)});
     this->firstName = input.oneWord("Ingrese su nombre: ", 3, 20);
+    console.setConsoleCursorPosition({LEFT_SPACING, (UP_SPACING + 2)});
     this->lastName = input.oneWord("Ingrese su apellido: ", 3, 20);
+    console.setConsoleCursorPosition({LEFT_SPACING, (UP_SPACING + 3)});
     this->password = input.alphanumeric("Ingresa una clave (entre 5 a 10 caracteres): ", 5, 10);
 }

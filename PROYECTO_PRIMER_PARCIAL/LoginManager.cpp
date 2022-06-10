@@ -36,16 +36,12 @@ void LoginManager::start() {
 }
 
 bool LoginManager::registerOnSystem(List<Person> *users) {
-    int seconds = 5;
-    int waitTime = seconds * 1000;
 
     Person *personToInsert = new Person();
 
     while (!users->insertAtEnd(personToInsert)) {
-        std::cout << "\n\tCargando espere...";
-        Sleep(waitTime);
 
-        std::cout << "\n[ERROR: la persona ingresada ya existe, presiona una tecla para reintentar]";
+        std::cout << "\n\t\t\t\t\t[ERROR: la persona ingresada ya existe, presiona una tecla para reintentar]";
         getch();
 
         personToInsert->setData();
@@ -68,12 +64,9 @@ bool LoginManager::registerOnSystem(List<Person> *users) {
         return repeats - 1;
     }());
 
-    std::cout << "\n\tCargando espere...";
-    Sleep(waitTime);
-    
-    std::cout << "\nTu correo electronico es: " << personToInsert->getEmail();
+    std::cout << "\n\t\t\t\t\tTu correo electronico es: " << personToInsert->getEmail();
 
-    std::cout << "\n---Presione una tecla para continuar---\n";
+    std::cout << "\n\t\t\t\t\t---Presione una tecla para continuar---";
     getch();
 
     return true;

@@ -1,14 +1,16 @@
 #include "LoginManager.hpp"
 #include "MenuLogin.hpp"
-#include "MenuSystem.hpp"
 #include "EmailGenerator.hpp"
+#include "SystemManager.hpp"
 #include <iostream>
 #include <cstdlib>
 
 void LoginManager::start() {
-    MenuLogin menuLogin;
-    MenuSystem menuSystem;
     CircularDoublyLinkedList<Person> *users = new CircularDoublyLinkedList<Person>(false);
+    MenuLogin menuLogin;
+
+    CircularDoublyLinkedList<Smartphone> *smartphones = new CircularDoublyLinkedList<Smartphone>(true);
+    SystemManager systemManager(smartphones);
 
     bool hasSelectedExit{false};
 
@@ -22,7 +24,7 @@ void LoginManager::start() {
             case LOGIN:
 
                 if (login(users)) {
-                    hasSelectedExit = menuSystem.start() == menuSystem.EXIT;
+                    hasSelectedExit = systemManager.start();
                 }
 
                 break;

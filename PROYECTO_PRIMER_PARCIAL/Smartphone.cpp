@@ -27,6 +27,6 @@ void Smartphone::setData() {
     Input input;
 
     this->mark = input.alphabetic("Ingrese la marca del celular: ", 10, 15);
-    this->model = input.any("Ingrese el modelo del celular: ", 10, 15);
+    this->model = input.alphanumeric("Ingrese el modelo del celular: ", 10, 15);
     this->price = input.unsignedRealNumber("Ingrese el precio: ", 1, 5);
 }

@@ -16,14 +16,24 @@ const char *Person::getLastName() {
     return this->lastName;
 }
 
-void Person::setEmail(const char *newEmail) {
-    std::strcpy(this->email, newEmail);
+const char *Person::getEmail() {
+    return this->email;
+}
+
+void Person::setEmail(char *newEmail) {
+    this->email = newEmail;
+}
+
+void Person::setPassword(char *newPassword) {
+    this->password = newPassword;
 }
 
 void Person::setData() {
+    system("cls");
+
     Input input;
     this->idCard = input.identificationCard("\nIngresa tu cedula: ");
     this->firstName = input.oneWord("Ingrese su nombre: ", 3, 20);
     this->lastName = input.oneWord("Ingrese su apellido: ", 3, 20);
-    this->password = input.any("Ingresa una clave (entre 5 a 10 caracteres): ", 5, 10);
+    this->password = input.alphanumeric("Ingresa una clave (entre 5 a 10 caracteres): ", 5, 10);
 }

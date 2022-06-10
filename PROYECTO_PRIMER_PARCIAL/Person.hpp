@@ -19,9 +19,10 @@ class Person {
         Person(char *initialIdCard);
         const char *getFirstName();
         const char *getLastName();
+        const char *getEmail();
         const char *getPassword();
-        void setEmail(const char *newEmail);
-        void setPassword(const char *newPassword);
+        void setEmail(char *newEmail);
+        void setPassword(char *newPassword);
         void setData();
 
         bool operator ==(const Person &personToCompare) {

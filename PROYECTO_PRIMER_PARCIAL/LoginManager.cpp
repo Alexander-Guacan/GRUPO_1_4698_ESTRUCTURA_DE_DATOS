@@ -9,7 +9,7 @@ void LoginManager::start() {
     CircularDoublyLinkedList<Person> *users = new CircularDoublyLinkedList<Person>(false);
     MenuLogin menuLogin;
 
-    CircularDoublyLinkedList<Smartphone> *smartphones = new CircularDoublyLinkedList<Smartphone>(true);
+    CircularDoublyLinkedList<Smartphone> *smartphones = new CircularDoublyLinkedList<Smartphone>(false);
     SystemManager systemManager(smartphones);
 
     bool hasSelectedExit{false};

@@ -445,7 +445,7 @@ char *Input::identificationCard(const char *instructionMessage, short textColor)
     return idCard;
 }
 
-char *Input::any(const char *instructionMessage, short minimumCharacters, short maximumCharacters) {
+char *Input::alphanumeric(const char *instructionMessage, short minimumCharacters, short maximumCharacters) {
     printf("%s", instructionMessage);
 
     const char ENTER_KEY{13};
@@ -459,7 +459,10 @@ char *Input::any(const char *instructionMessage, short minimumCharacters, short 
 
     while ((keyPressed = getch()) != ENTER_KEY || *string == '\0' || sizeOfString < minimumCharacters) {
 
-        if (sizeOfString < maximumCharacters) {
+        if ((  (keyPressed >= '0' && keyPressed <= '9')
+            || (keyPressed >= 'a' && keyPressed <= 'z')
+            || (keyPressed >= 'A' && keyPressed <= 'Z')
+            ) && sizeOfString < maximumCharacters) {
             printf("%c", keyPressed);
 
             *iterator = keyPressed;
@@ -478,10 +481,10 @@ char *Input::any(const char *instructionMessage, short minimumCharacters, short 
     return string;
 }
 
-char *Input::any(const char *instructionMessage, short minimumCharacters, short maximumCharacters, short textColor) {
+char *Input::alphanumeric(const char *instructionMessage, short minimumCharacters, short maximumCharacters, short textColor) {
     setTextColor(textColor);
 
-    char *text{any(instructionMessage, minimumCharacters, maximumCharacters)};
+    char *text{alphanumeric(instructionMessage, minimumCharacters, maximumCharacters)};
 
     setTextColor(GREY);
 

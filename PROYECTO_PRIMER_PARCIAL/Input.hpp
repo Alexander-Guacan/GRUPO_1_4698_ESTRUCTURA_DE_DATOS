@@ -47,8 +47,8 @@ class Input {
         char *alphabetic(const char *instructionMessage, short minimumCharacters, short maximumCharacters, short textColor);
         char *identificationCard(const char *instructionMessage);
         char *identificationCard(const char *instructionMessage, short textColor);
-        char *any(const char *instructionMessage, short minimumCharacters, short maximumCharacters);
-        char *any(const char *instructionMessage, short minimumCharacters, short maximumCharacters, short textColor);
+        char *alphanumeric(const char *instructionMessage, short minimumCharacters, short maximumCharacters);
+        char *alphanumeric(const char *instructionMessage, short minimumCharacters, short maximumCharacters, short textColor);
 };
 
 #endif

@@ -8,6 +8,7 @@ class Smartphone {
     char *mark{};
     char *model{};
     float price{};
+    int amount{};
 
     private:
         void setData();
@@ -18,6 +19,9 @@ class Smartphone {
         char *getMark();
         char *getModel();
         float getPrice();
+        int getAmount();
+        void addSmartphoneAmount(int amountToAdd);
+        void reduceSmartphoneAmount(int amountToRemove);
 
         bool operator==(const Smartphone &smartphoneToCompare) {
             bool equalsMark = std::strcmp(mark, smartphoneToCompare.mark) == 0;
@@ -29,6 +33,7 @@ class Smartphone {
         friend std::ostream& operator<<(std::ostream &output, const Smartphone &smartphoneToPrint) {
             output << "\nMarca: " << smartphoneToPrint.mark
                    << "\nModelo: " << smartphoneToPrint.model
+                   << "\nCantidad: " << smartphoneToPrint.amount
                    << "\nPrecio: " << smartphoneToPrint.price << "\n";
 
             return output;

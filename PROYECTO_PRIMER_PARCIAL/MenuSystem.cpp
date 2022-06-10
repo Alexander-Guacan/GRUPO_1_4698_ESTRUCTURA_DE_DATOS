@@ -1,4 +1,5 @@
 #include "MenuSystem.hpp"
+#include "HandleConsole.hpp"
 #include <conio.h>
 
 short MenuSystem::start() {
@@ -11,6 +12,7 @@ short MenuSystem::start() {
         FIRST_OPTION_ID,
         SECOND_OPTION_ID,
         THIRD_OPTION_ID,
+        FOURTH_OPTION_ID,
         RETURN_OPTION_ID,
         EXIT_OPTION_ID
     };
@@ -61,6 +63,10 @@ short MenuSystem::start() {
                     optionSelected = renderThirdOption();
                     break;
 
+                case FOURTH_OPTION_ID:
+                    optionSelected = renderFourthOption();
+                    break;
+
                 case RETURN_OPTION_ID:
                     optionSelected = renderReturnOption();
                     break;
@@ -80,13 +86,15 @@ short MenuSystem::start() {
 void MenuSystem::printOptions() {
     HandleConsole console;
 
-    console.printTextWithColor("MENU DE COMPRA DE CELULARES", console.RED, {SPACE_LEFT, TITLE_POSITION});
+    console.printTextWithColor("MENU DE COMPRA Y VENTA DE CELULARES", console.RED, {SPACE_LEFT, TITLE_POSITION});
 
-    console.printTextWithColor("Comprar", console.GREEN, {SPACE_LEFT, FIRST_OPTION_POSITION});
+    console.printTextWithColor("Comprar", console.BLUE, {SPACE_LEFT, FIRST_OPTION_POSITION});
+
+    console.printTextWithColor("Vender", console.GREY, {SPACE_LEFT, SECOND_OPTION_POSITION});
     
-    console.printTextWithColor("Ver listado completo", console.GREY, {SPACE_LEFT, SECOND_OPTION_POSITION});
+    console.printTextWithColor("Listado completo", console.GREY, {SPACE_LEFT, THIRD_OPTION_POSITION});
     
-    console.printTextWithColor("Stock", console.GREY, {SPACE_LEFT, THIRD_OPTION_POSITION});
+    console.printTextWithColor("Stock", console.GREY, {SPACE_LEFT, FOURTH_OPTION_POSITION});
 
     console.printTextWithColor("Regresar", console.GREY, {SPACE_LEFT, RETURN_OPTION_POSITION});
 
@@ -96,9 +104,9 @@ void MenuSystem::printOptions() {
 short MenuSystem::renderFirstOption() {
     HandleConsole console;
 
-    console.printTextWithColor("Comprar", console.GREEN, {SPACE_LEFT, FIRST_OPTION_POSITION});
+    console.printTextWithColor("Comprar", console.BLUE, {SPACE_LEFT, FIRST_OPTION_POSITION});
     
-    console.printTextWithColor("Ver listado completo", console.GREY, {SPACE_LEFT, SECOND_OPTION_POSITION});
+    console.printTextWithColor("Vender", console.GREY, {SPACE_LEFT, SECOND_OPTION_POSITION});
 
     return BUY;
 }
@@ -108,19 +116,31 @@ short MenuSystem::renderSecondOption() {
 
     console.printTextWithColor("Comprar", console.GREY, {SPACE_LEFT, FIRST_OPTION_POSITION});
     
-    console.printTextWithColor("Ver listado completo", console.GREEN, {SPACE_LEFT, SECOND_OPTION_POSITION});
+    console.printTextWithColor("Vender", console.BLUE, {SPACE_LEFT, SECOND_OPTION_POSITION});
     
-    console.printTextWithColor("Stock", console.GREY, {SPACE_LEFT, THIRD_OPTION_POSITION});
+    console.printTextWithColor("Listado completo", console.GREY, {SPACE_LEFT, THIRD_OPTION_POSITION});
 
-    return COMPLETE_LIST;
+    return SOLD;
 }
 
 short MenuSystem::renderThirdOption() {
     HandleConsole console;
     
-    console.printTextWithColor("Ver listado completo", console.GREY, {SPACE_LEFT, SECOND_OPTION_POSITION});
+    console.printTextWithColor("Vender", console.GREY, {SPACE_LEFT, SECOND_OPTION_POSITION});
     
-    console.printTextWithColor("Stock", console.GREEN, {SPACE_LEFT, THIRD_OPTION_POSITION});
+    console.printTextWithColor("Listado completo", console.BLUE, {SPACE_LEFT, THIRD_OPTION_POSITION});
+
+    console.printTextWithColor("Stock", console.GREY, {SPACE_LEFT, FOURTH_OPTION_POSITION});
+
+    return COMPLETE_LIST;
+}
+
+short MenuSystem::renderFourthOption() {
+    HandleConsole console;
+    
+    console.printTextWithColor("Listado completo", console.GREY, {SPACE_LEFT, THIRD_OPTION_POSITION});
+    
+    console.printTextWithColor("Stock", console.BLUE, {SPACE_LEFT, FOURTH_OPTION_POSITION});
 
     console.printTextWithColor("Regresar", console.GREY, {SPACE_LEFT, RETURN_OPTION_POSITION});
 
@@ -130,9 +150,9 @@ short MenuSystem::renderThirdOption() {
 short MenuSystem::renderReturnOption() {
     HandleConsole console;
     
-    console.printTextWithColor("Stock", console.GREY, {SPACE_LEFT, THIRD_OPTION_POSITION});
+    console.printTextWithColor("Stock", console.GREY, {SPACE_LEFT, FOURTH_OPTION_POSITION});
 
-    console.printTextWithColor("Regresar", console.GREEN, {SPACE_LEFT, RETURN_OPTION_POSITION});
+    console.printTextWithColor("Regresar", console.BLUE, {SPACE_LEFT, RETURN_OPTION_POSITION});
 
     console.printTextWithColor("Salir", console.GREY, {SPACE_LEFT, EXIT_OPTION_POSITION});
 
@@ -144,7 +164,7 @@ short MenuSystem::renderExitOption() {
 
     console.printTextWithColor("Regresar", console.GREY, {SPACE_LEFT, RETURN_OPTION_POSITION});
 
-    console.printTextWithColor("Salir", console.GREEN, {SPACE_LEFT, EXIT_OPTION_POSITION});
+    console.printTextWithColor("Salir", console.BLUE, {SPACE_LEFT, EXIT_OPTION_POSITION});
 
     return EXIT;
 }

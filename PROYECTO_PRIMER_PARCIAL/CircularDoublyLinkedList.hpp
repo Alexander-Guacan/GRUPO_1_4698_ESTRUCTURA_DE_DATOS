@@ -228,6 +228,9 @@ bool CircularDoublyLinkedList<T>::deleteAt(short positionToDelete) {
                 nodeToDelete = nodeToDelete->getNextNode();
             }
 
+            nodeToDelete->getPreviousNode()->setNextNode(nodeToDelete->getNextNode());
+            nodeToDelete->getNextNode()->setPreviousNode(nodeToDelete->getPreviousNode());
+
             delete nodeToDelete;
         }
 

@@ -14,9 +14,10 @@ class Smartphone {
 
     public:
         Smartphone();
+        Smartphone(char *initialMark, char *initialModel, float initialPrice);
         char *getMark();
         char *getModel();
-        float *getPrice();
+        float getPrice();
 
         bool operator==(const Smartphone &smartphoneToCompare) {
             bool equalsMark = std::strcmp(mark, smartphoneToCompare.mark) == 0;

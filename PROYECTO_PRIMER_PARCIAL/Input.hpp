@@ -35,6 +35,8 @@ class Input {
         char *numbers(const char *instructionMessage, short minimumDigits, short maximumDigits, short textColor);
         int unsignedIntegerNumber(const char *instructionMessage, short minimumDigits, short maximumDigits);
         int unsignedIntegerNumber(const char *instructionMessage, short minimumDigits, short maximumDigits, short textColor);
+        int positiveIntegerNumber(const char *instructionMessage, short minimumDigits, short maximumDigits);
+        int positiveIntegerNumber(const char *instructionMessage, short minimumDigits, short maximumDigits, short textColor);
         int integerNumber(const char *instructionMessage, short minimumDigits, short maximumDigits);
         int integerNumber(const char *instructionMessage, short minimumDigits, short maximumDigits, short textColor);
         double unsignedRealNumber(const char *instructionMessage, short minimumDigits, short maximumDigits);

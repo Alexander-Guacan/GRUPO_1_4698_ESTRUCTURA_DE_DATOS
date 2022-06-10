@@ -93,6 +93,50 @@ int Input::unsignedIntegerNumber(const char *instructionMessage, short minimumDi
     return value;
 }
 
+int Input::positiveIntegerNumber(const char *instructionMessage, short minimumDigits, short maximumDigits) {
+    printf("%s", instructionMessage);
+
+    const char ENTER_KEY{13};
+    const char BACKSPACE_KEY{8};
+
+    char *numbers = new char[maximumDigits + 1]{};
+
+    char keyPressed{};
+    char *iterator{numbers};
+    int digitsAmount{};
+
+    while ((keyPressed = getch()) != ENTER_KEY || *numbers == '\0' || digitsAmount < minimumDigits || std::atoi(numbers) == 0) {
+        if (keyPressed >= '0' && keyPressed <= '9' && digitsAmount < maximumDigits) {
+            printf("%c", keyPressed);
+
+            *iterator = keyPressed;
+            iterator++;
+            digitsAmount++;
+
+        } else if (keyPressed == BACKSPACE_KEY && iterator != numbers) {
+            printf("\b \b");
+
+            digitsAmount--;
+            iterator--;
+            *iterator = '\0';
+        }
+    }
+
+    printf("\n");
+
+    return std::atoi(numbers);
+}
+
+int Input::positiveIntegerNumber(const char *instructionMessage, short minimumDigits, short maximumDigits, short textColor) {
+    setTextColor(textColor);
+
+    int value{positiveIntegerNumber(instructionMessage, minimumDigits, maximumDigits)};
+
+    setTextColor(GREY);
+
+    return value;
+}
+
 int Input::integerNumber(const char *instructionMessage, short minimumDigits, short maximumDigits) {
 
     printf("%s", instructionMessage);

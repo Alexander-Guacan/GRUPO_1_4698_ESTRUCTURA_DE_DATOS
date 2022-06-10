@@ -1,13 +1,13 @@
 #include "LoginManager.hpp"
 #include "MenuLogin.hpp"
-#include "MenuOfBuy.hpp"
+#include "MenuSystem.hpp"
 #include "EmailGenerator.hpp"
 #include <iostream>
 #include <cstdlib>
 
 void LoginManager::start() {
     MenuLogin menuLogin;
-    MenuOfBuy menuOfBuy;
+    MenuSystem menuSystem;
     CircularDoublyLinkedList<Person> *users = new CircularDoublyLinkedList<Person>(false);
 
     bool hasSelectedExit{false};
@@ -20,7 +20,11 @@ void LoginManager::start() {
         switch (menuLogin.start()) {
             
             case LOGIN:
-                login(users);
+
+                if (login(users)) {
+                    hasSelectedExit = menuSystem.start() == menuSystem.EXIT;
+                }
+
                 break;
 
             case REGISTER:

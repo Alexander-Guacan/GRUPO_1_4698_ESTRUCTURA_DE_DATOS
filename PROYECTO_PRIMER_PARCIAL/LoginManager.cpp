@@ -20,8 +20,7 @@ void LoginManager::start() {
         switch (menuLogin.start()) {
             
             case LOGIN:
-                std::cout << "\nPresiono opcion login\n";
-                system("pause");
+                login(users);
                 break;
 
             case REGISTER:
@@ -35,13 +34,53 @@ void LoginManager::start() {
     }
 }
 
-bool LoginManager::registerOnSystem(List<Person> *users) {
+bool LoginManager::login(List<Person> *users) {
+    system("cls");
+    const short LEFT_SPACING = 40;
+    const short UP_SPACING = 5;
+    HandleConsole console;
+    Input input;
 
+    console.setConsoleCursorPosition({LEFT_SPACING, UP_SPACING});
+    char *emailInput = input.email("Ingresa tu correo electronico: ", std::strlen("@empresa.com") + 3, std::strlen("@empresa.com") + 20);
+    console.setConsoleCursorPosition({LEFT_SPACING, UP_SPACING + 1});
+    char *passwordInput = input.alphanumeric("Ingresa tu clave: ", 5, 10);
+
+    Person *personToSearch = new Person(emailInput, passwordInput);
+
+    IteratorLinkedList<Person> *iterator = users->getIterator();
+
+    bool hasFoundPerson = false;
+
+    while (iterator->hasNext() && !hasFoundPerson) {
+        Person *personInList = iterator->getData();
+
+        bool hasEqualsEmail = std::strcmp(personToSearch->getEmail(), personInList->getEmail()) == 0;
+        bool hasEqualsPassword = std::strcmp(personToSearch->getPassword(), personInList->getPassword()) == 0;
+
+        hasFoundPerson = hasEqualsEmail && hasEqualsPassword;
+    }
+
+    if (!hasFoundPerson) {
+        console.printTextWithColor("[ERROR: usuario no consta en el sistema, presione una tecla para continuar]", console.RED, {LEFT_SPACING, UP_SPACING + 2});
+        getch();
+    } else {
+        console.printTextWithColor("[Datos correctos, presione una tecla para continuar]", console.BLUE, {LEFT_SPACING, UP_SPACING + 2});
+        getch();
+    }
+
+    return hasFoundPerson;
+}
+
+bool LoginManager::registerOnSystem(List<Person> *users) {
+    const short LEFT_SPACING = 40;
+    const short UP_SPACING = 5;
+    HandleConsole console;
     Person *personToInsert = new Person();
 
     while (!users->insertAtEnd(personToInsert)) {
 
-        std::cout << "\n\t\t\t\t\t[ERROR: la persona ingresada ya existe, presiona una tecla para reintentar]";
+        console.printTextWithColor("[ERROR: la persona ingresada ya existe, presiona una tecla para reintentar]", console.RED, {LEFT_SPACING, UP_SPACING + 4});
         getch();
 
         personToInsert->setData();
@@ -64,9 +103,9 @@ bool LoginManager::registerOnSystem(List<Person> *users) {
         return repeats - 1;
     }());
 
-    std::cout << "\n\t\t\t\t\tTu correo electronico es: " << personToInsert->getEmail();
-
-    std::cout << "\n\t\t\t\t\t---Presione una tecla para continuar---";
+    console.printTextWithColor("Tu correo electronico es: ", console.BLUE, {LEFT_SPACING, UP_SPACING + 4});
+    console.printTextWithColor(personToInsert->getEmail(), console.GREEN);
+    console.printTextWithColor("---Presione una tecla para continuar---", console.BLUE, {LEFT_SPACING, UP_SPACING + 5});
     getch();
 
     return true;

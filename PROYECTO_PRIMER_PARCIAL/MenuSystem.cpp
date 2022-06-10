@@ -1,7 +1,7 @@
-#include "MenuOfBuy.hpp"
+#include "MenuSystem.hpp"
 #include <conio.h>
 
-short MenuOfBuy::start() {
+short MenuSystem::start() {
     system("cls");
     printOptions();
     HandleConsole console;
@@ -77,7 +77,7 @@ short MenuOfBuy::start() {
     return optionSelected;
 }
 
-void MenuOfBuy::printOptions() {
+void MenuSystem::printOptions() {
     HandleConsole console;
 
     console.printTextWithColor("MENU DE COMPRA DE CELULARES", console.RED, {SPACE_LEFT, TITLE_POSITION});
@@ -93,7 +93,7 @@ void MenuOfBuy::printOptions() {
     console.printTextWithColor("Salir", console.GREY, {SPACE_LEFT, EXIT_OPTION_POSITION});
 }
 
-short MenuOfBuy::renderFirstOption() {
+short MenuSystem::renderFirstOption() {
     HandleConsole console;
 
     console.printTextWithColor("Comprar", console.GREEN, {SPACE_LEFT, FIRST_OPTION_POSITION});
@@ -103,7 +103,7 @@ short MenuOfBuy::renderFirstOption() {
     return BUY;
 }
 
-short MenuOfBuy::renderSecondOption() {
+short MenuSystem::renderSecondOption() {
     HandleConsole console;
 
     console.printTextWithColor("Comprar", console.GREY, {SPACE_LEFT, FIRST_OPTION_POSITION});
@@ -115,7 +115,7 @@ short MenuOfBuy::renderSecondOption() {
     return COMPLETE_LIST;
 }
 
-short MenuOfBuy::renderThirdOption() {
+short MenuSystem::renderThirdOption() {
     HandleConsole console;
     
     console.printTextWithColor("Ver listado completo", console.GREY, {SPACE_LEFT, SECOND_OPTION_POSITION});
@@ -127,7 +127,7 @@ short MenuOfBuy::renderThirdOption() {
     return STOCK;
 }
 
-short MenuOfBuy::renderReturnOption() {
+short MenuSystem::renderReturnOption() {
     HandleConsole console;
     
     console.printTextWithColor("Stock", console.GREY, {SPACE_LEFT, THIRD_OPTION_POSITION});
@@ -139,7 +139,7 @@ short MenuOfBuy::renderReturnOption() {
     return RETURN;
 }
 
-short MenuOfBuy::renderExitOption() {
+short MenuSystem::renderExitOption() {
     HandleConsole console;
 
     console.printTextWithColor("Regresar", console.GREY, {SPACE_LEFT, RETURN_OPTION_POSITION});

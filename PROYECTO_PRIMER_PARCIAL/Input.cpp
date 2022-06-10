@@ -490,3 +490,49 @@ char *Input::alphanumeric(const char *instructionMessage, short minimumCharacter
 
     return text;
 }
+
+char *Input::email(const char *instructionMessage, short minimumCharacters, short maximumCharacters) {
+    printf("%s", instructionMessage);
+
+    const char ENTER_KEY{13};
+    const char BACKSPACE_KEY{8};
+
+    char *emailInput = new char[maximumCharacters + 1]{};
+
+    char keyPressed{};
+    char *iterator{emailInput};
+    int sizeOfString{};
+
+    while ((keyPressed = getch()) != ENTER_KEY || *emailInput == '\0' || sizeOfString < minimumCharacters) {
+
+        if ((  (keyPressed >= '0' && keyPressed <= '9')
+            || (keyPressed >= 'a' && keyPressed <= 'z')
+            || (keyPressed == '@' || keyPressed == '.')
+            ) && sizeOfString < maximumCharacters) {
+            printf("%c", keyPressed);
+
+            *iterator = keyPressed;
+            iterator++;
+            sizeOfString++;
+
+        } else if (keyPressed == BACKSPACE_KEY && iterator != emailInput) {
+            printf("\b \b");
+
+            sizeOfString--;
+            iterator--;
+            *iterator = '\0';
+        }
+    }
+
+    return emailInput;
+}
+
+char *Input::email(const char *instructionMessage, short minimumCharacters, short maximumCharacters, short textColor) {
+    setTextColor(textColor);
+
+    char *emailInput{email(instructionMessage, minimumCharacters, maximumCharacters)};
+
+    setTextColor(GREY);
+
+    return emailInput;
+}

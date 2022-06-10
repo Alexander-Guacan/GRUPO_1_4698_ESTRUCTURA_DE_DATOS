@@ -49,6 +49,8 @@ class Input {
         char *identificationCard(const char *instructionMessage, short textColor);
         char *alphanumeric(const char *instructionMessage, short minimumCharacters, short maximumCharacters);
         char *alphanumeric(const char *instructionMessage, short minimumCharacters, short maximumCharacters, short textColor);
+        char *email(const char *instructionMessage, short minimumCharacters, short maximumCharacters);
+        char *email(const char *instructionMessage, short minimumCharacters, short maximumCharacters, short textColor);
 };
 
 #endif

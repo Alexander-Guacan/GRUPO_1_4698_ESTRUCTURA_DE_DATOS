@@ -17,6 +17,7 @@ class Person {
     public:
         Person();
         Person(char *initialIdCard);
+        Person(char *initialEmail, char *initialPassword);
         const char *getFirstName();
         const char *getLastName();
         const char *getEmail();

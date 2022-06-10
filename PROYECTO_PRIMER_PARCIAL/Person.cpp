@@ -9,6 +9,11 @@ Person::Person(char *initialIdCard) {
     this->idCard = initialIdCard;
 }
 
+Person::Person(char *initialEmail, char *initialPassword) {
+    this->email = initialEmail;
+    this->password = initialPassword;
+}
+
 const char *Person::getFirstName() {
     return this->firstName;
 }
@@ -19,6 +24,10 @@ const char *Person::getLastName() {
 
 const char *Person::getEmail() {
     return this->email;
+}
+
+const char *Person::getPassword() {
+    return this->password;
 }
 
 void Person::setEmail(char *newEmail) {

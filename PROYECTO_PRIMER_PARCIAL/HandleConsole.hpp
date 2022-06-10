@@ -27,6 +27,7 @@ class HandleConsole {
 
         void setConsoleCursorVisibility(bool enabled);
         void setConsoleCursorPosition(COORD positionXY);
+        void setConsoleTextColor(int colorId);
         void printTextWithColor(const char* message, int colorId);
         void printTextWithColor(const char* message, int colorId, COORD positionXY);
 };

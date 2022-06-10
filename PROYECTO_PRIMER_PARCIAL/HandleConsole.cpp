@@ -17,21 +17,24 @@ void HandleConsole::setConsoleCursorPosition(COORD positionXY) {
     SetConsoleCursorPosition(consoleIdentification, positionXY);
 }
 
-void HandleConsole::printTextWithColor(const char* message, int colorId) {
+void HandleConsole::setConsoleTextColor(int colorId) {
     HANDLE consoleIdentification = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(consoleIdentification, colorId);
+}
+
+void HandleConsole::printTextWithColor(const char* message, int colorId) {
+    setConsoleTextColor(colorId);
 
     std::cout << message;
 
-    SetConsoleTextAttribute(consoleIdentification, GREY);
+    setConsoleTextColor(GREY);
 }
 
 void HandleConsole::printTextWithColor(const char* message, int colorId, COORD positionXY) {
-    HANDLE consoleIdentification = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(consoleIdentification, colorId);
+    setConsoleTextColor(colorId);
 
     setConsoleCursorPosition(positionXY);
     std::cout << message;
 
-    SetConsoleTextAttribute(consoleIdentification, GREY);
+    setConsoleTextColor(GREY);
 }

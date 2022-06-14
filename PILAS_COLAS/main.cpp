@@ -12,7 +12,8 @@
 
 int main() {
 
-    MenuInitial::printScreen();
+    MenuInitial firstMenu;
+    firstMenu.printScreen();
 
     return 0;
 }

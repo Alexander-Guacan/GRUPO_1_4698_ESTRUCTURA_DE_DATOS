@@ -1,8 +1,6 @@
 #include "HandleConsole.hpp"
 #include <iostream>
 
-COORD HandleConsole::cursor = {0, 0};
-
 void HandleConsole::clearScreen() {
     system("cls");
 }
@@ -20,16 +18,20 @@ void HandleConsole::setConsoleCursorVisibility(bool enabled) {
     SetConsoleCursorInfo(consoleIdentification, &cursorInfo);
 }
 
-void HandleConsole::setCursorPosition(COORD position) {
-    HandleConsole::cursor = position;
-
-    HANDLE consoleIdentification = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleCursorPosition(consoleIdentification, HandleConsole::cursor);
-}
-
 void HandleConsole::setConsoleTextColor(enum HandleConsole::TextColors colorId) {
     HANDLE consoleIdentification = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(consoleIdentification, static_cast<int>(colorId));
+}
+
+COORD HandleConsole::getCursor() {
+    return this->cursor;
+}
+
+void HandleConsole::setCursorPosition(COORD position) {
+    this->cursor = position;
+
+    HANDLE consoleIdentification = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleCursorPosition(consoleIdentification, this->cursor);
 }
 
 void HandleConsole::printTextWithColor(const char* message, enum HandleConsole::TextColors colorId) {
@@ -39,6 +41,6 @@ void HandleConsole::printTextWithColor(const char* message, enum HandleConsole::
 
     setConsoleTextColor(TextColors::GREY);
 
-    HandleConsole::cursor.Y++;
-    HandleConsole::setCursorPosition(HandleConsole::cursor);
+    this->cursor.Y++;
+    HandleConsole::setCursorPosition(this->cursor);
 }

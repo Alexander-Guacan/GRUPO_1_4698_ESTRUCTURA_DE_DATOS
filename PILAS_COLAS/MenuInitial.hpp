@@ -5,21 +5,38 @@
 
 class MenuInitial {
     private:
-        static void printOptions();
-        static int printStackOption();
-        static int printQueueOption();
+        const COORD TITLE_POSITION {
+            45,
+            5
+        };
+
+        const COORD SUBTITLE_POSITION {
+            static_cast<SHORT>(TITLE_POSITION.X - 6),
+            static_cast<SHORT>(TITLE_POSITION.Y + 2)
+        };
+
+        const COORD STACK_OPTION_POSITION {
+            static_cast<SHORT>(TITLE_POSITION.X),
+            static_cast<SHORT>(SUBTITLE_POSITION.Y + 2)
+        };
+
+        const COORD QUEUE_OPTION_POSITION {
+            static_cast<SHORT>(STACK_OPTION_POSITION.X + 19),
+            static_cast<SHORT>(STACK_OPTION_POSITION.Y)
+        };
+
+        void printOptions();
+        int printStackOption();
+        int printQueueOption();
 
     public:
-        static const COORD TITLE_POSITION;
-        static const COORD SUBTITLE_POSITION;
-        static const COORD STACK_OPTION_POSITION;
-        static const COORD QUEUE_OPTION_POSITION;
-        enum class Options : int {
+
+        enum class Options : const int {
             STACK_OPTION,
             QUEUE_OPTION
         };
 
-        static int printScreen();
+        int printScreen();
 };
 
 #endif

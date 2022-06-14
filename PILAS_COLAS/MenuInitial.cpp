@@ -2,26 +2,6 @@
 #include "HandleConsole.hpp"
 #include <conio.h>
 
-const COORD MenuInitial::TITLE_POSITION = {
-    10,
-    5
-};
-
-const COORD MenuInitial::SUBTITLE_POSITION = {
-    static_cast<SHORT>(TITLE_POSITION.X - 6),
-    static_cast<SHORT>(TITLE_POSITION.Y + 1)
-};
-
-const COORD MenuInitial::STACK_OPTION_POSITION = {
-    static_cast<SHORT>(TITLE_POSITION.X + 2),
-    static_cast<SHORT>(SUBTITLE_POSITION.Y + 1)
-};
-
-const COORD MenuInitial::QUEUE_OPTION_POSITION = {
-    static_cast<SHORT>(STACK_OPTION_POSITION.X + 15),
-    static_cast<SHORT>(STACK_OPTION_POSITION.Y)
-};
-
 int MenuInitial::printScreen() {
     HandleConsole::setConsoleCursorVisibility(false);
     HandleConsole::clearScreen();
@@ -72,41 +52,44 @@ int MenuInitial::printScreen() {
 }
 
 void MenuInitial::printOptions() {
-    HandleConsole::setCursorPosition(MenuInitial::TITLE_POSITION);
-    HandleConsole::printTextWithColor("EJERCICIO CON PILAS Y COLAS", HandleConsole::TextColors::BLUE);
+    HandleConsole console;
+    console.setCursorPosition(TITLE_POSITION);
+    console.printTextWithColor("EJERCICIO CON PILAS Y COLAS", HandleConsole::TextColors::GREEN);
 
-    HandleConsole::setCursorPosition(MenuInitial::SUBTITLE_POSITION);
-    HandleConsole::printTextWithColor("Que estructura de datos desea utilizar?", HandleConsole::TextColors::BLUE);
+    console.setCursorPosition(SUBTITLE_POSITION);
+    console.printTextWithColor("Elija la estructura de datos a utilizar", HandleConsole::TextColors::DEEP_CYAN);
 
-    HandleConsole::setCursorPosition(MenuInitial::STACK_OPTION_POSITION);
-    HandleConsole::printTextWithColor("> Pila <", HandleConsole::TextColors::BLUE);
+    console.setCursorPosition(STACK_OPTION_POSITION);
+    console.printTextWithColor("> Pila <", HandleConsole::TextColors::BLUE);
 
-    HandleConsole::setCursorPosition(MenuInitial::QUEUE_OPTION_POSITION);
-    HandleConsole::printTextWithColor("  Cola  ", HandleConsole::TextColors::BLUE);
+    console.setCursorPosition(QUEUE_OPTION_POSITION);
+    console.printTextWithColor("  Cola  ", HandleConsole::TextColors::BLUE);
 
-    HandleConsole::setCursorPosition(MenuInitial::STACK_OPTION_POSITION);
+    console.setCursorPosition(STACK_OPTION_POSITION);
 }
 
 int MenuInitial::printStackOption() {
-    HandleConsole::setCursorPosition(MenuInitial::STACK_OPTION_POSITION);
-    HandleConsole::printTextWithColor("> Pila <", HandleConsole::TextColors::BLUE);
+    HandleConsole console;
+    console.setCursorPosition(STACK_OPTION_POSITION);
+    console.printTextWithColor("> Pila <", HandleConsole::TextColors::BLUE);
 
-    HandleConsole::setCursorPosition(MenuInitial::QUEUE_OPTION_POSITION);
-    HandleConsole::printTextWithColor("  Cola  ", HandleConsole::TextColors::BLUE);
+    console.setCursorPosition(QUEUE_OPTION_POSITION);
+    console.printTextWithColor("  Cola  ", HandleConsole::TextColors::BLUE);
 
-    HandleConsole::setCursorPosition(MenuInitial::STACK_OPTION_POSITION);
+    console.setCursorPosition(STACK_OPTION_POSITION);
 
     return static_cast<int>(Options::STACK_OPTION);
 }
 
 int MenuInitial::printQueueOption() {
-    HandleConsole::setCursorPosition(MenuInitial::STACK_OPTION_POSITION);
-    HandleConsole::printTextWithColor("  Pila  ", HandleConsole::TextColors::BLUE);
+    HandleConsole console;
+    console.setCursorPosition(STACK_OPTION_POSITION);
+    console.printTextWithColor("  Pila  ", HandleConsole::TextColors::BLUE);
 
-    HandleConsole::setCursorPosition(MenuInitial::QUEUE_OPTION_POSITION);
-    HandleConsole::printTextWithColor("> Cola <", HandleConsole::TextColors::BLUE);
+    console.setCursorPosition(QUEUE_OPTION_POSITION);
+    console.printTextWithColor("> Cola <", HandleConsole::TextColors::BLUE);
 
-    HandleConsole::setCursorPosition(MenuInitial::QUEUE_OPTION_POSITION);
+    console.setCursorPosition(QUEUE_OPTION_POSITION);
 
     return static_cast<int>(Options::QUEUE_OPTION);
 }

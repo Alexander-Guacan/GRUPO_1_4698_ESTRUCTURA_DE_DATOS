@@ -5,10 +5,10 @@
 
 class HandleConsole {
     private:
+        COORD cursor{0, 0};
 
     public:
-        static COORD cursor;
-        enum class TextColors : int {
+        enum class TextColors : const int {
             BLACK,
             BLUE,
             GREEN,
@@ -29,9 +29,10 @@ class HandleConsole {
 
         static void clearScreen();
         static void setConsoleCursorVisibility(bool enabled);
-        static void setCursorPosition(COORD position);
         static void setConsoleTextColor(enum HandleConsole::TextColors colorId);
-        static void printTextWithColor(const char* message, enum HandleConsole::TextColors colorId);
+        COORD getCursor();
+        void setCursorPosition(COORD position);
+        void printTextWithColor(const char* message, enum HandleConsole::TextColors colorId);
 };
 
 #endif

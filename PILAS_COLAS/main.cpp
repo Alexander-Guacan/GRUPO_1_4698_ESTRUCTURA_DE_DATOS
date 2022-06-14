@@ -8,9 +8,11 @@
  * Github: https://github.com/Alexander-Guacan/GRUPO_1_4698_ESTRUCTURA_DE_DATOS.git
  */
 
-#include "HandleConsole.hpp"
+#include "MenuInitial.hpp"
 
 int main() {
+
+    MenuInitial::printScreen();
 
     return 0;
 }

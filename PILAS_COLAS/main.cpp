@@ -1,6 +1,6 @@
 /*
  * UNIVERSIDAD DE LAS FUERZAS ARMADAS - ESPE
- * (enunciado del problema)
+ * Trabajar con colas y pilas, generar sus operaciones basicas y construir un metodo que permite obtener la varianza en cada tipo de estructura
  * Autor: Alexander David Guacán Rivera y Alison Paola Moncayo Achilchisa
  * Fecha de creacion: 13/06/2022
  * Fecha de ultima modificación: 13/06/2022

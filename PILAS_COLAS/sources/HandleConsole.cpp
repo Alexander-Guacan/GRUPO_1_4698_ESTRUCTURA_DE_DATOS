@@ -42,5 +42,5 @@ void HandleConsole::printTextWithColor(const char* message, enum HandleConsole::
     setConsoleTextColor(TextColors::GREY);
 
     this->cursor.Y++;
-    HandleConsole::setCursorPosition(this->cursor);
+    setCursorPosition(this->cursor);
 }

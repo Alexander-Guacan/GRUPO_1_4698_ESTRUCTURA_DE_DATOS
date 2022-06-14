@@ -1,9 +1,9 @@
-#ifndef MENU_INITIAL_HPP
-#define MENU_INITIAL_HPP
+#ifndef MENU_INITIAL_GUI_HPP
+#define MENU_INITIAL_GUI_HPP
 
 #include <windows.h>
 
-class MenuInitial {
+class MenuInitialGUI {
     private:
         const COORD TITLE_POSITION {
             45,

@@ -1,8 +1,8 @@
-#include "MenuInitial.hpp"
+#include "MenuInitialGUI.hpp"
 #include "HandleConsole.hpp"
 #include <conio.h>
 
-int MenuInitial::printScreen() {
+int MenuInitialGUI::printScreen() {
     HandleConsole::setConsoleCursorVisibility(false);
     HandleConsole::clearScreen();
     printOptions();
@@ -11,7 +11,7 @@ int MenuInitial::printScreen() {
     const int RIGHT_KEY{333};
     const int ENTER_KEY{13};
 
-    int optionSelected = static_cast<int>(MenuInitial::Options::STACK_OPTION);
+    int optionSelected = static_cast<int>(MenuInitialGUI::Options::STACK_OPTION);
     int keyPressed{};
 
     while ((keyPressed = getch()) != ENTER_KEY) {
@@ -36,11 +36,11 @@ int MenuInitial::printScreen() {
             }
 
             switch (optionSelected) {
-                case static_cast<int>(MenuInitial::Options::STACK_OPTION):
+                case static_cast<int>(MenuInitialGUI::Options::STACK_OPTION):
                     optionSelected = printStackOption();
                     break;
 
-                case static_cast<int>(MenuInitial::Options::QUEUE_OPTION):
+                case static_cast<int>(MenuInitialGUI::Options::QUEUE_OPTION):
                     optionSelected = printQueueOption();
                     break;
             }
@@ -51,7 +51,7 @@ int MenuInitial::printScreen() {
     return optionSelected;
 }
 
-void MenuInitial::printOptions() {
+void MenuInitialGUI::printOptions() {
     HandleConsole console;
     console.setCursorPosition(TITLE_POSITION);
     console.printTextWithColor("EJERCICIO CON PILAS Y COLAS", HandleConsole::TextColors::GREEN);
@@ -68,7 +68,7 @@ void MenuInitial::printOptions() {
     console.setCursorPosition(STACK_OPTION_POSITION);
 }
 
-int MenuInitial::printStackOption() {
+int MenuInitialGUI::printStackOption() {
     HandleConsole console;
     console.setCursorPosition(STACK_OPTION_POSITION);
     console.printTextWithColor("> Pila <", HandleConsole::TextColors::BLUE);
@@ -81,7 +81,7 @@ int MenuInitial::printStackOption() {
     return static_cast<int>(Options::STACK_OPTION);
 }
 
-int MenuInitial::printQueueOption() {
+int MenuInitialGUI::printQueueOption() {
     HandleConsole console;
     console.setCursorPosition(STACK_OPTION_POSITION);
     console.printTextWithColor("  Pila  ", HandleConsole::TextColors::BLUE);

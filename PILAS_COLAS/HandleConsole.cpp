@@ -3,6 +3,10 @@
 
 COORD HandleConsole::cursor = {0, 0};
 
+void HandleConsole::clearScreen() {
+    system("cls");
+}
+
 void HandleConsole::setConsoleCursorVisibility(bool enabled) {
     HANDLE consoleIdentification = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_CURSOR_INFO cursorInfo;

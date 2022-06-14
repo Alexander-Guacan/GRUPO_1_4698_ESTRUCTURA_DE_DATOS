@@ -5,9 +5,9 @@
 
 class HandleConsole {
     private:
-        static COORD cursor;
 
     public:
+        static COORD cursor;
         enum class TextColors : int {
             BLACK,
             BLUE,
@@ -27,6 +27,7 @@ class HandleConsole {
             WHITE
         };
 
+        static void clearScreen();
         static void setConsoleCursorVisibility(bool enabled);
         static void setCursorPosition(COORD position);
         static void setConsoleTextColor(enum HandleConsole::TextColors colorId);

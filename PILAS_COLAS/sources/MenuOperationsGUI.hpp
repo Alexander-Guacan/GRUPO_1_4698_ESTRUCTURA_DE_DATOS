@@ -31,13 +31,18 @@ class MenuOperationsGUI {
         };
         
         const COORD CALCULATE_VARIANCE_OPTION_POSITION {
-            static_cast<SHORT>(TITLE_POSITION.X- 8),
+            static_cast<SHORT>(TITLE_POSITION.X - 8),
             static_cast<SHORT>(SHOW_WITH_DELETE_OPTION_POSITION.Y + 1)
+        };
+
+        const COORD RETURN_OPTION_POSITION {
+            static_cast<SHORT>(TITLE_POSITION.X - 4),
+            static_cast<SHORT>(CALCULATE_VARIANCE_OPTION_POSITION.Y + 1)
         };
         
         const COORD EXIT_OPTION_POSITION {
             static_cast<SHORT>(TITLE_POSITION.X - 3),
-            static_cast<SHORT>(CALCULATE_VARIANCE_OPTION_POSITION.Y + 3)
+            static_cast<SHORT>(RETURN_OPTION_POSITION.Y + 3)
         };
         
         void printOptions();
@@ -46,6 +51,7 @@ class MenuOperationsGUI {
         int printShowWithoutDeleteOption();
         int printShowWithDeleteOption();
         int printCalculateVarianceOption();
+        int printReturnOption();
         int printExitOption();
 
     public:
@@ -56,6 +62,7 @@ class MenuOperationsGUI {
             SHOW_WITHOUT_DELETE,
             SHOW_WITH_DELETE,
             CALCULATE_VARIANCE,
+            RETURN,
             EXIT
         };
 

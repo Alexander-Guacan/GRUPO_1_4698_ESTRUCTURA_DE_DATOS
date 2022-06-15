@@ -56,6 +56,10 @@ int MenuOperationsGUI::printScreen() {
                     optionSelected = printCalculateVarianceOption();
                     break;
 
+                case static_cast<int>(MenuOperationsGUI::Options::RETURN):
+                    optionSelected = printReturnOption();
+                    break;
+
                 case static_cast<int>(MenuOperationsGUI::Options::EXIT):
                     optionSelected = printExitOption();
                     break;
@@ -87,6 +91,9 @@ void MenuOperationsGUI::printOptions() {
 
     console.setCursorPosition(CALCULATE_VARIANCE_OPTION_POSITION);
     console.printTextWithColor("  Calcular varianza  ", HandleConsole::TextColors::DEEP_CYAN);
+
+    console.setCursorPosition(RETURN_OPTION_POSITION);
+    console.printTextWithColor("  Regresar  ", HandleConsole::TextColors::DEEP_CYAN);
 
     console.setCursorPosition(EXIT_OPTION_POSITION);
     console.printTextWithColor("  Salir  ", HandleConsole::TextColors::DEEP_RED);
@@ -158,17 +165,32 @@ int MenuOperationsGUI::printCalculateVarianceOption() {
     console.setCursorPosition(CALCULATE_VARIANCE_OPTION_POSITION);
     console.printTextWithColor("> Calcular varianza <", HandleConsole::TextColors::DEEP_CYAN);
 
+    console.setCursorPosition(RETURN_OPTION_POSITION);
+    console.printTextWithColor("  Regresar  ", HandleConsole::TextColors::DEEP_CYAN);
+
+    return static_cast<int>(MenuOperationsGUI::Options::CALCULATE_VARIANCE);
+}
+
+int MenuOperationsGUI::printReturnOption() {
+    HandleConsole console;
+
+    console.setCursorPosition(CALCULATE_VARIANCE_OPTION_POSITION);
+    console.printTextWithColor("  Calcular varianza  ", HandleConsole::TextColors::DEEP_CYAN);
+
+    console.setCursorPosition(RETURN_OPTION_POSITION);
+    console.printTextWithColor("> Regresar <", HandleConsole::TextColors::DEEP_CYAN);
+
     console.setCursorPosition(EXIT_OPTION_POSITION);
     console.printTextWithColor("  Salir  ", HandleConsole::TextColors::DEEP_RED);
 
-    return static_cast<int>(MenuOperationsGUI::Options::CALCULATE_VARIANCE);
+    return static_cast<int>(MenuOperationsGUI::Options::RETURN);
 }
 
 int MenuOperationsGUI::printExitOption() {
     HandleConsole console;
 
-    console.setCursorPosition(CALCULATE_VARIANCE_OPTION_POSITION);
-    console.printTextWithColor("  Calcular varianza  ", HandleConsole::TextColors::DEEP_CYAN);
+    console.setCursorPosition(RETURN_OPTION_POSITION);
+    console.printTextWithColor("  Regresar  ", HandleConsole::TextColors::DEEP_CYAN);
 
     console.setCursorPosition(EXIT_OPTION_POSITION);
     console.printTextWithColor("> Salir <", HandleConsole::TextColors::DEEP_RED);

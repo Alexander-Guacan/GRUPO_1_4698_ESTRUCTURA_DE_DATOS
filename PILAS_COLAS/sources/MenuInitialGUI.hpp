@@ -16,7 +16,7 @@ class MenuInitialGUI {
         };
 
         const COORD STACK_OPTION_POSITION {
-            static_cast<SHORT>(TITLE_POSITION.X),
+            static_cast<SHORT>(TITLE_POSITION.X - 10),
             static_cast<SHORT>(SUBTITLE_POSITION.Y + 2)
         };
 
@@ -25,15 +25,22 @@ class MenuInitialGUI {
             static_cast<SHORT>(STACK_OPTION_POSITION.Y)
         };
 
+        const COORD EXIT_OPTION_POSITION {
+            static_cast<SHORT>(QUEUE_OPTION_POSITION.X + 19),
+            static_cast<SHORT>(STACK_OPTION_POSITION.Y)
+        };
+
         void printOptions();
         int printStackOption();
         int printQueueOption();
+        int printExitOption();
 
     public:
 
         enum class Options : const int {
-            STACK_OPTION,
-            QUEUE_OPTION
+            STACK,
+            QUEUE,
+            EXIT
         };
 
         int printScreen();

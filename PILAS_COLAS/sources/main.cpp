@@ -8,55 +8,10 @@
  * Github: https://github.com/Alexander-Guacan/GRUPO_1_4698_ESTRUCTURA_DE_DATOS.git
  */
 
-#include <iostream>
-#include "Queue.hpp"
-#include "Stack.hpp"
-
-void rellenarQueue(Queue<int> *queue);
-void recorrerListaEliminandoSusElementos(Queue<int> *queue);
-void recorrerListaSinEliminarSusElementos(Queue<int> *queue);
+#include "MenuInitialSystem.hpp"
 
 int main() {
-    Queue<int> *queue = new Queue<int>();
-
-    rellenarQueue(queue);
-
-    recorrerListaEliminandoSusElementos(queue);
-
-    rellenarQueue(queue);
-
-    recorrerListaSinEliminarSusElementos(queue);
+    MenuInitialSystem::start();
 
     return 0;
-}
-
-void rellenarQueue(Queue<int> *queue) {
-
-    queue->add(new int{45});
-    queue->add(new int{78});
-    queue->add(new int{34});
-    queue->add(new int{9});
-    queue->add(new int{23});
-}
-
-void recorrerListaEliminandoSusElementos(Queue<int> *queue) {
-    std::cout << "\nSize inicial: " << queue->size() << '\n';
-
-    while (!queue->isEmpty()) {
-        std::cout << "Valor: " << *(queue->poll()) << '\n';
-    }
-
-    std::cout << "Size final: " << queue->size() << '\n';
-}
-
-void recorrerListaSinEliminarSusElementos(Queue<int> *queue) {
-    std::cout << "\nSize inicial: " << queue->size() << '\n';
-
-    Iterator<int> *iterator = queue->getIterator();
-
-    while (iterator->hasNext()) {
-        std::cout << "Valor: " << *(iterator->next()) << '\n';
-    }
-
-    std::cout << "Size final: " << queue->size() << '\n';
 }

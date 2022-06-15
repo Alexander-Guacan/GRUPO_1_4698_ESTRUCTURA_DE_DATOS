@@ -8,10 +8,15 @@
  * Github: https://github.com/Alexander-Guacan/GRUPO_1_4698_ESTRUCTURA_DE_DATOS.git
  */
 
-#include "BankSystem.hpp"
+#ifndef ID_VERIFICATOR_HPP
+#define ID_VERIFICATOR_HPP
 
-int main() {
-    BankSystem::start();
+#include <string>
 
-    return 0;
-}
+class IdVerificator {
+    public:
+        bool isValid(char *idCard);
+};
+
+
+#endif

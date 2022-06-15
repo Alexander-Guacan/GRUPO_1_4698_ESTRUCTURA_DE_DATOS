@@ -1,0 +1,532 @@
+/*
+ * UNIVERSIDAD DE LAS FUERZAS ARMADAS - ESPE
+ * Trabajar con colas y pilas, generar sus operaciones basicas y construir un metodo que permite obtener la varianza en cada tipo de estructura
+ * Autor: Alexander David Guacán Rivera y Alison Paola Moncayo Achilchisa
+ * Fecha de creacion: 13/06/2022
+ * Fecha de ultima modificación: 14/06/2022
+ * Grupo: 1
+ * Github: https://github.com/Alexander-Guacan/GRUPO_1_4698_ESTRUCTURA_DE_DATOS.git
+ */
+
+
+#include <iostream>
+#include "Queue.hpp"
+#include "Stack.hpp"
+
+void rellenarQueue(Queue<int> *queue);
+void recorrerListaEliminandoSusElementos(Queue<int> *queue);
+void recorrerListaSinEliminarSusElementos(Queue<int> *queue);
+
+int main() {
+    Queue<int> *queue = new Queue<int>();
+
+    rellenarQueue(queue);
+
+    recorrerListaEliminandoSusElementos(queue);
+
+    rellenarQueue(queue);
+
+    recorrerListaSinEliminarSusElementos(queue);
+
+    return 0;
+}
+
+void rellenarQueue(Queue<int> *queue) {
+
+    queue->add(new int{45});
+    queue->add(new int{78});
+    queue->add(new int{34});
+    queue->add(new int{9});
+    queue->add(new int{23});
+}
+
+void recorrerListaEliminandoSusElementos(Queue<int> *queue) {
+    std::cout << "\nSize inicial: " << queue->size() << '\n';
+
+    while (!queue->isEmpty()) {
+        std::cout << "Valor: " << *(queue->poll()) << '\n';
+    }
+
+    std::cout << "Size final: " << queue->size() << '\n';
+}
+
+void recorrerListaSinEliminarSusElementos(Queue<int> *queue) {
+    std::cout << "\nSize inicial: " << queue->size() << '\n';
+
+    Iterator<int> *iterator = queue->getIterator();
+
+    while (iterator->hasNext()) {
+        std::cout << "Valor: " << *(iterator->next()) << '\n';
+    }
+
+    std::cout << "Size final: " << queue->size() << '\n';
+}
+
+
+
+#ifndef DATA_STRUCTURE_HPP
+#define DATA_STRUCTURE_HPP
+
+#include "Iterator.hpp"
+
+template <typename T>
+class DataStructure {
+    protected:
+        SimpleNode<T> *head{nullptr};
+
+    public:
+        // Verifica si la lista esta vacia
+        bool isEmpty();
+        // Retorna el numero de elementos existentes en la lista
+        int size();
+        // Retorna un objeto Iterator
+        Iterator<T> *getIterator();
+};
+
+template <typename T>
+bool DataStructure<T>::isEmpty() {
+    return this->head == nullptr;
+}
+
+template <typename T>
+int DataStructure<T>::size() {
+    int sizeOfDataStructure{};
+    SimpleNode<T> *iterator{head};
+
+    while (iterator != nullptr) {
+        iterator = iterator->getNextNode();
+        sizeOfDataStructure++;
+    }
+
+    return sizeOfDataStructure;
+}
+
+template <typename T>
+Iterator<T> *DataStructure<T>::getIterator() {
+    return new Iterator<T>(this->head);
+}
+
+#endif
+
+#ifndef HANDLE_CONSOLE_HPP
+#define HANDLE_CONSOLE_HPP
+
+#include <windows.h>
+
+class HandleConsole {
+    private:
+        COORD cursor{0, 0};
+
+    public:
+        enum class TextColors : const int {
+            BLACK,
+            BLUE,
+            GREEN,
+            CYAN,
+            RED,
+            MAGENTA,
+            BROWN,
+            GREY,
+            DEEP_GREY,
+            DEEP_BLUE,
+            DEEP_GREEN,
+            DEEP_CYAN,
+            DEEP_RED,
+            DEEP_MAGENTA,
+            YELLOW,
+            WHITE
+        };
+
+        static void clearScreen();
+        static void setConsoleCursorVisibility(bool enabled);
+        static void setConsoleTextColor(enum HandleConsole::TextColors colorId);
+        COORD getCursor();
+        void setCursorPosition(COORD position);
+        void printTextWithColor(const char* message, enum HandleConsole::TextColors colorId);
+};
+
+#endif
+
+
+#ifndef ITERATOR_HPP
+#define ITERATOR_HPP
+
+#include "SimpleNode.hpp"
+
+template <typename T>
+class Iterator {
+    private:
+        SimpleNode<T> *node;
+
+    public:
+        // Inicializamos un con el primer nodo de la lista para recorrerla sin afectar su orden
+        Iterator(SimpleNode<T> *beginOfList);
+        // Devuelve true si existen mas elementos en la lista, caso contrario retorna false
+        bool hasNext();
+        // Devuelve el siguiente elemento de la lista, si la lista esta vacia o ya no quedan mas elementos retornara un nullptr
+        const T *next();
+};
+
+template <typename T>
+Iterator<T>::Iterator(SimpleNode<T> *beginOfList) {
+    this->node = beginOfList;
+}
+
+template <typename T>
+bool Iterator<T>::hasNext() {
+    return this->node != nullptr;
+}
+
+template <typename T>
+const T *Iterator<T>::next() {
+    T *data = node->getData();
+
+    node = node->getNextNode();
+
+    return data;
+}
+
+#endif
+
+
+#ifndef MENU_INITIAL_GUI_HPP
+#define MENU_INITIAL_GUI_HPP
+
+#include <windows.h>
+
+class MenuInitialGUI {
+    private:
+        const COORD TITLE_POSITION {
+            45,
+            5
+        };
+
+        const COORD SUBTITLE_POSITION {
+            static_cast<SHORT>(TITLE_POSITION.X - 6),
+            static_cast<SHORT>(TITLE_POSITION.Y + 2)
+        };
+
+        const COORD STACK_OPTION_POSITION {
+            static_cast<SHORT>(TITLE_POSITION.X),
+            static_cast<SHORT>(SUBTITLE_POSITION.Y + 2)
+        };
+
+        const COORD QUEUE_OPTION_POSITION {
+            static_cast<SHORT>(STACK_OPTION_POSITION.X + 19),
+            static_cast<SHORT>(STACK_OPTION_POSITION.Y)
+        };
+
+        void printOptions();
+        int printStackOption();
+        int printQueueOption();
+
+    public:
+
+        enum class Options : const int {
+            STACK_OPTION,
+            QUEUE_OPTION
+        };
+
+        int printScreen();
+};
+
+#endif
+
+
+#ifndef MENU_OPERATIONS_GUI_HPP
+#define MENU_OPERATIONS_GUI_HPP
+
+#include <windows.h>
+
+class MenuOperationsGUI {
+    private:
+        const COORD TITLE_POSITION {
+            55,
+            5
+        };
+        
+        const COORD ADD_OPTION_POSITION {
+            static_cast<SHORT>(TITLE_POSITION.X - 8),
+            static_cast<SHORT>(TITLE_POSITION.Y + 3)
+        };
+        
+        const COORD DELETE_OPTION_POSITION {
+            static_cast<SHORT>(TITLE_POSITION.X - 9),
+            static_cast<SHORT>(ADD_OPTION_POSITION.Y + 1)
+        };
+        
+        const COORD SHOW_WITHOUT_DELETE_OPTION_POSITION {
+            static_cast<SHORT>(TITLE_POSITION.X - 4),
+            static_cast<SHORT>(DELETE_OPTION_POSITION.Y + 1)
+        };
+        
+        const COORD SHOW_WITH_DELETE_OPTION_POSITION {
+            static_cast<SHORT>(TITLE_POSITION.X - 6),
+            static_cast<SHORT>(SHOW_WITHOUT_DELETE_OPTION_POSITION.Y + 1)
+        };
+        
+        const COORD CALCULATE_VARIANCE_OPTION_POSITION {
+            static_cast<SHORT>(TITLE_POSITION.X- 8),
+            static_cast<SHORT>(SHOW_WITH_DELETE_OPTION_POSITION.Y + 1)
+        };
+        
+        const COORD EXIT_OPTION_POSITION {
+            static_cast<SHORT>(TITLE_POSITION.X - 3),
+            static_cast<SHORT>(CALCULATE_VARIANCE_OPTION_POSITION.Y + 3)
+        };
+        
+        void printOptions();
+        int printAddOption();
+        int printDeleteOption();
+        int printShowWithoutDeleteOption();
+        int printShowWithDeleteOption();
+        int printCalculateVarianceOption();
+        int printExitOption();
+
+    public:
+
+        enum class Options : const int {
+            ADD,
+            DELETE_ELEMENT,
+            SHOW_WITHOUT_DELETE,
+            SHOW_WITH_DELETE,
+            CALCULATE_VARIANCE,
+            EXIT
+        };
+
+        int printScreen();
+};
+
+#endif
+
+
+
+#ifndef QUEUE_HPP
+#define QUEUE_HPP
+
+#include "DataStructure.hpp"
+
+template <typename T>
+class Queue : public DataStructure<T> {
+    private:
+        SimpleNode<T> *tail{nullptr};
+
+    public:
+        // Agrega un nuevo elemento al final de la lista
+        void add(T *newData);
+        // Retorna el elemento en la cabeza de la lista y luego es eliminado
+        T *poll();
+        // Retorna el elemento en la cabeza de la lista
+        T *peek();
+        // destructor
+        ~Queue();
+};
+
+template <typename T>
+void Queue<T>::add(T *newData) {
+    SimpleNode<T> *newNode = new SimpleNode<T>(newData);
+
+    if (!this->isEmpty()) {
+        tail->setNextNode(newNode);
+    } else {
+        this->head = newNode;
+    }
+
+    tail = newNode;
+}
+
+template <typename T>
+T *Queue<T>::poll() {
+    if (!this->isEmpty()) {
+        SimpleNode<T> *auxiliar{this->head};
+        T *data = this->head->getData();
+
+        this->head = this->head->getNextNode();
+        delete auxiliar;
+
+        return data;
+    } else {
+        return nullptr;
+    }
+}
+
+template <typename T>
+T *Queue<T>::peek() {
+    if (!this->isEmpty()) {
+
+        return this->head->getData();
+    } else {
+        return nullptr;
+    }
+}
+
+template <typename T>
+Queue<T>::~Queue() {
+    while (!this->isEmpty()) {
+        SimpleNode<T> *auxiliar{this->head};
+        this->head = this->head->getNextNode();
+        delete auxiliar;
+    }
+}
+
+
+#endif
+
+
+
+#ifndef QUEUE_VARIANCE_CALCULATOR_HPP
+#define QUEUE_VARIANCE_CALCULATOR_HPP
+
+#include "Queue.hpp"
+
+typedef int NUMBER;
+
+class QueueVarianceCalculator {
+    private:
+        static int elementsQuantity(Queue<NUMBER> *&queue);
+        static double average(Queue<NUMBER> *&queue);
+
+    public:
+        static double calculate(Queue<NUMBER> *&queue);
+};
+
+#endif
+
+
+#ifndef SIMPLE_NODE_HPP
+#define SIMPLE_NODE_HPP
+
+template <typename T>
+class SimpleNode {
+    private:
+        T *data{nullptr};
+        SimpleNode<T> *nextNode{nullptr};
+
+    public:
+        SimpleNode(T *initialData);
+        T *getData();
+        SimpleNode<T> *getNextNode();
+        void setData(T *newNode);
+        void setNextNode(SimpleNode<T> *newNextNode);
+        ~SimpleNode();
+};
+
+template <typename T>
+SimpleNode<T>::SimpleNode(T *initialData) {
+    this->data = initialData;
+}
+
+template <typename T>
+T *SimpleNode<T>::getData() {
+    return this->data;
+}
+
+template <typename T>
+SimpleNode<T> *SimpleNode<T>::getNextNode() {
+    return this->nextNode;
+}
+
+template <typename T>
+void SimpleNode<T>::setData(T *newData) {
+    this->data = newData;
+}
+
+template <typename T>
+void SimpleNode<T>::setNextNode(SimpleNode<T> *newNextNode) {
+    this->nextNode = newNextNode;
+}
+
+template <typename T>
+SimpleNode<T>::~SimpleNode() {
+    this->data = nullptr;
+    this->nextNode = nullptr;
+}
+
+#endif
+
+
+
+#ifndef STACK_HPP
+#define STACK_HPP
+
+#include "DataStructure.hpp"
+
+template <typename T>
+class Stack : public DataStructure<T> {
+
+    public:
+        // Agrega un nuevo elemento al principio de la lista
+        void push(T *newData);
+        // Retorna el elemento que se encuentra en la cabeza de la lista y lo elimina de la misma
+        T *pop();
+        // Retorna el elemento que se encuentra al principio de la lista
+        T *top();
+        // Destructor
+        ~Stack();
+};
+
+template <typename T>
+void Stack<T>::push(T *newData) {
+    SimpleNode<T> *newNode = new SimpleNode<T>(newData);
+
+    if (!this->isEmpty()) {
+        newNode->setNextNode(this->head);
+    }
+
+    this->head = newNode;
+}
+
+template <typename T>
+T *Stack<T>::pop() {
+    if (!this->isEmpty()) {
+        SimpleNode<T> *auxiliar{this->head};
+        T *data = this->head->getData();
+
+        this->head = this->head->getNextNode();
+        delete auxiliar;
+
+        return data;
+    } else {
+        return nullptr;
+    }
+}
+
+template <typename T>
+T *Stack<T>::top() {
+    if (!this->isEmpty()) {
+        return this->head->getData();
+    } else {
+        return nullptr;
+    }
+}
+
+template <typename T>
+Stack<T>::~Stack() {
+    while (!this->isEmpty()) {
+        SimpleNode<T> *auxiliar{this->head};
+        this->head = this->head->getNextNode();
+        delete auxiliar;
+    }
+}
+
+#endif
+
+
+
+#ifndef STACK_VARIANCE_CALCULATOR_HPP
+#define STACK_VARIANCE_CALCULATOR_HPP
+
+#include "Stack.hpp"
+
+typedef int NUMBER;
+
+class StackVarianceCalculator {
+    private:
+        static int elementsQuantity(Stack<NUMBER> *&stack);
+        static double average(Stack<NUMBER> *&stack);
+
+    public:
+        static double calculate(Stack<NUMBER> *&stack);
+};
+
+#endif

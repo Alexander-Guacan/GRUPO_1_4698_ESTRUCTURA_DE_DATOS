@@ -1,11 +1,10 @@
-#include "Mathematic.hpp"
+#include "Calculator.hpp"
 #include <iostream>
 
 int main() {
+    Calculator calculator;
 
-    char infixExpresion[] = {"5*4+3"};
-
-    std::cout << "Resultado: " << Mathematic::toPrefix("5*4+3");
+    calculator.inputExpression();
 
     return 0;
 }

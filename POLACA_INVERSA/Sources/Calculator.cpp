@@ -63,7 +63,7 @@ Stack<std::string> *Calculator::reverseMathematicExpression() {
     return reverseExpression;
 }
 
-void Calculator::inputExpression() {
+char *Calculator::inputExpression() {
     const char ENTER_KEY{13};
     const char BACKSPACE_KEY{8};
     const char SQRT_KEY{'r'};
@@ -275,13 +275,17 @@ void Calculator::inputExpression() {
 
             case BACKSPACE_KEY:
                 if (!this->mathematicExpression->isEmpty()) {
-                    mathematicExpression->pop();
+                    std::string output = *(this->mathematicExpression->pop());
+
+                    
                 }
         }
 
         printMathematicExpression();
 
     }
+
+    return toArrayChar();
 }
 
 void Calculator::printMathematicExpression() {

@@ -87,7 +87,7 @@ char *Mathematic::toPrefix(char *infixExpression) {
         *iterator = *(expression->pop());
         iterator++;
     }
-
+    strrev(infixExpression);
     return prefixExpression;
 }
 

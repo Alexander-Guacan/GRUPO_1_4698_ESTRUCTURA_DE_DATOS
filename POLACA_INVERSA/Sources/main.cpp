@@ -1,10 +1,9 @@
-#include "Calculator.hpp"
+#include "Menu.hpp"
 #include <iostream>
 
 int main() {
-    Calculator calculator;
-
-    calculator.inputExpression();
+    Menu menu;
+    menu.start();
 
     return 0;
 }

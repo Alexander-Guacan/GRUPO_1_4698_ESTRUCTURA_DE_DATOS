@@ -14,9 +14,9 @@ int main() {
 
     hashTable.print();
 
-    std::cout << "\nPosition: " << hashTable.search(66);
-    std::cout << "\nPosition: " << hashTable.search(37);
-    std::cout << "\nPosition: " << hashTable.search(2);
+    hashTable.deleteElement(8);
 
+    std::cout << std::endl;
+    hashTable.print();
     return 0;
 }

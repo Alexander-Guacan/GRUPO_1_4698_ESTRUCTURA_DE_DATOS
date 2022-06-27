@@ -10,7 +10,7 @@ class Node {
 
     public:
         Node(const T &initialData);
-        T &getData() const;
+        T &getData();
         Node<T> *getNextNode() const;
         Node<T> *getPreviousNode() const;
         void setData(const T &newData);
@@ -25,7 +25,7 @@ Node<T>::Node(const T &initialData) {
 }
 
 template <typename T>
-T &Node<T>::getData() const {
+T &Node<T>::getData() {
     return this->data;
 }
 

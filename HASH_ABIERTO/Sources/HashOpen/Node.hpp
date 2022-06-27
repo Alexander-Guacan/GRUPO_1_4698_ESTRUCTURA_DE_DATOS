@@ -56,7 +56,6 @@ void Node<T>::setNextNode(Node<T> *newNextNode) {
 
 template <typename T>
 Node<T>::~Node() {
-    this->data = nullptr;
     this->nextNode = nullptr;
     this->previousNode = nullptr;
 }

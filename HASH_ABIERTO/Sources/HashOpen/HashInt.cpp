@@ -22,8 +22,8 @@ void HashInt::insert(const int &element) {
         }
 
         iterator->setNextNode(newNode);
+        newNode->setPreviousNode(iterator);
     }
-
 
     this->elements++;
 }
@@ -46,7 +46,34 @@ short HashInt::search(const int &element) {
 
     return (hasFoundElement) ? key : ELEMENT_NOT_FOUND;
 }
+
 bool HashInt::deleteElement(const int &element) {
+    short key{hashCode(element)};
+
+    if (this->array[key] == nullptr)
+        return false;
+
+    Node<int> *iterator{this->array[key]};
+
+    bool hasFoundElement{false};
+    while (iterator != nullptr && !(hasFoundElement = iterator->getData() == element))
+        iterator = iterator->getNextNode();
+
+    if (hasFoundElement) {
+        if (iterator->getNextNode() != nullptr)
+            iterator->getNextNode()->setPreviousNode(iterator->getPreviousNode());
+
+        if (iterator == this->array[key]) {
+            this->array[key] = iterator->getNextNode();
+        } else {
+            iterator->getPreviousNode()->setNextNode(iterator->getNextNode());
+        }
+
+        delete iterator;
+        this->elements--;
+        return true;
+    }
+
     return false;
 }
 

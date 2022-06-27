@@ -8,6 +8,7 @@ class HashInt : public Hash<int> {
     private:
         short hashCode(const int &element);
     public:
+        bool isEmpty();
         void insert(const int &element);
         short search(const int &element);
         bool deleteElement(const int &element);

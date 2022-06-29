@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc libQueue_Menu_Library.a CMakeFiles/Queue_Menu_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/QueueMenu.cpp.obj
+C:\msys64\mingw64\bin\ranlib.exe libQueue_Menu_Library.a

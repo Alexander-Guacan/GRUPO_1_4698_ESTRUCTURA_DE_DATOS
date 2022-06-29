@@ -1,0 +1,4 @@
+C:/Users/alexa/Documents/Visual Studio Code/C++/Testing_Code/build/CMakeFiles/TestProject.dir
+C:/Users/alexa/Documents/Visual Studio Code/C++/Testing_Code/build/CMakeFiles/General_Library.dir
+C:/Users/alexa/Documents/Visual Studio Code/C++/Testing_Code/build/CMakeFiles/edit_cache.dir
+C:/Users/alexa/Documents/Visual Studio Code/C++/Testing_Code/build/CMakeFiles/rebuild_cache.dir

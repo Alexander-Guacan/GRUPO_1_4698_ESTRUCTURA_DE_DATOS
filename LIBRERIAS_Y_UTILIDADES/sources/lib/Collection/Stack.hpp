@@ -9,13 +9,13 @@ class Stack : public Collection<E>, public Iterable<E> {
 
     public:
         // Returns an iterator over a set of elements of type E
-        Iterator<E> iterator() const;
+        Iterator<E> iterator();
         // Returns an iterator over a set of elements of type E in reverse sequential order
-        Iterator<E> descendingIterator() const;
+        Iterator<E> descendingIterator();
         // Returns true if this collection contains no elements
         bool isEmpty() const;
         // Returns the number of elements in this collection
-        int size() const;
+        size_t size() const;
         // Removes all elements from this collection
         void clear();
         // Pushes an item onto the top of this stack
@@ -29,12 +29,12 @@ class Stack : public Collection<E>, public Iterable<E> {
 };
 
 template <typename E>
-Iterator<E> Stack<E>::iterator() const {
+Iterator<E> Stack<E>::iterator() {
     return Iterator<E>(this->head);
 }
 
 template <typename E>
-Iterator<E> Stack<E>::descendingIterator() const {
+Iterator<E> Stack<E>::descendingIterator() {
     return Iterator<E>(this->tail, true);
 }
 
@@ -44,8 +44,8 @@ bool Stack<E>::isEmpty() const {
 }
 
 template <typename E>
-int Stack<E>::size() const {
-    int amountOfElements{};
+size_t Stack<E>::size() const {
+    size_t amountOfElements{};
     Node<E> *iterator{this->head};
 
     while (iterator != nullptr) {

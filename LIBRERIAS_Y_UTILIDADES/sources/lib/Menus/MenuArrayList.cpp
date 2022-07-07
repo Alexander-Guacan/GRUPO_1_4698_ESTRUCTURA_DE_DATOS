@@ -213,14 +213,14 @@ void MenuArrayList::modifyElementByIndex() {
 
 void MenuArrayList::printOnForwardOrder() {
     std::cout << "\n\n";
-    for (int i{}; i < arrayList.size(); i++) {
+    for (size_t i{}; i < arrayList.size(); i++) {
         std::cout << '[' << arrayList[i] << "] ";
     }
 }
 
 void MenuArrayList::printOnReverseOrder() {
     std::cout << "\n\n";
-    for (int i{arrayList.size() - 1}; i >= 0 ; i--) {
+    for (size_t i{arrayList.size() - 1}; i >= 0 ; i--) {
         std::cout << '[' << arrayList[i] << "] ";
     }
 }

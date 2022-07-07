@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(TestProject LANGUAGES CXX)
+project(LibrariesAndUtilities LANGUAGES CXX)
 
 set(MAIN "main.cpp")
 set(CMAKE_CXX_STANDARD 11)

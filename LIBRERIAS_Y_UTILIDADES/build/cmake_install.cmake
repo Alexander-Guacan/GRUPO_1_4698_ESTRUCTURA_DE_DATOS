@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/alexa/Documents/Visual Studio Code/C++/Testing_Code/sources/src
+# Install script for directory: C:/Users/alexa/Documents/Visual Studio Code/C++/Git_ESPE/GRUPO_1_4698_ESTRUCTURA_DE_DATOS/LIBRERIAS_Y_UTILIDADES/sources/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/TestProject")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/LibrariesAndUtilities")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/alexa/Documents/Visual Studio Code/C++/Testing_Code/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/alexa/Documents/Visual Studio Code/C++/Git_ESPE/GRUPO_1_4698_ESTRUCTURA_DE_DATOS/LIBRERIAS_Y_UTILIDADES/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

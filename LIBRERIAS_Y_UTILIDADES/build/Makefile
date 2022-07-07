@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\src"
+CMAKE_SOURCE_DIR = "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build"
+CMAKE_BINARY_DIR = "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build\CMakeFiles" "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build\CMakeFiles" "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -116,17 +116,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TestProject
+# Target rules for targets named LibrariesAndUtilities
 
 # Build rule for target.
-TestProject: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 TestProject
-.PHONY : TestProject
+LibrariesAndUtilities: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 LibrariesAndUtilities
+.PHONY : LibrariesAndUtilities
 
 # fast build rule for target.
-TestProject/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/build
-.PHONY : TestProject/fast
+LibrariesAndUtilities/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LibrariesAndUtilities.dir\build.make CMakeFiles/LibrariesAndUtilities.dir/build
+.PHONY : LibrariesAndUtilities/fast
 
 #=============================================================================
 # Target rules for targets named General_Library
@@ -141,156 +141,156 @@ General_Library/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/build
 .PHONY : General_Library/fast
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.obj: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.obj
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.obj
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.obj: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.obj
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.obj
 
 # target to build an object file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.obj
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.obj
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.obj
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.obj
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.i: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.i
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.i
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.i: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.i
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.i
 
 # target to preprocess a source file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.i
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.i
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.i
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.i
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.s: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.s
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.s
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.s: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.s
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.s
 
 # target to generate assembly for a file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.s
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.s
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.s
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.s
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.obj: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.obj
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.obj
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.obj: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.obj
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.obj
 
 # target to build an object file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.obj
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.obj
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.obj
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.obj
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.i: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.i
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.i
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.i: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.i
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.i
 
 # target to preprocess a source file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.i
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.i
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.i
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.i
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.s: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.s
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.s
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.s: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.s
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.s
 
 # target to generate assembly for a file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.s
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.s
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.s
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.s
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.obj: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.obj
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.obj
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.obj: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.obj
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.obj
 
 # target to build an object file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.obj
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.obj
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.obj
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.obj
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.i: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.i
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.i
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.i: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.i
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.i
 
 # target to preprocess a source file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.i
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.i
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.i
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.i
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.s: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.s
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.s
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.s: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.s
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.s
 
 # target to generate assembly for a file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.s
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.s
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.s
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.s
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.obj: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.obj
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.obj
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.obj: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.obj
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.obj
 
 # target to build an object file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.obj
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.obj
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.obj
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.obj
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.i: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.i
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.i
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.i: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.i
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.i
 
 # target to preprocess a source file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.i
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.i
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.i
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.i
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.s: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.s
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.s
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.s: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.s
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.s
 
 # target to generate assembly for a file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.s
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.s
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.s
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.s
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.obj: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.obj
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.obj
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.obj: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.obj
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.obj
 
 # target to build an object file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.obj
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.obj
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.obj
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.obj
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.i: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.i
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.i
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.i: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.i
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.i
 
 # target to preprocess a source file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.i
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.i
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.i
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.i
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.s: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.s
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.s
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.s: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.s
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.s
 
 # target to generate assembly for a file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.s
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.s
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.s
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.s
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.obj: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.obj
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.obj
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.obj: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.obj
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.obj
 
 # target to build an object file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.obj
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.obj
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.obj
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.obj
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.i: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.i
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.i
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.i: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.i
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.i
 
 # target to preprocess a source file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.i
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.i
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.i
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.i
 
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.s: C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.s
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.s
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.s: d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.s
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.s
 
 # target to generate assembly for a file
-C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.s
-.PHONY : C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.s
+d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\General_Library.dir\build.make CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.s
+.PHONY : d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LibrariesAndUtilities.dir\build.make CMakeFiles/LibrariesAndUtilities.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -298,7 +298,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LibrariesAndUtilities.dir\build.make CMakeFiles/LibrariesAndUtilities.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -306,7 +306,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LibrariesAndUtilities.dir\build.make CMakeFiles/LibrariesAndUtilities.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -318,25 +318,25 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... General_Library
-	@echo ... TestProject
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.obj
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.i
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.s
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.obj
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.i
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.s
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.obj
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.i
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.s
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.obj
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.i
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.s
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.obj
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.i
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.s
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.obj
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.i
-	@echo ... C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.s
+	@echo ... LibrariesAndUtilities
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.obj
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.i
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.s
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.obj
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.i
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.s
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.obj
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.i
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.s
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.obj
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.i
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.s
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.obj
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.i
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.s
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.obj
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.i
+	@echo ... d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

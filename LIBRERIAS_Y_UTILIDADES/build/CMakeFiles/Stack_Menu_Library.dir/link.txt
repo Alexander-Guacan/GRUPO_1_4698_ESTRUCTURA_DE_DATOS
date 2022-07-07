@@ -1,2 +1,0 @@
-C:\msys64\mingw64\bin\ar.exe qc libStack_Menu_Library.a CMakeFiles/Stack_Menu_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/StackMenu.cpp.obj
-C:\msys64\mingw64\bin\ranlib.exe libStack_Menu_Library.a

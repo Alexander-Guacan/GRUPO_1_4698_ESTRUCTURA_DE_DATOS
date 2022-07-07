@@ -11,11 +11,11 @@ class Node {
     public:
         Node(const T &initialData);
         T &getData();
-        Node<T> *getNextNode();
-        Node<T> *getPreviousNode();
+        Node<T> *&getNextNode();
+        Node<T> *&getPreviousNode();
         void setData(const T &newData);
-        void setNextNode(Node<T> *newNextNode);
-        void setPreviousNode(Node<T> *newPreviousNode);
+        void setNextNode(Node<T> *&newNextNode);
+        void setPreviousNode(Node<T> *&newPreviousNode);
         ~Node();
 };
 
@@ -28,12 +28,12 @@ T &Node<T>::getData() {
 }
 
 template <typename T>
-Node<T> *Node<T>::getPreviousNode() {
+Node<T> *&Node<T>::getPreviousNode() {
     return this->previousNode;
 }
 
 template <typename T>
-Node<T> *Node<T>::getNextNode() {
+Node<T> *&Node<T>::getNextNode() {
     return this->nextNode;
 }
 
@@ -43,12 +43,12 @@ void Node<T>::setData(const T &newData) {
 }
 
 template <typename T>
-void Node<T>::setPreviousNode(Node<T> *newPreviousNode) {
+void Node<T>::setPreviousNode(Node<T> *&newPreviousNode) {
     this->previousNode = newPreviousNode;
 }
 
 template <typename T>
-void Node<T>::setNextNode(Node<T> *newNextNode) {
+void Node<T>::setNextNode(Node<T> *&newNextNode) {
     this->nextNode = newNextNode;
 }
 

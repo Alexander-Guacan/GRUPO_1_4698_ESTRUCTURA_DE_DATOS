@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\src"
+CMAKE_SOURCE_DIR = "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build"
+CMAKE_BINARY_DIR = "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/General_Library.dir/depend.make
@@ -68,117 +68,117 @@ include CMakeFiles/General_Library.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/General_Library.dir/flags.make
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.obj: CMakeFiles/General_Library.dir/flags.make
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.obj: CMakeFiles/General_Library.dir/includes_CXX.rsp
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.obj: C:/Users/alexa/Documents/Visual\ Studio\ Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.obj: CMakeFiles/General_Library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.obj -MF CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuPrincipal.cpp.obj.d -o CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuPrincipal.cpp.obj -c "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuPrincipal.cpp"
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.obj: CMakeFiles/General_Library.dir/flags.make
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.obj: CMakeFiles/General_Library.dir/includes_CXX.rsp
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.obj: C:/Users/alexa/Documents/Visual\ Studio\ Code/C++/Git_ESPE/GRUPO_1_4698_ESTRUCTURA_DE_DATOS/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.obj: CMakeFiles/General_Library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.obj -MF CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuPrincipal.cpp.obj.d -o CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuPrincipal.cpp.obj -c "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuPrincipal.cpp"
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuPrincipal.cpp" > CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuPrincipal.cpp.i
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuPrincipal.cpp" > CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuPrincipal.cpp.i
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuPrincipal.cpp" -o CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuPrincipal.cpp.s
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuPrincipal.cpp" -o CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuPrincipal.cpp.s
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.obj: CMakeFiles/General_Library.dir/flags.make
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.obj: CMakeFiles/General_Library.dir/includes_CXX.rsp
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.obj: C:/Users/alexa/Documents/Visual\ Studio\ Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.obj: CMakeFiles/General_Library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.obj -MF CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuStack.cpp.obj.d -o CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuStack.cpp.obj -c "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuStack.cpp"
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.obj: CMakeFiles/General_Library.dir/flags.make
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.obj: CMakeFiles/General_Library.dir/includes_CXX.rsp
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.obj: C:/Users/alexa/Documents/Visual\ Studio\ Code/C++/Git_ESPE/GRUPO_1_4698_ESTRUCTURA_DE_DATOS/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.obj: CMakeFiles/General_Library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.obj -MF CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuStack.cpp.obj.d -o CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuStack.cpp.obj -c "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuStack.cpp"
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuStack.cpp" > CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuStack.cpp.i
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuStack.cpp" > CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuStack.cpp.i
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuStack.cpp" -o CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuStack.cpp.s
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuStack.cpp" -o CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuStack.cpp.s
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.obj: CMakeFiles/General_Library.dir/flags.make
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.obj: CMakeFiles/General_Library.dir/includes_CXX.rsp
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.obj: C:/Users/alexa/Documents/Visual\ Studio\ Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.obj: CMakeFiles/General_Library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.obj -MF CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuQueue.cpp.obj.d -o CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuQueue.cpp.obj -c "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuQueue.cpp"
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.obj: CMakeFiles/General_Library.dir/flags.make
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.obj: CMakeFiles/General_Library.dir/includes_CXX.rsp
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.obj: C:/Users/alexa/Documents/Visual\ Studio\ Code/C++/Git_ESPE/GRUPO_1_4698_ESTRUCTURA_DE_DATOS/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.obj: CMakeFiles/General_Library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.obj -MF CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuQueue.cpp.obj.d -o CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuQueue.cpp.obj -c "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuQueue.cpp"
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuQueue.cpp" > CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuQueue.cpp.i
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuQueue.cpp" > CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuQueue.cpp.i
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuQueue.cpp" -o CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuQueue.cpp.s
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuQueue.cpp" -o CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuQueue.cpp.s
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.obj: CMakeFiles/General_Library.dir/flags.make
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.obj: CMakeFiles/General_Library.dir/includes_CXX.rsp
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.obj: C:/Users/alexa/Documents/Visual\ Studio\ Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.obj: CMakeFiles/General_Library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.obj -MF CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuLinkedList.cpp.obj.d -o CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuLinkedList.cpp.obj -c "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuLinkedList.cpp"
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.obj: CMakeFiles/General_Library.dir/flags.make
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.obj: CMakeFiles/General_Library.dir/includes_CXX.rsp
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.obj: C:/Users/alexa/Documents/Visual\ Studio\ Code/C++/Git_ESPE/GRUPO_1_4698_ESTRUCTURA_DE_DATOS/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.obj: CMakeFiles/General_Library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.obj -MF CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuLinkedList.cpp.obj.d -o CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuLinkedList.cpp.obj -c "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuLinkedList.cpp"
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuLinkedList.cpp" > CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuLinkedList.cpp.i
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuLinkedList.cpp" > CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuLinkedList.cpp.i
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuLinkedList.cpp" -o CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuLinkedList.cpp.s
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuLinkedList.cpp" -o CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuLinkedList.cpp.s
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.obj: CMakeFiles/General_Library.dir/flags.make
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.obj: CMakeFiles/General_Library.dir/includes_CXX.rsp
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.obj: C:/Users/alexa/Documents/Visual\ Studio\ Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.obj: CMakeFiles/General_Library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.obj -MF CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuArrayList.cpp.obj.d -o CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuArrayList.cpp.obj -c "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuArrayList.cpp"
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.obj: CMakeFiles/General_Library.dir/flags.make
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.obj: CMakeFiles/General_Library.dir/includes_CXX.rsp
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.obj: C:/Users/alexa/Documents/Visual\ Studio\ Code/C++/Git_ESPE/GRUPO_1_4698_ESTRUCTURA_DE_DATOS/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.obj: CMakeFiles/General_Library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.obj -MF CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuArrayList.cpp.obj.d -o CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuArrayList.cpp.obj -c "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuArrayList.cpp"
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuArrayList.cpp" > CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuArrayList.cpp.i
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuArrayList.cpp" > CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuArrayList.cpp.i
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Menus\MenuArrayList.cpp" -o CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Menus\MenuArrayList.cpp.s
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuArrayList.cpp" -o CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Menus\MenuArrayList.cpp.s
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.obj: CMakeFiles/General_Library.dir/flags.make
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.obj: CMakeFiles/General_Library.dir/includes_CXX.rsp
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.obj: C:/Users/alexa/Documents/Visual\ Studio\ Code/C++/Testing_Code/sources/lib/Tools/Input.cpp
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.obj: CMakeFiles/General_Library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.obj -MF CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Tools\Input.cpp.obj.d -o CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Tools\Input.cpp.obj -c "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Tools\Input.cpp"
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.obj: CMakeFiles/General_Library.dir/flags.make
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.obj: CMakeFiles/General_Library.dir/includes_CXX.rsp
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.obj: C:/Users/alexa/Documents/Visual\ Studio\ Code/C++/Git_ESPE/GRUPO_1_4698_ESTRUCTURA_DE_DATOS/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.obj: CMakeFiles/General_Library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.obj -MF CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Tools\Input.cpp.obj.d -o CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Tools\Input.cpp.obj -c "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Tools\Input.cpp"
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Tools\Input.cpp" > CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Tools\Input.cpp.i
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Tools\Input.cpp" > CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Tools\Input.cpp.i
 
-CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\lib\Tools\Input.cpp" -o CMakeFiles\General_Library.dir\C_\Users\alexa\Documents\Visual_Studio_Code\C++\Testing_Code\sources\lib\Tools\Input.cpp.s
+CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\lib\Tools\Input.cpp" -o CMakeFiles\General_Library.dir\d408c4e63ba2ceec26cf14a9ca37140b\LIBRERIAS_Y_UTILIDADES\sources\lib\Tools\Input.cpp.s
 
 # Object files for target General_Library
 General_Library_OBJECTS = \
-"CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.obj" \
-"CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.obj" \
-"CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.obj" \
-"CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.obj" \
-"CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.obj" \
-"CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.obj"
+"CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.obj" \
+"CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.obj" \
+"CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.obj" \
+"CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.obj" \
+"CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.obj" \
+"CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.obj"
 
 # External object files for target General_Library
 General_Library_EXTERNAL_OBJECTS =
 
-libGeneral_Library.a: CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuPrincipal.cpp.obj
-libGeneral_Library.a: CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuStack.cpp.obj
-libGeneral_Library.a: CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuQueue.cpp.obj
-libGeneral_Library.a: CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuLinkedList.cpp.obj
-libGeneral_Library.a: CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/MenuArrayList.cpp.obj
-libGeneral_Library.a: CMakeFiles/General_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Tools/Input.cpp.obj
+libGeneral_Library.a: CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuPrincipal.cpp.obj
+libGeneral_Library.a: CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuStack.cpp.obj
+libGeneral_Library.a: CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuQueue.cpp.obj
+libGeneral_Library.a: CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuLinkedList.cpp.obj
+libGeneral_Library.a: CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Menus/MenuArrayList.cpp.obj
+libGeneral_Library.a: CMakeFiles/General_Library.dir/d408c4e63ba2ceec26cf14a9ca37140b/LIBRERIAS_Y_UTILIDADES/sources/lib/Tools/Input.cpp.obj
 libGeneral_Library.a: CMakeFiles/General_Library.dir/build.make
 libGeneral_Library.a: CMakeFiles/General_Library.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libGeneral_Library.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libGeneral_Library.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\General_Library.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\General_Library.dir\link.txt --verbose=$(VERBOSE)
 
@@ -191,6 +191,6 @@ CMakeFiles/General_Library.dir/clean:
 .PHONY : CMakeFiles/General_Library.dir/clean
 
 CMakeFiles/General_Library.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\src" "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\sources\src" "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build" "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build" "C:\Users\alexa\Documents\Visual Studio Code\C++\Testing_Code\build\CMakeFiles\General_Library.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\src" "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\sources\src" "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build" "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build" "C:\Users\alexa\Documents\Visual Studio Code\C++\Git_ESPE\GRUPO_1_4698_ESTRUCTURA_DE_DATOS\LIBRERIAS_Y_UTILIDADES\build\CMakeFiles\General_Library.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/General_Library.dir/depend
 

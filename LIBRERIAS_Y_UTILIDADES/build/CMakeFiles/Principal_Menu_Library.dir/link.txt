@@ -1,2 +1,0 @@
-C:\msys64\mingw64\bin\ar.exe qc libPrincipal_Menu_Library.a CMakeFiles/Principal_Menu_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/PrincipalMenu.cpp.obj CMakeFiles/Principal_Menu_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/QueueMenu.cpp.obj CMakeFiles/Principal_Menu_Library.dir/C_/Users/alexa/Documents/Visual_Studio_Code/C++/Testing_Code/sources/lib/Menus/StackMenu.cpp.obj
-C:\msys64\mingw64\bin\ranlib.exe libPrincipal_Menu_Library.a

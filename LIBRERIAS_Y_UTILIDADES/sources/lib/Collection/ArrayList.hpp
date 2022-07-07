@@ -7,10 +7,10 @@ template <typename E>
 class ArrayList : public List<E> {
     private:
         E *array{nullptr};
-        int positionToInsert{};
-        int elementsInserted{};
-        int capacity{10};
-        const int CAPACITY_INCREMENT{10};
+        size_t positionToInsert{};
+        size_t elementsInserted{};
+        size_t capacity{10};
+        const size_t CAPACITY_INCREMENT{10};
 
         // Returns true if number of elements inserted greather than capacity
         bool isFull();
@@ -21,11 +21,11 @@ class ArrayList : public List<E> {
         // Constructs an empty list with an initial capacity of ten.
         ArrayList();
         // Constructs an empty list with the specified initial capacity.
-        ArrayList(int initialCapacity);
+        ArrayList(size_t initialCapacity);
         // Returns true if this Array contains no elements
         bool isEmpty() const;
         // Returns the number of elements in this Array
-        int size() const;
+        size_t size() const;
         // Removes all elements from this Array
         void clear();
         // Inserts the specified element at the beginning of this list
@@ -33,23 +33,23 @@ class ArrayList : public List<E> {
         // Appends the specified element to the end of the list
         void addLast(const E &element);
         // Inserts the specified element at the specified position in this list
-        bool add(int index, const E &element);
+        bool add(size_t index, const E &element);
         // Returns the element at the specified position in this list. Throws: IndexOutOfBoundsException
-        E &get(int index);
+        E &get(size_t index);
         // Returns the element at the specified position in this list. Throws: IndexOutOfBoundsException
-        E &operator[](int index);
+        E &operator[](size_t index);
         // Returns the index of the first ocurrence of the specified element in this list, or -1 if this list does not contain the element
-        int indexOf(const E &element) const;
+        ssize_t indexOf(const E &element) const;
         // Returns the index of the last ocurrence of the specified element in this list, or -1 if this list does not contain the element
-        int lastIndexOf(const E &element) const;
+        ssize_t lastIndexOf(const E &element) const;
         // Removes the element at the specified position in this list and returns it. Throws: IndexOutOfBoundsException
-        E remove(int index);
+        E remove(size_t index);
         // Removes the first ocurrence of the specified element from this list, if it is present
-        bool removeFirstOcurrence(E element);
+        bool removeFirstOcurrence(const E &element);
         // Removes the last ocurrence of the specified element from this list, if it is present
-        bool removeLastOcurrence(E element);
+        bool removeLastOcurrence(const E &element);
         // Replace the element at the specified position in this list with the specified element, and returns the element removed. Throws: IndexOutOfBoundsException
-        E set(int index, const E &element);
+        E set(size_t index, const E &element);
         // Destructor
         ~ArrayList();
 };
@@ -64,7 +64,7 @@ void ArrayList<E>::resize() {
     this->capacity = this->elementsInserted + this->CAPACITY_INCREMENT;
     E *newArray = new E[this->capacity]{};
 
-    for (int i{}; i < size(); i++) {
+    for (size_t i{}; i < size(); i++) {
         newArray[i] = this->array[i];
     }
 
@@ -79,7 +79,7 @@ ArrayList<E>::ArrayList() {
 }
 
 template <typename E>
-ArrayList<E>::ArrayList(int initialCapacity) {
+ArrayList<E>::ArrayList(size_t initialCapacity) {
     this->capacity = initialCapacity;
     this->array = new E[this->capacity]{};
 }
@@ -90,7 +90,7 @@ bool ArrayList<E>::isEmpty() const {
 }
 
 template <typename E>
-int ArrayList<E>::size() const {
+size_t ArrayList<E>::size() const {
     return this->elementsInserted;
 }
 
@@ -111,7 +111,7 @@ void ArrayList<E>::addFirst(const E &element) {
         this->array[this->positionToInsert] = element;
 
     } else {
-        for (int i{this->positionToInsert}; i > 0; i--) {
+        for (size_t i{this->positionToInsert}; i > 0; i--) {
             this->array[i] = this->array[i - 1];
         }
 
@@ -137,7 +137,7 @@ void ArrayList<E>::addLast(const E &element) {
 }
 
 template <typename E>
-bool ArrayList<E>::add(int index, const E &element) {
+bool ArrayList<E>::add(size_t index, const E &element) {
     if (index < 0 || index >= size())
         return false;
 
@@ -151,7 +151,7 @@ bool ArrayList<E>::add(int index, const E &element) {
         return true;
     }
 
-    for (int i{this->positionToInsert}; i > index; i--) {
+    for (size_t i{this->positionToInsert}; i > index; i--) {
         this->array[i] = this->array[i - 1];
     }
 
@@ -167,7 +167,7 @@ bool ArrayList<E>::add(int index, const E &element) {
 }
 
 template <typename E> 
-E &ArrayList<E>::get(int index) {
+E &ArrayList<E>::get(size_t index) {
     if (index < 0 || index >= size())
         throw "IndexOutOfBoundsException.";
 
@@ -175,18 +175,18 @@ E &ArrayList<E>::get(int index) {
 }
 
 template <typename E>
-E &ArrayList<E>::operator[](int index) {
+E &ArrayList<E>::operator[](size_t index) {
     return get(index);
 }
 
 template <typename E>
-int ArrayList<E>::indexOf(const E &element) const {
-    const int ELEMENT_NOT_FOUND{-1};
+ssize_t ArrayList<E>::indexOf(const E &element) const {
+    const ssize_t ELEMENT_NOT_FOUND{-1};
 
     if (isEmpty())
         return ELEMENT_NOT_FOUND;
 
-    int index{ELEMENT_NOT_FOUND};
+    ssize_t index{ELEMENT_NOT_FOUND};
     bool hasFoundElement{false};
 
     while (index < size() - 1 && !hasFoundElement) {
@@ -198,15 +198,15 @@ int ArrayList<E>::indexOf(const E &element) const {
 }
 
 template <typename E>
-int ArrayList<E>::lastIndexOf(const E &element) const {
-    const int ELEMENT_NOT_FOUND{-1};
+ssize_t ArrayList<E>::lastIndexOf(const E &element) const {
+    const ssize_t ELEMENT_NOT_FOUND{-1};
     
     if (isEmpty())
         return ELEMENT_NOT_FOUND;
 
-    int lastMatchIndex{ELEMENT_NOT_FOUND};
+    ssize_t lastMatchIndex{ELEMENT_NOT_FOUND};
 
-    for (int i{}; i < size(); i++) {
+    for (size_t i{}; i < size(); i++) {
         if (this->array[i] == element) {
             lastMatchIndex = i;
         }
@@ -216,7 +216,7 @@ int ArrayList<E>::lastIndexOf(const E &element) const {
 }
 
 template <typename E>
-E ArrayList<E>::remove(int index) {
+E ArrayList<E>::remove(size_t index) {
     if (index < 0 || index >= size())
         throw "IndexOutOfBoundsException.";
 
@@ -224,8 +224,8 @@ E ArrayList<E>::remove(int index) {
 
     E *newArray = new E[this->capacity]{};
 
-    int j{};
-    for (int i{}; i < size(); i++) {
+    size_t j{};
+    for (size_t i{}; i < size(); i++) {
         if (i != index) {
             newArray[j] = this->array[i];
             j++;
@@ -243,12 +243,12 @@ E ArrayList<E>::remove(int index) {
 }
 
 template <typename E>
-bool ArrayList<E>::removeFirstOcurrence(E element) {
+bool ArrayList<E>::removeFirstOcurrence(const E &element) {
     if (isEmpty())
         return false;
 
-    const int ELEMENT_NOT_FOUND{-1};
-    int indexMatch = indexOf(element);
+    const ssize_t ELEMENT_NOT_FOUND{-1};
+    ssize_t indexMatch = indexOf(element);
 
     if (indexMatch == ELEMENT_NOT_FOUND)
         return false;
@@ -258,12 +258,12 @@ bool ArrayList<E>::removeFirstOcurrence(E element) {
 }
 
 template <typename E>
-bool ArrayList<E>::removeLastOcurrence(E element) {
+bool ArrayList<E>::removeLastOcurrence(const E &element) {
     if (isEmpty())
         return false;
 
-    const int ELEMENT_NOT_FOUND{-1};
-    int indexMatch = lastIndexOf(element);
+    const ssize_t ELEMENT_NOT_FOUND{-1};
+    ssize_t indexMatch = lastIndexOf(element);
 
     if (indexMatch == ELEMENT_NOT_FOUND)
         return false;
@@ -273,7 +273,7 @@ bool ArrayList<E>::removeLastOcurrence(E element) {
 }
 
 template <typename E>
-E ArrayList<E>::set(int index, const E &element) {
+E ArrayList<E>::set(size_t index, const E &element) {
     if (index < 0 || index >= size())
         throw "IndexOutOfBoundsException.";
 

@@ -9,13 +9,13 @@ class Queue : public Collection<E>, public Iterable<E> {
 
     public:
         // Returns an iterator over a set of elements of type E
-        Iterator<E> iterator() const;
+        Iterator<E> iterator();
         // Returns an iterator over a set of elements of type E in reverse sequential order
-        Iterator<E> descendingIterator() const;
+        Iterator<E> descendingIterator();
         // Returns true if this Queue contains no elements
         bool isEmpty() const;
         // Returns the number of elements in this Queue
-        int size() const;
+        size_t size() const;
         // Removes all elements from this Queue
         void clear();
         // Inserts the element into this Queue
@@ -29,12 +29,12 @@ class Queue : public Collection<E>, public Iterable<E> {
 };
 
 template <typename E>
-Iterator<E> Queue<E>::iterator() const {
+Iterator<E> Queue<E>::iterator() {
     return Iterator<E>(this->head);
 }
 
 template <typename E>
-Iterator<E> Queue<E>::descendingIterator() const {
+Iterator<E> Queue<E>::descendingIterator() {
     return Iterator<E>(this->tail, true);
 }
 
@@ -44,8 +44,8 @@ bool Queue<E>::isEmpty() const {
 }
 
 template <typename E>
-int Queue<E>::size() const {
-    int amountOfElements{};
+size_t Queue<E>::size() const {
+    size_t amountOfElements{};
     Node<E> *iterator{this->head};
 
     while (iterator != nullptr) {
@@ -86,7 +86,7 @@ E Queue<E>::poll() {
     if (isEmpty())
         throw "EmptyQueueException.";
 
-    E data = this->head->getData();
+    E dataErased = this->head->getData();
     
     Node<E> *auxiliar{this->head};
     this->head = this->head->getNextNode();
@@ -97,7 +97,7 @@ E Queue<E>::poll() {
     if (isEmpty())
         this->tail = nullptr;
 
-    return data;
+    return dataErased;
 }
 
 template <typename E>

@@ -1,4 +1,4 @@
-C:/Users/alexa/Documents/Visual Studio Code/C++/Testing_Code/build/CMakeFiles/TestProject.dir
-C:/Users/alexa/Documents/Visual Studio Code/C++/Testing_Code/build/CMakeFiles/General_Library.dir
-C:/Users/alexa/Documents/Visual Studio Code/C++/Testing_Code/build/CMakeFiles/edit_cache.dir
-C:/Users/alexa/Documents/Visual Studio Code/C++/Testing_Code/build/CMakeFiles/rebuild_cache.dir
+C:/Users/alexa/Documents/Visual Studio Code/C++/Git_ESPE/GRUPO_1_4698_ESTRUCTURA_DE_DATOS/LIBRERIAS_Y_UTILIDADES/build/CMakeFiles/LibrariesAndUtilities.dir
+C:/Users/alexa/Documents/Visual Studio Code/C++/Git_ESPE/GRUPO_1_4698_ESTRUCTURA_DE_DATOS/LIBRERIAS_Y_UTILIDADES/build/CMakeFiles/General_Library.dir
+C:/Users/alexa/Documents/Visual Studio Code/C++/Git_ESPE/GRUPO_1_4698_ESTRUCTURA_DE_DATOS/LIBRERIAS_Y_UTILIDADES/build/CMakeFiles/edit_cache.dir
+C:/Users/alexa/Documents/Visual Studio Code/C++/Git_ESPE/GRUPO_1_4698_ESTRUCTURA_DE_DATOS/LIBRERIAS_Y_UTILIDADES/build/CMakeFiles/rebuild_cache.dir

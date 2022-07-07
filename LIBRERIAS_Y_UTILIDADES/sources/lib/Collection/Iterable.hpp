@@ -11,9 +11,9 @@ class Iterable {
 
     public:
         // Returns an iterator over a set of elements of type T
-        virtual Iterator<T> iterator() const = 0;
+        virtual Iterator<T> iterator() = 0;
         // Returns an iterator over a set of elements of type T in reverse sequential order
-        virtual Iterator<T> descendingIterator() const = 0;
+        virtual Iterator<T> descendingIterator() = 0;
 };
 
 #endif

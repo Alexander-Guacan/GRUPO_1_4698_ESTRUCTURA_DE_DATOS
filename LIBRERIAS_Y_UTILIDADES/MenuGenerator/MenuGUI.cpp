@@ -5,7 +5,7 @@
 #include <iostream>
 
 void MenuGUI::printOptions() {
-    system("clear");
+    system("cls");
     HandleConsole::setCursorVisibilitie(false);
     HandleConsole::setCursorPosition(this->menuPosition.X + 1, this->menuPosition.Y);
     std::cout << title;

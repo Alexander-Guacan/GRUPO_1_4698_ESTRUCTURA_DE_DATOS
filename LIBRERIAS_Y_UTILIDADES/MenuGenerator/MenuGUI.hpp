@@ -6,10 +6,10 @@
 
 class MenuGUI {
     private:
+        std::string title{};
+        const std::string *options{nullptr};
         COORD menuPosition{4, 4};
         COORD arrowPosition{static_cast<SHORT>(this->menuPosition.X - 2), this->menuPosition.Y};
-        const std::string *options{nullptr};
-        std::string title{};
         size_t sizeOfArrayOptions{};
         size_t activeOption{1};
 

@@ -2,7 +2,6 @@
 #include <iostream>
 #include <conio.h>
 
-
 int Input::unsignedIntegerNumber(short minimumDigits, short maximumDigits) {
     if (minimumDigits <= 0 || maximumDigits >= 10)
         throw "DigitsOutOfBoundsException";

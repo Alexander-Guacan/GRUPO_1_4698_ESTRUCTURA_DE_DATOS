@@ -1,11 +1,57 @@
 #include "Input.hpp"
+#include "HandleConsole.hpp"
 #include <iostream>
 #include <conio.h>
 
-int Input::unsignedIntegerNumber(short minimumDigits, short maximumDigits) {
-    if (minimumDigits <= 0 || maximumDigits >= 10)
-        throw "DigitsOutOfBoundsException";
+void Input::printKey(char input) {
+    if (this->cursorPosition.X != -1) {
+        HandleConsole::setCursorPosition(this->cursorPosition.X, this->cursorPosition.Y);
+        this->cursorPosition.X++;
+    }
 
+    printf("%c", input);
+}
+
+void Input::eraseCharacter() {
+    if (this->cursorPosition.X != -1) {
+        HandleConsole::setCursorPosition(this->cursorPosition.X, this->cursorPosition.Y);
+        this->cursorPosition.X--;
+    }
+
+    printf("\b \b");
+}
+
+void Input::printEndLine() {
+    if (this->cursorPosition.X != -1) {
+        HandleConsole::setCursorPosition(this->cursorPosition.X, this->cursorPosition.Y);
+        this->cursorPosition.X = this->xInitialPosition;
+        this->cursorPosition.Y++;
+        HandleConsole::setCursorPosition(this->cursorPosition.X, this->cursorPosition.Y);
+    } else {
+        printf("\n");
+    }
+
+}
+
+Input::Input() {
+    this->cursorPosition.X = -1;
+    this->cursorPosition.Y = -1;
+}
+
+Input::Input(SHORT xPosition, SHORT yPosition) {
+    this->cursorPosition.X = xPosition;
+    this->cursorPosition.Y = yPosition;
+    this->xInitialPosition = this->cursorPosition.X;
+}
+
+void Input::updateCursorPosition(COORD coordinates) { this->cursorPosition = coordinates; }
+
+void Input::updateCursorPosition(SHORT x, SHORT y) {
+    this->cursorPosition.X = x;
+    this->cursorPosition.Y = y;
+}
+
+unsigned int Input::unsignedIntegerNumber(short minimumDigits, short maximumDigits) {
     const char ENTER_KEY{13};
     const char BACKSPACE_KEY{8};
 
@@ -16,15 +62,15 @@ int Input::unsignedIntegerNumber(short minimumDigits, short maximumDigits) {
     int digitsAmount{};
 
     while ((keyPressed = getch()) != ENTER_KEY || *numbers == '\0' || digitsAmount < minimumDigits) {
-        if (std::isdigit((keyPressed)) && digitsAmount < maximumDigits) {
-            printf("%c", keyPressed);
+        if (std::isdigit(keyPressed) && digitsAmount < maximumDigits) {
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
             digitsAmount++;
 
         } else if (keyPressed == BACKSPACE_KEY && iterator != numbers) {
-            printf("\b \b");
+            eraseCharacter();
 
             digitsAmount--;
             iterator--;
@@ -32,16 +78,12 @@ int Input::unsignedIntegerNumber(short minimumDigits, short maximumDigits) {
         }
     }
 
-    printf("\n");
+    printEndLine();
 
     return std::atoi(numbers);
 }
 
 double Input::unsignedRealNumber(short minimumDigits, short maximumDigits) {
-    if (minimumDigits <= 0 || maximumDigits >= 15)
-        throw "DigitsOutOfBoundsException";
-
-
     const char ENTER_KEY{13};
     const char BACKSPACE_KEY{8};
 
@@ -54,7 +96,7 @@ double Input::unsignedRealNumber(short minimumDigits, short maximumDigits) {
 
     while ((keyPressed = getch()) != ENTER_KEY || *numbers == '\0' || digitsAmount < minimumDigits) {
         if (keyPressed == '.' && iterator != numbers && !hasEnteredADot) {
-            printf("%c", keyPressed);
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
@@ -62,14 +104,14 @@ double Input::unsignedRealNumber(short minimumDigits, short maximumDigits) {
             hasEnteredADot = true;
 
         } else if (std::isdigit(keyPressed) && digitsAmount < maximumDigits) {
-            printf("%c", keyPressed);
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
             digitsAmount++;
 
         } else if (keyPressed == BACKSPACE_KEY && iterator != numbers) {
-            printf("\b \b");
+            eraseCharacter();
 
             iterator--;
 
@@ -83,15 +125,12 @@ double Input::unsignedRealNumber(short minimumDigits, short maximumDigits) {
         }
     }
 
-    printf("\n");
+    printEndLine();
 
     return std::atof(numbers);
 }
 
 int Input::integerNumber(short minimumDigits, short maximumDigits) {
-    if (minimumDigits <= 0 || maximumDigits >= 10)
-        throw "DigitsOutOfBoundsException";
-
     const char ENTER_KEY{13};
     const char BACKSPACE_KEY{8};
 
@@ -103,20 +142,20 @@ int Input::integerNumber(short minimumDigits, short maximumDigits) {
 
     while ((keyPressed = getch()) != ENTER_KEY || *numbers == '\0' || digitsAmount < minimumDigits) {
         if (keyPressed == '-' && iterator == numbers) {
-            printf("%c", keyPressed);
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
 
         } else if (std::isdigit(keyPressed) && digitsAmount < maximumDigits) {
-            printf("%c", keyPressed);
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
             digitsAmount++;
 
         } else if (keyPressed == BACKSPACE_KEY && iterator != numbers) {
-            printf("\b \b");
+            eraseCharacter();
 
             iterator--;
             
@@ -127,15 +166,12 @@ int Input::integerNumber(short minimumDigits, short maximumDigits) {
         }
     }
 
-    printf("\n");
+    printEndLine();
 
     return std::atoi(numbers);
 }
 
 double Input::realNumber(short minimumDigits, short maximumDigits) {
-    if (minimumDigits <= 0 || maximumDigits >= 15)
-        throw "DigitsOutOfBoundsException";
-
     const char ENTER_KEY{13};
     const char BACKSPACE_KEY{8};
 
@@ -150,13 +186,13 @@ double Input::realNumber(short minimumDigits, short maximumDigits) {
     while ((keyPressed = getch()) != ENTER_KEY || *numbers == '\0' || digitsAmount < minimumDigits) {
 
         if (keyPressed == '-' && iterator == numbers) {
-            printf("%c", keyPressed);
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
 
         } else if (keyPressed == '.' && iterator != numbers && !hasEnteredADot) {
-            printf("%c", keyPressed);
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
@@ -164,14 +200,14 @@ double Input::realNumber(short minimumDigits, short maximumDigits) {
             hasEnteredADot = true;
 
         } else if (std::isdigit(keyPressed) && digitsAmount < maximumDigits) {
-            printf("%c", keyPressed);
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
             digitsAmount++;
 
         } else if (keyPressed == BACKSPACE_KEY && iterator != numbers) {
-            printf("\b \b");
+            eraseCharacter();
 
             iterator--;
             
@@ -186,12 +222,12 @@ double Input::realNumber(short minimumDigits, short maximumDigits) {
         }
     }
 
-    printf("\n");
+    printEndLine();
 
     return std::atof(numbers);
 }
 
-char *Input::word(short minimumCharacters, short maximumCharacters) {
+std::string Input::word(short minimumCharacters, short maximumCharacters) {
     const char ENTER_KEY{13};
     const char BACKSPACE_KEY{8};
 
@@ -204,14 +240,14 @@ char *Input::word(short minimumCharacters, short maximumCharacters) {
     while ((keyPressed = getch()) != ENTER_KEY || *string == '\0' || sizeOfString < minimumCharacters) {
 
         if (std::isalpha(keyPressed) && sizeOfString < maximumCharacters) {
-            printf("%c", keyPressed);
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
             sizeOfString++;
 
         } else if (keyPressed == BACKSPACE_KEY && iterator != string) {
-            printf("\b \b");
+            eraseCharacter();
 
             sizeOfString--;
             iterator--;
@@ -219,12 +255,12 @@ char *Input::word(short minimumCharacters, short maximumCharacters) {
         }
     }
 
-    printf("\n");
+    printEndLine();
 
     return string;
 }
 
-char *Input::digits(short minimumDigits, short maximumDigits) {
+std::string Input::digits(short minimumDigits, short maximumDigits) {
     const char ENTER_KEY{13};
     const char BACKSPACE_KEY{8};
 
@@ -236,14 +272,14 @@ char *Input::digits(short minimumDigits, short maximumDigits) {
 
     while ((keyPressed = getch()) != ENTER_KEY || *numbers == '\0' || digitsAmount < minimumDigits) {
         if (std::isdigit(keyPressed) && digitsAmount < maximumDigits) {
-            printf("%c", keyPressed);
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
             digitsAmount++;
 
         } else if (keyPressed == BACKSPACE_KEY && iterator != numbers) {
-            printf("\b \b");
+            eraseCharacter();
 
             digitsAmount--;
             iterator--;
@@ -251,12 +287,12 @@ char *Input::digits(short minimumDigits, short maximumDigits) {
         }
     }
 
-    printf("\n");
+    printEndLine();
 
     return numbers;
 }
 
-char *Input::alphabetic(short minimumLetters, short maximumLetters) {
+std::string Input::alphabetic(short minimumLetters, short maximumLetters) {
     const char ENTER_KEY{13};
     const char BACKSPACE_KEY{8};
     const char SPACE_KEY{32};
@@ -270,7 +306,7 @@ char *Input::alphabetic(short minimumLetters, short maximumLetters) {
     while ((keyPressed = getch()) != ENTER_KEY || *string == '\0' || sizeOfString < minimumLetters) {
 
         if (keyPressed == SPACE_KEY && iterator != string && sizeOfString < maximumLetters) {
-            printf("%c", keyPressed);
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
@@ -278,14 +314,14 @@ char *Input::alphabetic(short minimumLetters, short maximumLetters) {
 
         } else if (std::isalpha(keyPressed) && sizeOfString < maximumLetters) {
 
-            printf("%c", keyPressed);
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
             sizeOfString++;
 
         } else if (keyPressed == BACKSPACE_KEY && iterator != string) {
-            printf("\b \b");
+            eraseCharacter();
 
             sizeOfString--;
             iterator--;
@@ -293,19 +329,19 @@ char *Input::alphabetic(short minimumLetters, short maximumLetters) {
         }
     }
 
-    // Limpiando espacios en blanco despues del ultimo caracter alfabetico
+    // Cleaning blank spaces after last alphabetic character
     if (*(iterator - 1) == SPACE_KEY) {
         while (*(--iterator) == SPACE_KEY) {
             *iterator = '\0';
         }
     }
 
-    printf("\n");
+    printEndLine();
 
     return string;
 }
 
-char *Input::alphanumeric(short minimumCharacters, short maximumCharacters) {
+std::string Input::alphanumeric(short minimumCharacters, short maximumCharacters) {
     const char ENTER_KEY{13};
     const char BACKSPACE_KEY{8};
     const char SPACE_KEY{32};
@@ -319,7 +355,7 @@ char *Input::alphanumeric(short minimumCharacters, short maximumCharacters) {
     while ((keyPressed = getch()) != ENTER_KEY || *string == '\0' || sizeOfString < minimumCharacters) {
 
         if (keyPressed == SPACE_KEY && iterator != string && sizeOfString < maximumCharacters) {
-            printf("%c", keyPressed);
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
@@ -327,14 +363,14 @@ char *Input::alphanumeric(short minimumCharacters, short maximumCharacters) {
 
         } else if (std::isalnum(keyPressed) && sizeOfString < maximumCharacters) {
 
-            printf("%c", keyPressed);
+            printKey(keyPressed);
 
             *iterator = keyPressed;
             iterator++;
             sizeOfString++;
 
         } else if (keyPressed == BACKSPACE_KEY && iterator != string) {
-            printf("\b \b");
+            eraseCharacter();
 
             sizeOfString--;
             iterator--;
@@ -342,14 +378,14 @@ char *Input::alphanumeric(short minimumCharacters, short maximumCharacters) {
         }
     }
 
-    // Limpiando espacios en blanco despues del ultimo caracter alfabetico
+    // Cleaning blank spaces after last alphabetic character
     if (*(iterator - 1) == SPACE_KEY) {
         while (*(--iterator) == SPACE_KEY) {
             *iterator = '\0';
         }
     }
 
-    printf("\n");
+    printEndLine();
 
     return string;
 }

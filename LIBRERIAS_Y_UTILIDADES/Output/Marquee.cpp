@@ -1,62 +1,69 @@
 #include "Marquee.hpp"
 #include "HandleConsole.hpp"
+#include <windows.h>
+#include <thread>
+#include <chrono>
 #include <iostream>
 #include <conio.h>
 
-void Marquee::renderMarquee(SHORT x) {
-    HandleConsole::setCursorPosition(x, this->yHight);
+void Marquee::renderMarquee(short x) {
+    HandleConsole::setCursorPosition(x, this->verticalPosition);
     std::cout << this->message;
 }
 
-void Marquee::renderMarquee(const std::string &substring, SHORT x) {
-    HandleConsole::setCursorPosition(x, this->yHight);
+void Marquee::renderMarquee(const std::string &substring, short x) {
+    HandleConsole::setCursorPosition(x, this->verticalPosition);
     std::cout << substring;
 }
 
-void Marquee::clearMarquee(SHORT xActualPosition) {
-    HandleConsole::setCursorPosition(xActualPosition - 1, this->yHight);
+void Marquee::clearMarquee(short xActualPosition) {
+    HandleConsole::setCursorPosition(xActualPosition - 1, this->verticalPosition);
     std::cout << ' ';
 }
 
-Marquee::Marquee(const std::string &initialMessage, size_t initialXLimitleft, size_t initialXLimitRight) {
+Marquee::Marquee(const std::string &initialMessage, short xLimitleft, short xLimitRight) {
     this->message = initialMessage;
-    this->xLimitLeft = initialXLimitleft;
-    this->xLimitRight = initialXLimitRight;
+    this->limitLeft = xLimitleft;
+    this->limitRight = xLimitRight;
     this->setVelocity(this->DEFAULT_VELOCITY);
 }
 
-void Marquee::setPosition(SHORT y) {
-    this->yHight = y;
+void Marquee::setVerticalPosition(short y) {
+    this->verticalPosition = y;
 }
 
 void Marquee::setVelocity(short newVelocity) {
-    const short MINIMUM_TIME_IN_MILISECONDS{10};
-    const short MAXIMUM_TIME_IN_MILISECONDS{1000};
-    const short MINIMUM_WAIT_TIME_FOR_NEXT_INSTRUCTION{MINIMUM_TIME_IN_MILISECONDS};
-    const short MAXIMUM_WAIT_TIME_FOR_NEXT_INSTRUCTION{MAXIMUM_TIME_IN_MILISECONDS};
-    const short MINIMUM_SPEED{0};
-    const short MAXIMUM_SPEED{10};
-    const short SLOPE{(MAXIMUM_WAIT_TIME_FOR_NEXT_INSTRUCTION - MINIMUM_WAIT_TIME_FOR_NEXT_INSTRUCTION) / (MINIMUM_SPEED - MAXIMUM_SPEED)};
+    const short minimumTimeInMilliseconds{100};
+    const short maximumTimeInMilliseconds{1000};
+    const short minimumWaitTimeFoNextInstruction{minimumTimeInMilliseconds};
+    const short maximumWaitTimeForNextInstruction{maximumTimeInMilliseconds};
+    // Minimum value for newVelocity variable
+    const short minimumSpeed{0};
+    // Maximum value for newVelocity variable
+    const short maximumSpeed{10};
+    const short slope{(maximumWaitTimeForNextInstruction - minimumWaitTimeFoNextInstruction) / (minimumSpeed - maximumSpeed)};
 
     if (newVelocity < 0 || newVelocity > 10)
         newVelocity = this->DEFAULT_VELOCITY;
 
-    this->velocity = SLOPE * newVelocity + MAXIMUM_WAIT_TIME_FOR_NEXT_INSTRUCTION;
+    this->velocity = slope * newVelocity + maximumWaitTimeForNextInstruction;
 }
 
 void Marquee::print() {
-    HandleConsole::setCursorVisibilitie(false);
 
-    for (size_t i{1}; i < this->message.length(); i++) {
-        HandleConsole::setCursorPosition(this->xLimitLeft, this->yHight);
-        std::cout << std::string(this->message, this->message.length() - i, this->message.length() - (this->message.length() - i));
+    HandleConsole::setCursorVisibilitie(false);
+    
+    // Print from last until first character of the message
+    for (short i{static_cast<short>(this->message.length())}; i > 0; i--) {
+        HandleConsole::setCursorPosition(this->limitLeft, this->verticalPosition);
+        std::cout << std::string(this->message, i, static_cast<short>(this->message.length()) - i);
         Sleep(this->velocity);
     }
 
-    size_t x{this->xLimitLeft};
+    short x{this->limitLeft};
     while (true) {
         
-        if (x < this->xLimitRight - this->message.length()) {
+        if (x < this->limitRight - static_cast<short>(this->message.length())) {
             renderMarquee(x);
 
             clearMarquee(x);
@@ -64,22 +71,16 @@ void Marquee::print() {
 
             clearMarquee(x);
 
-            renderMarquee(std::string(this->message, 0, this->xLimitRight - x), x);
+            renderMarquee(std::string(this->message, 0, this->limitRight - x), x);
 
-            renderMarquee(std::string(this->message, this->xLimitRight - x, this->message.length() - (this->xLimitRight - x)), this->xLimitLeft);
+            renderMarquee(std::string(this->message, this->limitRight - x, static_cast<short>(this->message.length()) - (this->limitRight - x)), this->limitLeft);
         }
 
-        Sleep(this->velocity);
+        std::this_thread::sleep_for(std::chrono::milliseconds(this->velocity));
         x++;
 
-        if (x > this->xLimitRight)
-            x = this->xLimitLeft;
-
-        if (kbhit()) {
-            const int ESCAPE_KEY{27};
-            if (getch() == ESCAPE_KEY)
-                break;
-        }
+        if (x > this->limitRight)
+            x = this->limitLeft;
     }
 
     HandleConsole::setCursorVisibilitie(true);

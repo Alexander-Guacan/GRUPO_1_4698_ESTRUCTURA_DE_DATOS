@@ -1,18 +1,21 @@
 #include "HandleConsole.hpp"
+#include <windows.h>
 
-void HandleConsole::setCursorPosition(SHORT x, SHORT y) {
-    HANDLE consoleIndentificator{GetStdHandle(STD_OUTPUT_HANDLE)};
+void HandleConsole::setCursorPosition(short x, short y) {
     COORD position{x, y};
-    SetConsoleCursorPosition(consoleIndentificator, position);
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), position);
 }
 
-void HandleConsole::setCursorVisibilitie(bool isEnabled) {
-    HANDLE consoleIdentificator{GetStdHandle(STD_OUTPUT_HANDLE)};
+void HandleConsole::setCursorVisibilitie(bool on) {
     CONSOLE_CURSOR_INFO cursor;
-    cursor.bVisible = isEnabled;
+    cursor.bVisible = on;
     const short DEFAULT_CURSOR_SIZE{3};
     const short INVISIBLE_CURSOR_SIZE{1};
-    cursor.bVisible = isEnabled;
-    cursor.dwSize = (isEnabled) ? INVISIBLE_CURSOR_SIZE: DEFAULT_CURSOR_SIZE;
-    SetConsoleCursorInfo(consoleIdentificator, &cursor);
+    cursor.bVisible = on;
+    cursor.dwSize = (on) ? INVISIBLE_CURSOR_SIZE : DEFAULT_CURSOR_SIZE;
+    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursor);
+}
+
+void HandleConsole::setTextColor(enum HandleConsole::TextColor color) {
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), static_cast<short>(color));
 }

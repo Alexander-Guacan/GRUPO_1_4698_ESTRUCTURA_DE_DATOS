@@ -1,5 +1,5 @@
 #include "MenuGUI.hpp"
-#include "HandleConsole.cpp"
+#include "HandleConsole.hpp"
 #include <conio.h>
 #include <iostream>
 
